@@ -1,0 +1,284 @@
+/* General CSS */
+div {
+  /* border: red 1px dashed */
+}
+
+.selected {
+  color: #3190FF;
+}
+
+.unselected {
+  color: #BDBDBD;
+}
+
+.hover-over {
+  color: #8EC2FF;
+}
+
+.border-round {
+  border-radius: 6px;
+}
+
+.teamSelector {
+  cursor: pointer;
+}
+
+.a-little-bit-of-jus {
+  color: #3190FF;
+}
+
+.flexible-container {
+  width: 100%;
+  white-space: nowrap;
+  /* border: red 1px dashed; */
+}
+
+/* General Type Systems */
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+h1 {
+  font-family: freight-macro-pro, serif;
+  margin-top: 0px;
+}
+
+h2 {
+  font-family: proxima-nova, sans-serif;
+  margin-top: 0px;
+  color: #333333;
+}
+
+h3 {
+  font-family: freight-macro-pro, serif;
+  margin-top: 0px;
+  color: #333333;
+}
+
+p {
+  font-family: freight-macro-pro, serif;
+  color: #1E1D21;
+  margin: 0px;
+}
+
+.site-title {
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 86px;
+  display: flex;
+  align-items: center;
+  width: 640px;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+  /* border: 1px black dashed; */
+}
+
+.site-subtitle-type {
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  margin-right: 12px;
+}
+
+.site-subtitle-attr {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.body-style {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.overview-statement {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+
+.overview-item-header {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.overview-item-body {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+  color: #4F4F4F;
+}
+
+.section-title {
+  font-weight: 100;
+  font-size: 24px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.small-quote {
+  font-family: freight-display-pro, serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 100%;
+  margin: 0px;
+  color: #4F4F4F;
+}
+
+/* Images*/
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.title-image {
+  position: absolute;
+  /* max-height: 480px; */
+  max-width: 1200px;
+  top: -240px;
+  z-index: -1;
+}
+
+.content-image {
+  flex: none;
+  align-self: center;
+  /* border: 1px green dashed; */
+}
+
+.image-container {
+  display: flex;
+  border-radius: 6px;
+  box-sizing: content-box;
+  /* max-height: 470px; */
+  max-height: 640px;
+  width: 100%;
+  /* max-width: 1138px; */
+  max-width: 1366;
+  /* border: red 2px dashed; */
+}
+
+.image-item-toggle {
+  display: flex;
+  flex-direction: row;
+  border: 1px dashed red;
+}
+
+.image-selector-item {
+  display: inline;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-right: 24px;
+}
+
+/* Main Content */
+.header-content {
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 0px;
+  position: absolute;
+  width: 100%;
+  /* border: #ad03fc 1px dashed; */
+}
+
+/* Div Backgrounds */
+.gray-bg {
+  background-color: #F8F8F8;
+}
+
+.white-bg {
+  background-color: #FFFFFF;
+}
+
+/* Container Styles */
+.item {
+  display: inline-block;
+}
+
+.title-content {
+  position: static;
+  left: 151px;
+  align-self: center;
+  /* border: red 1px dashed; */
+}
+
+.subtitle-content {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 96px 0px 96px 0px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    align-self: center;
+    margin: 0px 0px;
+    width: 100%;
+    /* border: blue 1px dashed; */
+}
+
+.content-inside {
+  display: flex;
+  flex: column;
+  align-self: center;
+  margin: 0px 10px;
+  /* border: green 1px dashed; */
+}
+
+.content-left {
+  width: 446px;
+  margin-right: 360px;
+  /* margin-right: 132px; */
+  /* border: orange 1px dashed; */
+}
+
+.content-right {
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 560px;
+  padding: 0px;
+  /* border: orange 1px dashed; */
+}
+
+.content-block {
+  margin-bottom: 60px;
+}
+
+.content-block-end {
+  margin: 0;
+}
+
+.overview-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.overview-item {
+  margin-bottom: 12px;
+  margin-right: 48px;
+}
