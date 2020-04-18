@@ -1,6 +1,6 @@
-/* General CSS test */
+/* General CSS */
 div {
-  /* border: red 1px dashed */
+  border: none !important;
 }
 
 .selected {
@@ -25,6 +25,12 @@ div {
 
 .a-little-bit-of-jus {
   color: #3190FF;
+}
+
+.align-center {
+  align-self: center;
+  align-items: baseline;
+  /* border: 1px dashed pink; */
 }
 
 .flexible-container {
@@ -93,6 +99,13 @@ p {
   letter-spacing: 0.02em;
 }
 
+.case-title {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
 .body-style {
   font-weight: 300;
   font-size: 18px;
@@ -148,6 +161,7 @@ p {
   text-align: center;
   letter-spacing: 0.02em;
   color: #BDBDBD;
+  margin-top: 24px;
   /* border: red 1px dashed; */
 }
 
@@ -196,7 +210,16 @@ img {
   box-sizing: content-box;
   /* height: 392px; */
   max-width: 392px;
-  /* margin: 0px 36px 0px 36px; */
+  /* border: red 2px dashed; */
+}
+
+.image-container-middle {
+  display: flex;
+  border-radius: 6px;
+  box-sizing: content-box;
+  /* height: 392px; */
+  max-width: 392px;
+  margin: 0px 96px 0px 96px;
   /* border: red 2px dashed; */
 }
 
@@ -207,11 +230,22 @@ img {
   border-radius: 6px;
   box-sizing: content-box;
   height: 100%;
-  width: 329px;
+  width: 330px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 24px;
-  /* border: red 1px dashed; */
+  border: red 1px dashed;
+}
+
+.image-container-UI-middle {
+  /* align-self: center; */
+  display: block;
+  text-align: center;
+  border-radius: 6px;
+  box-sizing: content-box;
+  height: 100%;
+  width: 330px;
+  margin: 0px 96px 0px 96px;
+  border: red 1px dashed;
 }
 
 .image-item-toggle {
@@ -231,6 +265,43 @@ img {
   margin-right: 24px;
 }
 
+/* Landing Page */
+.case-content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 96px;
+  /* border: green 1px dashed; */
+}
+
+.case-title-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.case-navigation {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  /* border: green 1px dashed; */
+}
+
+.case-rows {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 48px;
+}
+
+.case-item{
+  margin: 0px 48px;
+  /* border: red 1px dashed; */
+}
+
+.case-item img {
+  height: 200px;
+  width: 330px;
+}
+
 /* Main Content */
 .header-content {
   padding: 15px;
@@ -244,7 +315,7 @@ img {
   padding: 72px 0px;
   position: absolute;
   width: 100%;
-  /* border: #ad03fc 1px dashed; */
+  border: #ad03fc 1px dashed;
 }
 
 /* Div Backgrounds */
@@ -265,7 +336,7 @@ img {
   position: static;
   left: 151px;
   align-self: center;
-  /* border: red 1px dashed; */
+  border: red 1px dashed;
 }
 
 .subtitle-content {
@@ -284,7 +355,7 @@ img {
     align-self: center;
     margin: 0px 0px;
     width: 100%;
-    /* border: blue 1px dashed; */
+    border: blue 1px dashed;
 }
 
 .content-inside {
@@ -292,7 +363,17 @@ img {
   flex: column;
   align-self: center;
   margin: 0px 10px;
-  /* border: green 1px dashed; */
+  border: green 1px dashed;
+  /* width: 1370px; */
+}
+
+.content-top {
+  display: flex;
+  flex: column;
+  align-self: center;
+  margin: 0px 10px;
+  margin-bottom: 96px;
+  border: green 1px dashed;
   /* width: 1370px; */
 }
 
@@ -300,14 +381,14 @@ img {
   width: 446px;
   margin-right: 360px;
   /* margin-right: 132px; */
-  /* border: orange 1px dashed; */
+  border: orange 1px dashed;
 }
 
 .image-content-left {
   width: 446px;
   margin-right: 360px;
   /* margin-right: 132px; */
-  /* border: orange 1px dashed; */
+  border: orange 1px dashed;
 }
 
 .content-right {
@@ -315,28 +396,30 @@ img {
   /* flex-direction: column; */
   width: 560px;
   padding: 0px;
-  /* border: orange 1px dashed; */
+  border: orange 1px dashed;
 }
 
 .content-right-2 {
-  display: table;
-  /* flex-direction: column; */
+  display: table-cell;
+  vertical-align: middle;
   width: 560px;
   padding: 0px;
-  /* border: orange 1px dashed; */
+  border: pink 3px dashed;
 }
 
-.middle-line {
-    display: table-cell;
-    vertical-align: middle;
+.content-UI {
+    display: inline-block;
+    position: relative;
 }
 
 .content-block {
   margin-bottom: 60px;
+  border: 1px red dashed;
 }
 
 .content-block-end {
   margin: 0;
+  border: 1px red dashed;
 }
 
 .overview-items {
