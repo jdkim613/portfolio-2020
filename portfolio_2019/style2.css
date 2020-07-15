@@ -1,6 +1,6 @@
 /* General CSS */
 div {
-  border: none !important;
+  /* border: none !important; */
 }
 
 .selected {
@@ -77,6 +77,24 @@ p {
   margin: 0px;
 }
 
+a:link {
+  position: relative;
+  text-decoration: none;
+  transition: left 0.5s ease;
+  -webkit-transition: left 0.5s ease;
+}
+
+.case-links {
+  position: relative;
+  top: 0%;
+
+}
+
+a:hover {
+  color: rgba(1.0, 1.0, 1.0, 0.4);
+  top: -2.5px;
+}
+
 .site-title {
   font-weight: 300;
   font-size: 72px;
@@ -138,7 +156,7 @@ p {
 }
 
 .section-title {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 24px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -149,10 +167,34 @@ p {
   font-weight: 500;
 }
 
+.section-quote {
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+}
+
+.perspective-container {
+  align-self: center;
+  display: block;
+  max-width: 50%;
+  /* border: 3px green dashed; */
+}
+
+.perspective-statement {
+  font-family: freight-display-pro, serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0px;
+  color: #4F4F4F;
+  /* border: 2px yellow dashed; */
+}
+
 .small-quote {
   font-family: freight-display-pro, serif;
   font-size: 64px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 100%;
   margin: 0px;
   color: #4F4F4F;
@@ -167,6 +209,41 @@ p {
   color: #BDBDBD;
   margin-top: 24px;
   /* border: red 1px dashed; */
+}
+
+/* Navigation */
+.header-content {
+  padding: 35px;
+  /* padding-left: 5%; */
+  /* padding-right: 5%; */
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 48px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border: 1px blue dotted;
+}
+
+.navigation-items {
+  display: flex;
+  flex-direction: row;
+  border: 1px purple dotted;
+}
+
+.navigation-items h3 {
+  font-weight: 400;
+}
+
+.about-page {
+  margin-left: 36px;
+}
+
+.more-menu {
+  margin-left: 36px;
 }
 
 /* Images*/
@@ -268,6 +345,40 @@ img {
 }
 
 /* Landing Page */
+#homepage-header {
+  font-size: 1.5rem;
+}
+
+.homepage-content{
+  display: flex;
+  justify-content: center;
+  border: 4px pink dashed;
+}
+
+.homepage-title {
+  display: flex;
+  min-width: 1372px;
+  margin: 25vh 0vw;
+  border: red 1px dashed;
+}
+
+.project-item {
+  font-size: 1rem;
+  margin-bottom: .5vh;
+}
+
+#project-title {
+  display: none;
+  font-size: 1rem;
+}
+
+#project-attr {
+  display: none;
+  font-style: italic;
+  font-size: 1rem;
+  color: #5A5A5A;
+}
+
 .case-content {
   display: flex;
   flex-direction: column;
@@ -319,38 +430,6 @@ img {
   transform: scale(1.03);
 }
 
-/* Navigation */
-.header-content {
-  padding: 35px;
-  /* padding-left: 5%; */
-  /* padding-right: 5%; */
-  width: 80%;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 48px;
-  border: 1px blue dotted;
-}
-
-.navigation-items {
-  display: flex;
-  flex-direction: row;
-  border: 1px purple dotted;
-}
-
-.navigation-items h3 {
-  font-weight: 400;
-}
-
-.about-page {
-  margin-left: 36px;
-}
-
-.more-menu {
-  margin-left: 36px;
-}
-
 /* Main Content */
 .body-content {
   display: flex;
@@ -389,16 +468,16 @@ img {
 }
 
 .content-container {
-    display: flex;
-    flex-direction: column;
-    padding: 96px 0px 96px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 96px 0px 96px 0px;
 
-    /* Inside Auto Layout */
-    flex: none;
-    align-self: center;
-    margin: 0px 0px;
-    width: 100%;
-    border: blue 1px dashed;
+  /* Inside Auto Layout */
+  flex: none;
+  align-self: center;
+  margin: 0px 0px;
+  width: 100%;
+  border: blue 1px dashed;
 }
 
 .content-inside {
@@ -410,6 +489,19 @@ img {
   /* width: 1370px; */
 }
 
+.content-row {
+  margin-top: 96px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  max-width: 1372px;
+}
+
+.content-row div {
+  width: 30%;
+}
+
 .content-top {
   display: flex;
   flex: column;
@@ -418,6 +510,13 @@ img {
   margin-bottom: 96px;
   border: green 1px dashed;
   /* width: 1370px; */
+}
+
+.content-bottom {
+  margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
 .content-left {
@@ -443,19 +542,23 @@ img {
 }
 
 .content-right-2 {
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   width: 560px;
   padding: 0px;
   border: pink 3px dashed;
 }
 
 .content-UI {
-    display: inline-block;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .content-block {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 60px;
   border: 1px red dashed;
 }
@@ -463,6 +566,19 @@ img {
 .content-block-end {
   margin: 0;
   border: 1px red dashed;
+}
+
+.content-block-2 {
+  width: 390px;
+}
+
+.content-block .image-container-UI {
+  margin: 0px 0px 48px;
+  display: flex;
+  border-radius: 6px;
+  box-sizing: content-box;
+  width: 240px;
+  /* border: red 2px dashed; */
 }
 
 .overview-items {
@@ -473,4 +589,76 @@ img {
 .overview-item {
   margin-bottom: 12px;
   margin-right: 48px;
+}
+
+.quote-content-inside {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border: green 1px dashed;
+}
+
+.quote-content-inside .section-title {
+  margin: 0px;
+}
+
+.title-inblock {
+  width: 1370px;
+  display: flex;
+  margin-bottom: 96px;
+}
+
+.quote-blocks {
+  width: 1370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: blue 1px dashed;
+}
+
+.quote-block {
+  width: 389px;
+  /* margin-right: 48px; */
+}
+
+.stat-content {
+  width: 1370px;
+  /* height: 424px; */
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0px 10px;
+  border: blue 1px dashed;
+}
+
+.stat-content .section-title {
+  margin-bottom: 96px;
+}
+
+.stat-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: green 1px dashed;
+  /* margin-bottom: 96px; */
+}
+
+.add-bottom {
+  margin-bottom: 96px;
+}
+
+.stat-item {
+  border: orange 1px dashed;
+}
+
+.stat-item h3 {
+  text-align: center;
+}
+
+.stat {
+  font-family: freight-display-pro, serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 124px;
 }

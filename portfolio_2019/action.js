@@ -1,6 +1,54 @@
 $(document).ready(function() {
   console.log("it works")
 
+  // Project Toggle
+  $('.project-item').on('mouseover', function() {
+
+    $('#project-title, #project-attr').css('display', 'block'); // show the hidden block
+    var thisMouse = this.id; // assign id value
+    changeProjectTitle(thisMouse); // change the title based on the value
+
+  }).on('mouseleave', function() {
+
+    $('#project-title, #project-attr').css('display', 'none');
+
+  })
+
+  function changeProjectTitle(project) {
+
+    var projectTitle;
+    var projectAttr;
+
+    switch(project) {
+      case 'project1':
+        projectTitle = 'Internship – 10 Weeks';
+        projectAttr = 'UX, XR, Consulting';
+        console.log('project 1 selected');
+        break;
+
+      case 'project2':
+        projectTitle = 'Independent Project – 12 Weeks';
+        projectAttr = 'Design Research';
+        console.log('project 2 selected');
+        break;
+
+      case 'project3':
+        projectTitle = 'Competition – 48 Hours';
+        projectAttr = 'Experience Design';
+        console.log('project 3 selected');
+        break;
+      case 'project4':
+        projectTitle = 'Campaign – 2 Weeks';
+        projectAttr = 'Branding Strategy';
+        console.log('project 4 selected');
+        break;
+    }
+
+    $('#project-title').text(projectTitle);
+    $('#project-attr').text(projectAttr);
+
+  }
+
   // Image Toggle
   $( ".image-selector-item" ).hover(
     function() {
@@ -46,6 +94,24 @@ $(document).ready(function() {
         });
 
       // Changing Case Titles
+      // function cases(caseID, question, type, attr) {
+      //   this.caseID = caseID;
+      //   this.question = question;
+      //   this.type = type;
+      //   this.attr = attr;
+      // }
+      //
+      // var caseItemsArray = [
+      //   cases("caseZero", "How might we question?", "Independent Project |", "UX, Branding"),
+      //   cases("caseOne", "I like we question?", "Internship |", "UX, Branding"),
+      //   cases("caseTwo", "Question needs to be longer than below?!", "Coursework |", "UX, Branding"),
+      //   cases("caseThree", "Meow the question?", "Work |", "UX, Branding"),
+      //   cases("caseFour", "Monkey isn't a question?", "Freenlance |", "UX, Branding"),
+      //   cases("caseFive", "Ah. The question?", "Unassigned |", "UX, Branding"),
+      // ]
+
+      //
+
       var caseZero = new Array("How might we question?", "Independent Project |", "UX, Branding");
       var caseOne = new Array("I like we question?", "Internship |", "UX, Branding");
       var caseTwo = new Array("Meow the question?", "Work |", "UX, Branding");
@@ -55,37 +121,6 @@ $(document).ready(function() {
 
       var caseItems = new Array(caseZero, caseOne, caseTwo, caseThree, caseFour, caseFive);
       var caseNum = null;
-
-      $("#case-0").mouseover(
-        function() {
-          var caseNum = 0;
-          console.log("caseNum is " + caseNum);
-      });
-      $("#case-1").mouseover(
-        function() {
-          var caseNum = 1;
-          console.log("caseNum is " + caseNum);
-      });
-      $("#case-2").mouseover(
-        function() {
-          var caseNum = 2;
-          console.log("caseNum is " + caseNum);
-      });
-      $("#case-3").mouseover(
-        function() {
-          var caseNum = 3;
-          console.log("caseNum is " + caseNum);
-      });
-      $("#case-4").mouseover(
-        function() {
-          var caseNum = 4;
-          console.log("caseNum is " + caseNum);
-      });
-      $("#case-5").mouseover(
-        function() {
-          var caseNum = 5;
-          console.log("caseNum is " + caseNum);
-      });
 
       function changeCaseTitles(caseNumber) {
           $(".case-title").removeClass("not-visible");
@@ -139,22 +174,5 @@ $(document).ready(function() {
       }, function() {
         removeCaseTitles()
       });
-
-
-      // $(caseNum).hover(
-      //   function() {
-      //   $(".case-title").removeClass("not-visible");
-      //   $(".site-subtitle-type").removeClass("not-visible");
-      //   $(".site-subtitle-attr").removeClass("not-visible");
-      //   $(".case-title").text(caseItems[caseNum][0]);
-      //   $(".site-subtitle-type").text(caseItems[caseNum][1]);
-      //   $(".site-subtitle-attr").text(caseItems[caseNum][2]);
-      //   console.log("Case title 0")
-      // },function() {
-      //   $(".case-title").addClass("not-visible");
-      //   $(".site-subtitle-type").addClass("not-visible");
-      //   $(".site-subtitle-attr").addClass("not-visible");
-      //   console.log("default state")
-      // });
 
   });
