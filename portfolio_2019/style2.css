@@ -1,6 +1,6 @@
 /* General CSS */
 div {
-  /* border: none !important; */
+  border: none !important;
 }
 
 .selected {
@@ -211,6 +211,16 @@ a:hover {
   /* border: red 1px dashed; */
 }
 
+.icon-image {
+  width: 64px;
+  margin-bottom: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
 /* Navigation */
 .header-content {
   padding: 35px;
@@ -219,7 +229,6 @@ a:hover {
   width: 90%;
   justify-content: space-between;
   display: flex;
-  align-items: center;
   margin: auto;
   margin-bottom: 48px;
   position: fixed;
@@ -250,14 +259,6 @@ a:hover {
 img {
   width: 100%;
   object-fit: cover;
-}
-
-.title-image {
-  position: absolute;
-  /* max-height: 480px; */
-  max-width: 1200px;
-  top: -240px;
-  z-index: -1;
 }
 
 .content-image {
@@ -342,41 +343,6 @@ img {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-right: 24px;
-}
-
-/* Landing Page */
-#homepage-header {
-  font-size: 1.5rem;
-}
-
-.homepage-content{
-  display: flex;
-  justify-content: center;
-  border: 4px pink dashed;
-}
-
-.homepage-title {
-  display: flex;
-  min-width: 1372px;
-  margin: 25vh 0vw;
-  border: red 1px dashed;
-}
-
-.project-item {
-  font-size: 1rem;
-  margin-bottom: .5vh;
-}
-
-#project-title {
-  display: none;
-  font-size: 1rem;
-}
-
-#project-attr {
-  display: none;
-  font-style: italic;
-  font-size: 1rem;
-  color: #5A5A5A;
 }
 
 .case-content {

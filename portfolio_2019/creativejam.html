@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="creativejam.css">
     <title>Creative Jam</title>
     <link rel='icon' href='assets/creativejam.ico' type='image/x-icon'/ >
     <link rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
@@ -11,7 +12,10 @@
   <header>
     <div class="header-content">
       <div>
-        <h2>JK</h2></div>
+        <a href="index.html">
+          <h2>JK</h2>
+        </a>
+      </div>
       <div class="navigation-items">
         <div class="about-page">
           <h3>About</h3>
@@ -28,11 +32,11 @@
     <div class="body-content">
 
       <!-- Site Title Module -->
-      <div class="content-container">
+      <div id="creativejam-title" class="content-container">
         <div class="content-inside">
           <div class="content-left">
             <div class="title-content">
-              <h1 class="site-title">Travel should be <span class="a-little-bit-of-jus">shared</span>.</h1>
+              <h1 class="site-title-creativejam">Travel together, post <span class="a-little-bit-of-jus">together</span>.</h1>
               <div class="subtitle-content">
                 <h3 class="site-subtitle-type">Competition |</h3>
                 <h3 class="site-subtitle-attr">UX, UI</h3>
@@ -40,20 +44,20 @@
             </div>
           </div>
           <div class="content-right">
-            <img class="title-image" src="https://www.lifewire.com/thmb/Imp1c1I4Hc4edc6T-ZZuAmpUmJo=/4000x3000/filters:fill(auto,1)/HLS19_HoloLens2_leftFacing_tilt_RGB_4K_whiteBG-d17efed754084023912d029033bc378f.jpg"></img>
+            <img class="title-image" src="assets/creativejam/creativejam_wt2.gif"></img>
           </div>
         </div>
       </div>
 
       <!-- Overview Module -->
-      <div class="white-bg content-container">
+      <div id="overview-module" class="white-bg content-container">
         <div class="content-inside">
           <div class="item content-left">
             <h2 class="section-title">Overview</h2>
           </div>
           <div class="item content-right">
             <div class="content-block">
-              <h3 class="overview-statement">Using Augemented Reality to place create shared photo journies.</h3>
+              <h3 class="overview-statement">Using Augemented Reality to create shared photo journies.</h3>
             </div>
             <div class="flexible-container">
               <div class="overview-items">
@@ -96,10 +100,10 @@
 
 
       <!-- large image container module -->
-      <div class="gray-bg content-container">
+      <div class="white-bg content-container">
         <div class="content-image">
-          <div class="image-container">
-              <img id="image-item-0" class="border-round image-shadow" src="https://dynamics365cdn.azureedge.net/cvt-df1a53f60e0c95ad8766638639a309f77f978efd9f3526a9196ad0f4fbc0b652/pictures/pages/mixed-reality/guides/Panel2_2880x1200.jpg">
+          <div id="image-container-cjstory" class="image-container">
+              <img id="image-item-cj-0" class="border-round image-shadow" src="assets/creativejam/storytelling.gif">
           </div>
         </div>
       </div>
@@ -108,6 +112,57 @@
       <div class="white-bg content-container">
         <div class="perspective-container">
           <h3 class="perspective-statement">I believe that stories are best remembered <i>together</i> and in <i>context</i>.</h3>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="white-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">I Believe that</h2>
+          </div>
+          <div class="content-right"></div>
+        </div>
+        <div class="content-row">
+          <div class="content-block">
+            <img class="icon-image" src="assets/creativejam/collaboration-icon.png"></img>
+            <h3 class="section-header">Collaborative Stories</h3>
+            <p class="body-style">Shared stories often tell a more complete story than remembering on our own.</p>
+          </div>
+          <div class="content-block">
+            <img class="icon-image" src="assets/creativejam/spatial-icon.png"></img>
+            <h3 class="section-header">Spatial Awareness</h3>
+            <p class="body-style">Remembering the context of the photos can make them more meaningful.</p>
+          </div>
+          <div class="content-block">
+            <img class="icon-image" src="assets/creativejam/arfeed-icon.png"></img>
+            <h3 class="section-header">AR Browsing Feed</h3>
+            <p class="body-style">Photos aren’t just a snapshot of time, it’s also a snapshot of the place.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="white-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">Principles</h2>
+          </div>
+          <div class="content-right"></div>
+        </div>
+        <div class="content-row">
+          <div class="content-block">
+            <h3 class="section-header">Collaborative Stories</h3>
+            <p class="body-style">Shared Combining the storytelling element of Instagram Stories and the collaborative features of Google.</p>
+          </div>
+          <div class="content-block">
+            <h3 class="section-header">Spatial Awareness</h3>
+            <p class="body-style">Adding context to images including geolocation, audio, and text to each snapshot.</p>
+          </div>
+          <div class="content-block">
+            <h3 class="section-header">AR Browsing Feed</h3>
+            <p class="body-style">Viewing content that exists in the <i>real</i> world by creating an augmented reality feed of your travels.</p>
+          </div>
         </div>
       </div>
 
@@ -126,45 +181,21 @@
         </div>
       </div>
 
-      <!-- Standard Content Module -->
-      <div class="white-bg content-container">
-        <div class="content-inside">
-          <div class="item content-left">
-            <h2 class="section-title">Key Features</h2>
-          </div>
-          <div class="content-right"></div>
-        </div>
-        <div class="content-row">
-          <div class="content-block">
-            <h3 class="section-header">Background</h3>
-            <p class="body-style">As members document their family trips, the stories travelers tell could create earned trust for local Airbnb hosts by incorporating them into their stories.</p>
-          </div>
-          <div class="content-block">
-            <h3 class="section-header">Background</h3>
-            <p class="body-style">As members document their family trips, the stories travelers tell could create earned trust for local Airbnb hosts by incorporating them into their stories.</p>
-          </div>
-          <div class="content-block">
-            <h3 class="section-header">Background</h3>
-            <p class="body-style">As members document their family trips, the stories travelers tell could create earned trust for local Airbnb hosts by incorporating them into their stories.</p>
-          </div>
-        </div>
-      </div>
-
       <!-- UI Container Module -->
-      <div class="white-bg content-container">
+      <div class="gray-bg content-container">
         <div class="content-inside">
           <div class="content-image-squares">
             <div class="item image-content-left">
               <div class="image-container-UI">
-                  <img class="border-round image-shadow" src="https://365psd.com/wp-content/uploads/2014/10/iPhone-6-icon-template-preview.jpg">
+                  <img class="border-round image-shadow" src="assets/creativejam/collaborate.gif">
                   <h2 class="image-description">UI Description</h2>
               </div>
             </div>
             <div class="item content-right-2">
               <div class="content-UI">
                 <div class="content-block">
-                  <h3 class="section-header">Share Your Stories Together</h3>
-                  <p class="body-style">We always collaboratively create photo albums together, so why not stories? By adding your family and friends into your journey, you can now post to the same stories and make it easier for your party to live through the moments after it passes.</p>
+                  <h3 class="section-header">Create Your Stories <i>together</i></h3>
+                  <p class="body-style">The current story experiences are siloed into individual accounts rather than being a collective. Why not make it collaborative? By Inviting your friends and family, you can create journies that allows you to not only travel togher but also write the stories together.</p>
                 </div>
               </div>
             </div>
@@ -172,75 +203,49 @@
         </div>
       </div>
 
-      <!-- 3-UI Container Module -->
-      <div class="white-bg content-container">
-        <div class="content-inside">
-          <div class="content-image-squares">
-            <div class="image-container-UI">
-                <img class="border-round image-shadow" src="https://365psd.com/wp-content/uploads/2014/10/iPhone-6-icon-template-preview.jpg">
-                <h2 class="image-description">UI Description</h2>
-            </div>
-            <div class="image-container-UI-middle">
-                <img class="border-round image-shadow" src="https://365psd.com/wp-content/uploads/2014/10/iPhone-6-icon-template-preview.jpg">
-                <h2 class="image-description">UI Description</h2>
-            </div>
-            <div class="image-container-UI">
-                <img class="border-round image-shadow" src="https://365psd.com/wp-content/uploads/2014/10/iPhone-6-icon-template-preview.jpg">
-                <h2 class="image-description">UI Description</h2>
-            </div>
-          </div>
-        </div>
-        <div class="content-bottom">
-          <div class="item content-right">
-            <div class="content-block">
-              <h3 class="section-header">Section Header</h3>
-              <p class="body-style">Our goal is to conduct series of interviews and observational research to learn about the current user journey of STEM students. 1234567890</p>
-            </div>
-            <div class="content-block-end">
-              <h3 class="section-header">Section Header</h3>
-              <p class="body-style">Our goal is to conduct series of interviews and observational research to learn about the current user journey of STEM students. 1234567890</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Small Quote Container Module -->
-      <div class="white-bg content-container">
-        <div class="content-inside">
-          <div class="item content-left">
-            <h3 class="small-quote">Find real use cases in the world.</h3>
-          </div>
-          <div class="item content-right">
-            <div class="content-block">
-              <h3 class="section-header">Section Header</h3>
-              <p class="body-style">Our goal is to conduct series of interviews and observational research to learn about the current user journey of STEM students. 1234567890</p>
-            </div>
-            <div class="content-block-end">
-              <h3 class="section-header">Section Header</h3 class="section-header">
-              <p class="body-style">Our goal is to conduct series of interviews and observational research to learn about the current user journey of STEM students. 1234567890</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3-Image Container Module -->
+      <!-- UI Container Module -->
       <div class="gray-bg content-container">
         <div class="content-inside">
           <div class="content-image-squares">
-            <div class="image-container-square">
-                <img id="image-item-0" class="border-round image-shadow" src="https://cdn.dribbble.com/users/4859/screenshots/11037158/media/4457134114c740b6c2fe1cab5986bced.png">
+            <div class="item image-content-left">
+              <div class="image-container-UI">
+                  <img class="border-round image-shadow" src="assets/creativejam/contextual-photos.gif">
+                  <h2 class="image-description">UI Description</h2>
+              </div>
             </div>
-            <div class="image-container-middle">
-                <img id="image-item-0" class="border-round image-shadow" src="https://media.timeout.com/images/105400735/630/472/image.jpg">
-            </div>
-            <div class="image-container-square">
-                <img id="image-item-0" class="border-round image-shadow" src="https://cdn.dribbble.com/users/2785110/screenshots/10977849/media/86a07b376f7356b7226648b7bb29b748.jpg">
+            <div class="item content-right-2">
+              <div class="content-UI">
+                <div class="content-block">
+                  <h3 class="section-header">Photos that are <i>more</i></h3>
+                  <p class="body-style">I believe that pictures are worth a thousand words, but a picture with context is worth a lifetime of memories. With spatial-aware photos, we can add the missing context into images along with other metadata and fill in the emotional value it needs.</p>
+                </div>
+              </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
 
-
+      <!-- UI Container Module -->
+      <div class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="content-image-squares">
+            <div class="item image-content-left">
+              <div class="image-container-UI">
+                  <img class="border-round image-shadow" src="assets/creativejam/AR-Feed.gif">
+                  <h2 class="image-description">UI Description</h2>
+              </div>
+            </div>
+            <div class="item content-right-2">
+              <div class="content-UI">
+                <div class="content-block">
+                  <h3 class="section-header">Take your attention <i>outsite</i></h3>
+                  <p class="body-style">When I think of albums, I think of stories. And stories have sequences– a narrative. The current digital album is a photo dump but what if we can change that to something more physical? By superimposing your photos on an AR view, you can make.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- 3-UI Container Module -->
       <div class="white-bg content-container">
@@ -296,39 +301,25 @@
         </div>
       </div>
 
-      <!-- Stats Module -->
-      <div class="gray-bg content-container">
-          <div class="stat-content">
-            <h2 class="section-title">Section Title</h2>
-            <div class="stat-row add-bottom">
-              <div class="stat-item">
-                <h3 class="section-header">Section Header</h3>
-                <p class="stat">25k</p>
-              </div>
-              <div class="stat-item">
-                <h3 class="section-header">Section Header</h3>
-                <p class="stat">25k</p>
-              </div>
-              <div class="stat-item">
-                <h3 class="section-header">Section Header</h3>
-                <p class="stat">25k</p>
-              </div>
+      <!-- Small Quote Container Module -->
+      <div class="white-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h3 class="small-quote">Can traveling ever be normal again?</h3>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header">Learning Outcome</h3>
+              <p class="body-style">Through this experience, I learned that breaking design conventions requires testing and validation. It was a challenge within the timeframe of the competition to excavate those insights, but if this were to be developed as an iterated product, I would focus on a usability study and finding the value proposition of this app to validate whether collaboration is an appropriate feature for sharing stories.</p>
+              <br>
+              <p><i>Placed as top 10 Finalist of 570 teams</i></p>
             </div>
-            <div class="stat-row">
-              <div class="stat-item">
-                <h3 class="section-header">Section Header</h3>
-                <p class="stat">44%</p>
-              </div>
-              <div class="stat-item">
-                <h3 class="section-header">Section Header</h3>
-                <p class="stat">39%</p>
-              </div>
-              <div class="stat-item">
-                <h3 class="section-header">Section Header</h3>
-                <p class="stat">112%</p>
-              </div>
+            <div class="content-block-end">
+              <h3 class="section-header">What's Next</h3>
+              <p class="body-style">Can traveling ever go back to normal after COVID-19? Perhaps. But rather than trying to “go backward”, I believe it’s time to redefine what normal is. Using the tools of technology and– more importantly, the serendipitous connections we have, we can write the next story of travel.</p>
             </div>
           </div>
+        </div>
       </div>
 
 

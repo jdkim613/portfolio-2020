@@ -1,0 +1,47 @@
+div {
+  border: none !important;
+}
+
+.title-image {
+  position: absolute;
+  /* max-height: 480px; */
+  max-width: 1200px;
+  top: -240px;
+  z-index: -1;
+}
+
+/* Landing Page */
+#homepage-header {
+  font-size: 1.5rem;
+}
+
+.homepage-content{
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  border: 4px pink dashed;
+}
+
+.homepage-title {
+  display: flex;
+  min-width: 1372px;
+  margin: 25vh 0vw;
+  border: red 1px dashed;
+}
+
+.project-item {
+  font-size: 1rem;
+  margin-bottom: .5vh;
+}
+
+#project-title {
+  display: none;
+  font-size: 1rem;
+}
+
+#project-attr {
+  display: none;
+  font-style: italic;
+  font-size: 1rem;
+  color: #5A5A5A;
+}
