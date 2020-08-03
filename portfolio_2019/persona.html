@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/persona.css">
     <title> Student Persona </title>
+    <link rel='icon' href='assets/persona.ico' type='image/x-icon'/ >
     <link  rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
@@ -19,7 +20,9 @@
           <h3>About</h3>
         </div>
         <div class="more-menu">
-          <h3>More</h3>
+          <a href="designsystem.html">
+            <h3>More</h3>
+          </a>
         </div>
       </div>
     </div>
@@ -29,7 +32,7 @@
     <div class="body-content">
 
       <!-- Site Title Module -->
-      <div class="content-container">
+      <div id="persona-title" class="content-container">
         <div class="content-inside">
           <div class="content-left">
             <div class="title-content">
@@ -99,19 +102,19 @@
         </div>
       </div>
 
+      <!-- What I Want Module -->
+      <div class="white-bg content-container">
+        <div class="perspective-container">
+          <h3 class="perspective-statement">I looked at user persona cards made by <a href="https://sfdc.co/productpersonas" target="_blank">Salesforce</a> and thought, <i>Why not make these cards for my school?</i></h3>
+        </div>
+      </div>
+
       <!-- large image container module -->
       <div class="white-bg content-container">
         <div class="content-image">
           <div id="image-container-pc-0" class="image-container">
               <img id="image-item-pc-0" class="border-round image-shadow" src="assets/persona/students.jpg">
           </div>
-        </div>
-      </div>
-
-      <!-- What I Want Module -->
-      <div class="white-bg content-container">
-        <div class="perspective-container">
-          <h3 class="perspective-statement">I looked at user persona cards made by <a href="https://sfdc.co/productpersonas" target="_blank">Salesforce</a> and thought, <i>Why not make these cards for my school?</i></h3>
         </div>
       </div>
 
@@ -124,7 +127,7 @@
           <div class="item content-right">
             <div class="content-block">
               <h3 class="section-header">Process over perfection</h3>
-              <p class="body-style">Instead of focusing on making the product perfect, I decided to devote most of my time documenting the process as the persona cards were designed to be a legacy project. I knew that within one quarter, I wouldn’t be able to create a comprehensive deck of the entire student population. However, I could create a process that other design research teams could replicate to expand and improve upon.</p>
+              <p class="body-style">Instead of perfecting the persona cards, I decided to devote my time crafting the process over the product. Since it was designed to be a legacy project, I knew that within one quarter, I wouldn’t be able to create a comprehensive deck of the entire student body. However, I could create a process that could later be replicated, expanded, and improved upon.</p>
             </div>
           </div>
         </div>
@@ -190,7 +193,7 @@
       <!-- Stats Module -->
       <div class="gray-bg content-container">
           <div class="stat-content">
-            <h2 class="section-title">Research Summary</h2>
+            <h2 class="section-title">Research</h2>
             <div class="stat-row add-bottom">
               <div class="stat-item">
                 <p class="stat">+300</p>
@@ -208,16 +211,50 @@
           </div>
       </div>
 
+      <!-- Image Container Module -->
+      <div class="gray-bg content-container">
+        <div class="content-image">
+          <div class="image-items-toggle">
+            <div id="image-item-switch-research-groups" class="image-selector-item selected teamSelector">Proto-Personas</div>
+            <div id="image-item-switch-research-interviews" class="image-selector-item unselected teamSelector">Interviews</div>
+            <div id="image-item-switch-research-coding" class="image-selector-item unselected teamSelector">Coding</div>
+            <div id="image-item-switch-research-highlights" class="image-selector-item unselected teamSelector">Highlights</div>
+            <div id="image-item-switch-research-insights" class="image-selector-item unselected teamSelector">Insights</div>
+          </div>
+          <br>
+          <div class="image-container">
+              <img id="image-item-pc-research" class="border-round image-shadow" src="assets/persona/research-protopersona.png">
+          </div>
+        </div>
+        <div class="content-bottom">
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 id="research-item-header" class="section-header">Creating Protopersonas</h3>
+              <p id="research-item-body" class="body-style">I reached out to the stakeholders on campus that work closely with students and we began brainstorming various personas. This quick exercise helped me narrowed down target personas whom I got to interview and gave me a roadmap for the future of this project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Standard Content Module -->
       <div class="white-bg content-container">
         <div class="content-inside">
           <div class="item content-left">
-            <h2 class="section-title">Design</h2>
+            <h2 class="section-title">Card Design</h2>
           </div>
           <div class="item content-right">
             <div class="content-block">
-              <p class="body-style">As members document their family trips, the stories travelers tell could create earned trust for local Airbnb hosts by incorporating them into their stories.</p>
+              <p class="body-style">To design the cards, I made modular components on Figma so that it’s accessible and customizable for any future teams.</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="white-bg content-container">
+        <div class="content-image">
+          <div id="image-container-pc-02" class="image-container">
+              <img id="image-item-pc-02" class="border-round image-shadow" src="assets/persona/module-design.png">
           </div>
         </div>
       </div>
@@ -229,20 +266,149 @@
             <div class="item image-content-left">
               <div class="image-container-UI">
                   <div class="card-item-toggle">
-                    <div id="image-item-switch-pcfront" class="image-selector-item selected teamSelector">Front</div>
-                    <div id="image-item-switch-pcback" class="image-selector-item unselected teamSelector">Back</div>
+                    <div id="image-item-switch-pcfront" class="image-selector-item selected teamSelector">Persona</div>
+                    <div id="image-item-switch-pcback" class="image-selector-item unselected teamSelector">Info</div>
                   </div>
-                  <img id="image-item-pc-3" class="border-round" src="assets/persona/persona-front.png">
-                  <h2 class="image-description">Collaborative Feed</h2>
+                  <img id="image-item-pc-3" class="border-round image-shadow" src="assets/persona/persona-front.png">
+                  <h2 class="image-description">Persona Card</h2>
               </div>
             </div>
             <div class="item content-right-2">
               <div class="content-UI">
                 <div class="content-block">
-                  <h3 class="section-header">Create Your Stories <i>together</i></h3>
-                  <p class="body-style">The current storytelling experiences are siloed. Why not make it collaborative? By Inviting your friends and family into a shared story, you can create a shared narrative that allows you to not only travel together but also write the stories together.</p>
+                  <h3 class="section-header">Designing something personal</h3>
+                  <p class="body-style">The names of the personas are actual names from the school and they are prefaced with an alliterative descriptor (e.g. Exemplary Esra) so that they could be quickly referenced without memory recall. Some of the pictures of students were also submitted by the interviewees themselves, but the names and the stories were mismatched to protect their identities.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="white-bg content-container">
+        <div class="content-image">
+          <div id="image-container-pc-02" class="image-container-1">
+              <img id="image-item-pc-02" class="border-round image-shadow" src="assets/persona/card-anatomy.png">
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <!-- <div class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">Other Cards</h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <p class="body-style">As members document their family trips, the stories travelers tell could create earned trust for local Airbnb hosts by incorporating them into their stories.</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- UI Container Module -->
+      <div class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="content-image-squares">
+            <div class="item image-content-left">
+              <div class="image-container-UI">
+                  <div class="card-item-toggle">
+                    <div id="image-item-switch-eventfront" class="image-selector-item selected teamSelector">Event</div>
+                    <div id="image-item-switch-eventback" class="image-selector-item unselected teamSelector">Description</div>
+                  </div>
+                  <img id="image-item-pc-4" class="border-round image-shadow" src="assets/persona/event-front.png">
+                  <h2 class="image-description">Event Card</h2>
+              </div>
+            </div>
+            <div class="item content-right-2">
+              <div class="content-UI">
+                <div class="content-block">
+                  <h3 class="section-header">Events that shape the student experience</h3>
+                  <p class="body-style">These cards were not a part of the original plan but were added later on because I found patterns of events emerging from the stories that the students told. Event cards hold thought-provoking questions that ask, “What if…” and “How might we…” to riddles the policy and program creators to make meaningful experiences for their users.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI Container Module -->
+      <div class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="content-image-squares">
+            <div class="item image-content-left">
+              <div class="image-container-UI">
+                  <div class="card-item-toggle">
+                    <div id="image-item-switch-activityfront" class="image-selector-item selected teamSelector">Activity</div>
+                    <div id="image-item-switch-activityback" class="image-selector-item unselected teamSelector">Instruction</div>
+                  </div>
+                  <img id="image-item-pc-5" class="border-round image-shadow" src="assets/persona/activity-front.png">
+                  <h2 class="image-description">Activity Card</h2>
+              </div>
+            </div>
+            <div class="item content-right-2">
+              <div class="content-UI">
+                <div class="content-block">
+                  <h3 class="section-header">Introducing design-led thinking</h3>
+                  <p class="body-style">The idea of Human-Centered Design is still nascent in higher ed. Activity cards are meant to teach stakeholders how to use the cards to spark new, and engaging ways to bring students back into their creative process. These exercises can run in meetings or workshops to help develop an understanding of the students, as well as brainstorming new strategies policies and programs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="white-bg content-container">
+        <div class="content-image">
+          <div id="image-container-pc-02" class="image-container-1">
+              <img id="image-item-pc-02" class="border-round image-shadow" src="assets/persona/never-stop.png">
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Container Module -->
+      <div class="gray-bg content-container">
+        <div class="quote-content-inside">
+          <div class="title-inblock">
+            <h2 class="section-title">Learn More</h2>
+          </div>
+          <div class="quote-blocks">
+            <div class="quote-block">
+              <h3 class="section-quote">I created an online repository for the campus to view. Check it out below.</h3>
+              <a href="https://www.uwbpersona.com/" target="_blank">
+                <h3 class="section-header">GitBook Link</h3>
+              </a>
+            </div>
+            <div class="quote-block">
+              <h3 class="section-quote">Read my Medium article about this project published on the UX Collective.</h3>
+              <a href="https://uxdesign.cc/can-you-make-colleges-more-human-centered-d4c35259a4e1" target="_blank">
+                <h3 class="section-header">Article Link</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Small Quote Container Module -->
+      <div class="white-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h3 class="small-quote">"Know thy user, and you are not thy user."</h3>
+            <p class="body-style add-top-margin">– <i><span class="a-little-bit-of-jus">Arnie Lund</span>, Professor of Practice at UW Bothell</i></p>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header">Closing Thoughts</h3>
+              <p class="body-style">This project started with a small inspiration, fueled by supporters on campus, and realized through its limitations. Working alone– not in a team, made me appreciate how much more you can achieve when you are together. That’s why one of the successes of this project is that it lives beyond myself. Through the open-source library of designs and processes, this project will continue on and continue to grow. And in the future, I see it being even more impactful by combining both qualitative and quantitative insights.</p>
+              <br>
+              <p><i>Special thanks to Arnie Lund (Advisor), Gowri Shankur (Sponsor), and Andrea Neubert (Supervisor)</i></p>
+            </div>
+            <div class="content-block-end">
+              <h3 class="section-header">What's Next</h3>
+              <p class="body-style">This project is set to be created into a student assistant position in the Planning and Administration org. In addition,  Dr. Arnie Lund who was an advisor for this project is incorporating into the class he’s teaching: CSS 478 Usability and User-Centered Design in the Fall of 2020. Stay tuned for future updates.</p>
             </div>
           </div>
         </div>

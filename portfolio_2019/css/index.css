@@ -2,6 +2,37 @@ div {
   /* border: none !important; */
 }
 
+span#homepage-header:before {
+  content: '';
+  animation: animate infinite 10s;
+}
+
+@keyframes animate {
+  0% {
+    content: 'Design, because it matters.';
+  }
+
+  20% {
+    content: 'Bridge the divide between people.';
+  }
+
+  40% {
+    content: 'Make something unforgettable.';
+  }
+
+  60% {
+    content: 'For the people– with the people.';
+  }
+
+  80% {
+    content: 'Diversity → Inclusion → Equity → Justice';
+  }
+
+  100% {
+    content: 'Design, because it matters.';
+  }
+}
+
 .title-image {
   position: absolute;
   /* max-height: 480px; */

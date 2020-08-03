@@ -48,8 +48,11 @@ div {
 }
 
 /* General Type Systems */
+header {
+  max-width: 750vw;
+}
+
 body {
-    max-width: 100%;
     overflow-x: hidden;
     margin: 0;
 }
@@ -417,7 +420,20 @@ img {
 
 /* Div Backgrounds */
 .gray-bg {
+  position: relative;
   background-color: #F8F8F8;
+  width: 100vw;
+}
+
+.gray-bg:before {
+    content:"";
+    background-color:#F8F8F8;
+    position: absolute;
+    height: 100%;
+    width: 4000px;
+    left: -2000px;
+    top: 0px;
+    z-index: -1;
 }
 
 .white-bg {
@@ -442,6 +458,19 @@ img {
   align-items: baseline;
 }
 
+.content-container-index {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 0px 96px 0px;
+
+  /* Inside Auto Layout */
+  flex: none;
+  align-self: center;
+  margin: 0px 0px;
+  width: 100%;
+  border: blue 1px dashed;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
@@ -452,6 +481,7 @@ img {
   align-self: center;
   margin: 0px 0px;
   width: 100%;
+  max-width: 1366px;
   border: blue 1px dashed;
 }
 
@@ -620,6 +650,10 @@ img {
 
 .add-bottom {
   margin-bottom: 96px;
+}
+
+.add-top-margin {
+  margin-top: 24px;
 }
 
 .stat-item {

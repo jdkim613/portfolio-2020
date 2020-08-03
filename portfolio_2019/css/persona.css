@@ -1,3 +1,11 @@
+body {
+  /* max-width: 900px; */
+}
+
+#persona-title {
+  margin: 96px 0px;
+}
+
 .title-image {
   position: absolute;
   /* max-height: 480px; */
@@ -5,7 +13,7 @@
   object-fit: cover;
   /* background-attachment: fixed; */
   top: 0px;
-  left: 680px;
+  left: 45vw;
   z-index: -1;
 }
 
@@ -15,8 +23,16 @@
   line-height: 86px;
   align-items: center;
   letter-spacing: 0.02em;
-  margin: 96px 0px;
+  margin-bottom: 24px;
   width: 640px;
+}
+
+.image-container {
+  box-sizing: content-box;
+  min-height: 450px;
+  max-height: 450px;
+  min-width: 1366px;
+  max-width: 1366px;
 }
 
 .image-container-1 {
