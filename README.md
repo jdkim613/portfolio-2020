@@ -1,3 +1,2 @@
-# kimjohn_portfolio
-Portfolio
-blah blah blah
+# John Kim's Portfolio
+https://johnkim.design/
