@@ -1,2 +1,2 @@
 # John Kim's Portfolio
-https://johnkim.design/kimjohn_portfolio/index.html
+https://johnkim.design/portfolio/index.html
