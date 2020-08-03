@@ -1,0 +1,36 @@
+.title-image {
+  position: absolute;
+  /* max-height: 480px; */
+  max-width: 1000px;
+  object-fit: cover;
+  /* background-attachment: fixed; */
+  top: 0px;
+  left: 680px;
+  z-index: -1;
+}
+
+.site-title-persona {
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 86px;
+  align-items: center;
+  letter-spacing: 0.02em;
+  margin: 96px 0px;
+  width: 640px;
+}
+
+.image-container-1 {
+  max-width: 1000px;
+}
+
+.small-image {
+  width: 144px;
+  margin-bottom: 24px;
+}
+
+.card-item-toggle {
+  display: flex;
+  flex-direction: row;
+  border: 1px dashed red;
+  margin-bottom: 18px;
+}
