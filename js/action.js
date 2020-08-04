@@ -18,6 +18,7 @@ $(document).ready(function() {
     $('#email-copied').css('display', 'block');
   })
 
+
   const emailToClipboard = str => {
   const el = document.createElement('textarea');
   el.value = str;
