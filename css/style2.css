@@ -98,6 +98,14 @@ a:link {
   -webkit-transition: left 0.5s ease;
 }
 
+.body-style a:link {
+  color:#000000;
+  position: relative;
+  text-decoration: none;
+  transition: left 0.5s ease;
+  -webkit-transition: left 0.5s ease;
+}
+
 .case-links {
   position: relative;
   top: 0%;
@@ -111,6 +119,10 @@ a:hover {
 
 a:visited {
   color: #3190FF;
+}
+
+.body-style a:visited {
+  color: #000000;
 }
 
 .site-title {
@@ -458,6 +470,15 @@ img {
   border: #ad03fc 1px dashed;
 }
 
+/* font colors */
+.white-font * {
+  color: #FFFFFF;
+}
+
+.lightgray-font * {
+  color: #F8F8F8;
+}
+
 /* Div Backgrounds */
 .gray-bg {
   position: relative;
@@ -468,6 +489,40 @@ img {
 .gray-bg:before {
     content:"";
     background-color:#F8F8F8;
+    position: absolute;
+    height: 100%;
+    width: 4000px;
+    left: -2000px;
+    top: 0px;
+    z-index: -1;
+}
+
+.black-bg {
+  position: relative;
+  background-color: #0F0F0F;
+  width: 100vw;
+}
+
+.black-bg:before {
+    content:"";
+    background-color:#0F0F0F;
+    position: absolute;
+    height: 100%;
+    width: 4000px;
+    left: -2000px;
+    top: 0px;
+    z-index: -1;
+}
+
+.purple-bg {
+  position: relative;
+  background-color: #380D93;
+  width: 100vw;
+}
+
+.purple-bg:before {
+    content:"";
+    background-color:#380D93;
     position: absolute;
     height: 100%;
     width: 4000px;
@@ -737,11 +792,17 @@ footer {
 
 }
 
+.footer-container {
+  width: 1366px;
+  display: flex;
+  flex-direction: column;
+  padding: 96px 0px;
+}
+
 .footer-content {
   width: 1366px;
   display: flex;
   justify-content: space-between;
-  padding: 96px 0px;
   height: 30vh;
   border: 3px dashed blue;
 }
@@ -768,4 +829,15 @@ footer {
   text-align: right;
   width: 15vw;
   border: red 1px dashed;
+}
+
+.social-icon-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.social-icons {
+  width: 1.75vw;
+  margin-left: .75vw;
 }

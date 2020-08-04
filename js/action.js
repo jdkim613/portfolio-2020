@@ -69,7 +69,7 @@ $(document).ready(function() {
         break;
 
       case 'project3':
-        projectTitle = 'Competition – 48 Hours';
+        projectTitle = 'Creative Jam – 48 Hours';
         projectAttr = 'Experience Design';
         console.log('project 3 selected');
         break;
