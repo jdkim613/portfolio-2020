@@ -1,12 +1,34 @@
 $(document).ready(function() {
   console.log("it works")
 
+  const myEmail = 'jdkim613@gmail.com';
+
   // change face
   $('#head').on('mouseover', function() {
     $('#head').attr('src', 'assets/face-1.png');
   }).on('mouseleave', function() {
     $('#head').attr('src', 'assets/face-0.png');
+    $('#email-copied').css('display', 'none');
   })
+
+
+  // email copy
+  $('#head').on('click', function() {
+    emailToClipboard('jdkim613@gmail.com');
+    $('#email-copied').css('display', 'block');
+  })
+
+  const emailToClipboard = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
 
   // Project Toggle
   $('.project-item').on('mouseover', function() {

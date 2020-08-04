@@ -18,6 +18,7 @@
 } */
 
 .head-container {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -30,10 +31,29 @@
   margin-top: 0px;
 }
 
+.head-email {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-right: 15vw;
+  margin-bottom: 15vh;
+  /* border: 1px green dashed; */
+}
+
+#email-copied {
+  margin-top: 0vh;
+  position: absolute;
+  top: 20vh;
+  left: 4vw;
+  display: none;
+}
+
 #head {
   width: 15vw;
   margin-bottom: 5vh;
-  margin-right: 15vw;
+  cursor: pointer;
 }
 
 .profile {
@@ -48,4 +68,23 @@
   line-height: 100%;
   margin: 0px 0px 36px;
   color: #4F4F4F;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  width: 20vw;
+  border: red 1px dashed;
+}
+
+.social-icon-row-0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.social-icons-0 {
+  width: 1.75vw;
+  margin-right: .75vw;
 }
