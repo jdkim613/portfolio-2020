@@ -1,3 +1,22 @@
+/* span#my-name:before {
+  content: '';
+  animation: animate infinite 6s;
+}
+
+@keyframes animate {
+  0% {
+    content: 'John.';
+  }
+
+  50% {
+    content: '주성 | Jusung.';
+  }
+
+  100% {
+    content: 'John.';
+  }
+} */
+
 .head-container {
   height: 100vh;
   display: flex;

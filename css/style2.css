@@ -4,8 +4,9 @@ div {
 }
 
 #logo {
-  width: 3vw;
-  /* width: 5vw; */
+  /* width: 3vw; */
+  width: 4vw;
+  /* border: 1px dashed green; */
 }
 
 *::selection {
@@ -275,7 +276,8 @@ header {
 .navigation-items {
   display: flex;
   flex-direction: row;
-  border: 1px purple dotted;
+  align-items: center;
+  border: 3px purple dotted;
 }
 
 .navigation-items h3 {
@@ -284,6 +286,9 @@ header {
 
 .about-page {
   margin-left: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .more-menu {
@@ -753,6 +758,10 @@ img {
 
 .bottom-margin-24 {
   margin-bottom: 24px;
+}
+
+.remove-bottom-margin {
+  margin-bottom: 0px;
 }
 
 .add-top-margin {
