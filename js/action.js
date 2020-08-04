@@ -50,16 +50,16 @@ $(document).ready(function() {
   }
 
   // Image Toggle
-  $( ".image-selector-item" ).hover(
-    function() {
-      if ($( this ).hasClass("selected") == true) {
-        // console.log("this is already selected"); // debug
-      } else {
-        $(this).addClass( "hover-over" );
-      }
-    }, function() {
-      $(this).removeClass( "hover-over" );
-    });
+  // $( ".image-selector-item" ).hover(
+  //   function() {
+  //     if ($( this ).hasClass("selected") == true) {
+  //       // console.log("this is already selected"); // debug
+  //     } else {
+  //       $(this).addClass( "hover-over" );
+  //     }
+  //   }, function() {
+  //     $(this).removeClass( "hover-over" );
+  //   });
 
     $(".image-selector-item").click(
       function() {

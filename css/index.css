@@ -1,5 +1,19 @@
 div {
-  /* border: none !important; */
+  border: none !important;
+}
+
+.homepage-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: -0;
+}
+
+.homepage-image {
+  position: absolute;
+  object-fit: contain;
+  height: 60vh;
+  left: 30vw;
 }
 
 span#homepage-header:before {
@@ -21,7 +35,7 @@ span#homepage-header:before {
   }
 
   60% {
-    content: 'For the people– with the people.';
+    content: 'Thrive under constraints.';
   }
 
   80% {

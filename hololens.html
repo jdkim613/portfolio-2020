@@ -1,19 +1,21 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="css/persona.css">
+    <link rel="stylesheet" href="css/hololens.css">
     <title> HoloLens Guides </title>
+    <link rel='icon' href='assets/xrdemo.ico' type='image/x-icon'/ >
     <link  rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <header>
     <div class="header-content">
-      <div>
+      <div class="add-click">
         <a href="index.html">
           <h2>JK</h2>
         </a>
       </div>
-      <div class="navigation-items">
+      <div class="navigation-items add-click">
         <div class="about-page">
           <h3>About</h3>
         </div>
@@ -28,8 +30,7 @@
     <div class="body-content">
 
       <!-- Site Title Module -->
-      <!-- Site Title Module -->
-      <div class="content-container">
+      <div id="hololens-title" class="content-container">
         <div class="content-inside">
           <div class="content-left">
             <div class="title-content">
@@ -41,7 +42,7 @@
             </div>
           </div>
           <div class="content-right">
-            <img class="title-image" src="https://www.lifewire.com/thmb/Imp1c1I4Hc4edc6T-ZZuAmpUmJo=/4000x3000/filters:fill(auto,1)/HLS19_HoloLens2_leftFacing_tilt_RGB_4K_whiteBG-d17efed754084023912d029033bc378f.jpg"></img>
+            <img id="image-item-hololens-header" class="title-image" src="https://www.lifewire.com/thmb/Imp1c1I4Hc4edc6T-ZZuAmpUmJo=/4000x3000/filters:fill(auto,1)/HLS19_HoloLens2_leftFacing_tilt_RGB_4K_whiteBG-d17efed754084023912d029033bc378f.jpg"></img>
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@
           </div>
           <div class="item content-right">
             <div class="content-block">
-              <h3 class="overview-statement">Usi</h3>
+              <h3 class="overview-statement">Inspiring new Extended Reality market opportunities with business-ready solutions.</h3>
             </div>
             <div class="flexible-container">
               <div class="overview-items">
@@ -64,7 +65,7 @@
                 </div>
                 <div class="overview-item">
                   <h3 class="overview-item-header">Role</h3>
-                  <p class="overview-item-body">UX Architect</p>
+                  <p class="overview-item-body">UX Architect<br>Instruction Design</p>
                 </div>
                 <div class="overview-item">
                   <h3 class="overview-item-header">Time</h3>
@@ -88,19 +89,352 @@
           </div>
           <div class="item content-right">
             <div class="content-block">
-              <h3 class="section-header">Brief</h3>
-              <p class="body-style">As members document their family trips, the stories travelers tell could create earned trust for local Airbnb hosts by incorporating them into their stories.</p>
+              <h3 class="section-header">Question</h3>
+              <p class="body-style">How can we envision the future of Extended Reality (XR) in our work?</p>
             </div>
             <div class="content-block-end">
-              <h3 class="section-header">Challege</h3>
-              <p class="body-style">Empower families and groups of friends who travel together a collaborative way to document, organize, and share their travel experiences and stays to the larger Airbnb community. In a mobile app, provide a way to combine photos and/or notes and <i>transform their shared family trips into immersive stories</i> about the culture and destinations they visit. </p>
+              <h3 class="section-header">Summary</h3>
+              <p class="body-style">Using Dynamic 365 Guides on the HoloLens, we created a scalable training module for retail coffee shops that provide an on-hand experience. The goal of the demo was to showcase the business potential for the Extended Reality (XR) market by prototyping around relevant business use cases. The barista training module provides ways to improve retention of knowledge, cuts operating costs, and allows for easy modifiability and expandability.</p>
             </div>
           </div>
         </div>
       </div>
 
-    </div>
+      <!-- large image container module -->
+      <div class="gray-bg content-container">
+        <div class="content-image">
+          <div id="image-container-hl-0" class="image-container-1">
+              <img id="image-item-hl-0" class="border-round image-shadow" src="assets/hololens/hololens-video-01.gif">
+          </div>
+          <h2 class="image-description">Source: Microsoft</h2>
+        </div>
+      </div>
 
-    <script src="js/action.js"></script>
+      <!-- Standard Content Module -->
+      <div id="challenge-nav" class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">Roadmap</h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <p class="body-style">When the project began, the solution already existed. Now, my role as a designer was to work backgrounds to find the right problem for the solution. The intern team was tasked with creating a demo that could be showcased to clients to invoke new ideas in their heads.</p>
+            </div>
+            <div class="content-block-end">
+              <h3 class="section-header">Enterprise Market</h3>
+              <p class="body-style">After Microsoft transitioned its XR offerings to the enterprise market, they focused on industries like healthcare, manufacturing, and utility services. It was the obvious area of focus as Microsoft had close relationships with companies like Phillips, GE, and Airbus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module: Gartner Hype Cycle -->
+      <div class="white-bg content-container">
+        <div class="content-image">
+          <div id="image-container-hl-1" class="image-container-1">
+              <img id="image-item-hl-1" class="border-round" src="assets/hololens/hype-cycle.png">
+          </div>
+          <h2 class="image-description">Gartner Hype Cycle</h2>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">Ideation</h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <p class="body-style">After secondary research on current AR/VR markets, we began brainstorming ideas for new business cases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module: Gartner Hype Cycle -->
+      <div class="gray-bg content-container">
+        <div class="content-image">
+          <div id="image-container-hl-2" class="image-container-1">
+              <img id="image-item-hl-2" class="border-round" src="assets/hololens/affinity-diagramming.png">
+              <h2 class="image-description">Affinity Diagramming</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Container Module -->
+      <div class="gray-bg content-container">
+        <div class="content-image">
+          <div class="image-items-toggle">
+            <div id="image-item-switch-feasibility" class="image-selector-item selected teamSelector">Feasibility</div>
+            <div id="image-item-switch-viability" class="image-selector-item unselected teamSelector">Viability</div>
+            <div id="image-item-switch-translatability" class="image-selector-item unselected teamSelector">Translatability</div>
+            <div id="image-item-switch-affordability" class="image-selector-item unselected teamSelector">Afforability</div>
+          </div>
+          <br>
+          <div class="image-container">
+              <img id="image-item-business-req" class="border-round image-shadow" src="assets/hololens/feasibility.png">
+          </div>
+        </div>
+        <div class="content-bottom">
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 id="req-item-header" class="section-header">Feasibility</h3>
+              <p id="req-item-body" class="body-style">First, we looked at whether the concept was feasible. Understanding the technical limitations of the HoloLens was important. The HoloLens 1 was uncomfortable and lacked precision so we ruled out any cases that required fine movements and long periods of use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Want Module -->
+      <div class="white-bg content-container">
+        <div class="perspective-container">
+          <h3 class="perspective-statement">“We needed to find a concept that people with various physical abilities and understanding of the technology could run.”</i></h3>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">Final Concept</h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header">Retail Barista Training</h3>
+              <p class="body-style bottom-margin-18">The final concept we chose was the retail barista training module. We found that there was a huge market potential due to high-turnover rates in employees and constant updates on the menu required new training to be scalable. It could be translated to other industries like fast-food chains, broader retail, and even hospitality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="gray-bg content-container remove-top-padding">
+        <div class="content-image">
+          <div id="image-container-hl-3" class="image-container-1">
+              <img id="image-item-hl-3" class="border-round" src="assets/hololens/adjacencies.png">
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="gray-bg content-container remove-top-padding">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <p class="body-style">Looking at Starbucks alone, we found that 40% of market capture could bring in approximately $5M in revenue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Module -->
+      <div class="gray-bg content-container">
+          <div class="stat-content">
+            <div class="stat-row add-bottom">
+              <div class="stat-item">
+                <p class="stat">55K</p>
+                <h3 class="section-header">New Employees</h3>
+                <p class"body-style"><i>2019</i></p>
+              </div>
+              <div class="stat-item">
+                <p class="stat">$240</p>
+                <h3 class="section-header">Training Cost per Employee</h3>
+                <p class"body-style"><i>20h x $12 average wages</i></p>
+              </div>
+              <div class="stat-item">
+                <p class="stat">$13M</p>
+                <h3 class="section-header">Market Cap</h3>
+                <p class"body-style"><i>Starbucks alone</i></p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="gray-bg content-container remove-top-padding">
+        <div class="content-image">
+          <div id="image-container-hl-4" class="image-container-small">
+              <img id="image-item-hl-4" class="border-round image-shadow" src="assets/hololens/barista.jpg">
+          </div>
+          <h2 class="image-description">Photo by Ali Yahya</h2>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="white-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">Design</h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <p class="body-style bottom-margin-18">The final concept we chose was the retail barista training module. We found that there was a huge market potential due to high-turnover rates in employees and constant updates on the menu required new training to be scalable. It could be translated to other industries like fast-food chains, broader retail, and even hospitality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="white-bg content-container remove-top-padding">
+        <div class="content-image">
+          <div id="image-container-hl-5" class="image-container-2">
+              <img id="image-item-hl-5" class="border-round" src="assets/hololens/instruction-breakdown.png">
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="white-bg content-container remove-top-padding">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header">Instruction Design</h3>
+              <p class="body-style bottom-margin-18">We added the instructions in the Guides using the built-in native tools. Along with the instructions, we created digital doubles of the espresso machine parts using Blender.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2-Image Container Module -->
+      <div class="white-bg content-container">
+        <div class="content-inside">
+          <div class="content-image-double">
+            <div class="image-container-double">
+                <img id="image-item-hl-6" class="image-item-double border-round image-shadow" src="assets/hololens/guides-editing.gif">
+                <h2 class="image-description">Editing Instructions</h2>
+            </div>
+            <div class="image-container-double">
+                <img id="image-item-hl-7" class="image-item-double border-round image-shadow" src="assets/hololens/guides-placement.gif">
+                <h2 class="image-description">Placing Guides</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="white-bg content-container remove-top-padding">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header">Prototyping</h3>
+              <p class="body-style bottom-margin-18">Before we had hands on the equipment, we created a prototype out of cardboard boxes to replicate the interactions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="white-bg content-container remove-top-padding">
+        <div class="content-image">
+          <div id="image-container-hl-8" class="image-container-small">
+              <img id="image-item-hl-8" class="border-round" src="assets/hololens/cardboard-prototype.gif">
+          </div>
+          <h2 class="image-description">Special Thanks to Recycling Bin</h2>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="white-bg content-container remove-top-padding">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header">Wizard of Oz</h3>
+              <p class="body-style bottom-margin-18">Before we had hands on the equipment, we created a prototype out of cardboard boxes to replicate the interactions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="white-bg content-container remove-top-padding">
+        <div class="content-image">
+          <div id="image-container-hl-9" class="image-container-small">
+              <img id="image-item-hl-9" class="border-round" src="assets/hololens/hololens-testing.jpeg">
+          </div>
+          <h2 class="image-description">Testing the Bike Rotor Demo</h2>
+        </div>
+      </div>
+
+      <!-- Standard Content Module -->
+      <div class="gray-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h2 class="section-title">Deliverable</h2>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header"></h3>
+              <p class="body-style">After weeks of testing, we were able to refine the instructions into a simple procedure with low error rates. At around 10 minute mark, testers began feeling eye-strains and headaches from the device.</p>
+            </div>
+            <div class="content-block">
+              <h3 class="section-header">Better Coffee = Better Experience</h3>
+              <p class="body-style">Another insight we learned was that better coffee increased the overall satisfaction for the testers. In our final recommendation, we noted this for future client engagements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- large image container module -->
+      <div class="gray-bg content-container remove-top-padding">
+        <div class="content-image">
+          <div id="image-container-hl-10" class="image-container-small">
+              <img id="image-item-hl-10" class="border-round" src="assets/hololens/hololens-demo.gif">
+          </div>
+          <h2 class="image-description">Final Walkthrough</h2>
+        </div>
+      </div>
+
+      <!-- Small Quote Container Module -->
+      <div class="white-bg content-container">
+        <div class="content-inside">
+          <div class="item content-left">
+            <h3 class="small-quote">"How ironic that we made coffee everyday during our internship."</h3>
+          </div>
+          <div class="item content-right">
+            <div class="content-block">
+              <h3 class="section-header">Closing Thoughts</h3>
+              <p class="body-style">This project started with a small inspiration, fueled by supporters on campus, and realized through its limitations. Working alone– not in a team, made me appreciate how much more you can achieve when you are together. That’s why one of the successes of this project is that it lives beyond myself. Through the open-source library of designs and processes, this project will continue on and continue to grow. And in the future, I see it being even more impactful by combining both qualitative and quantitative insights.</p>
+              <br>
+              <p><i>Special thanks to Arnie Lund (Advisor), Gowri Shankur (Sponsor), and Andrea Neubert (Supervisor)</i></p>
+            </div>
+            <div class="content-block-end">
+              <h3 class="section-header">What's Next</h3>
+              <p class="body-style">This project is set to be created into a student assistant position in the Planning and Administration org. In addition,  Dr. Arnie Lund who was an advisor for this project is incorporating into the class he’s teaching: CSS 478 Usability and User-Centered Design in the Fall of 2020. Stay tuned for future updates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="gray-bg footer-content">
+          <div class="footer-statement">
+            <h3 class="footer-quote">Thanks</h3>
+            <p class="">You've reached the end of this story. To learn more about how I'm impacting the world, reach out at my email or on my socials.</p>
+          </div>
+          <div class="contact-info">
+            <p class="body-style">jdkim613(at)gmail.com</p>
+          </div>
+        </div>
+      </footer>
+
+
+      </div>
+
+    <script src="js/hololens.js"></script>
+    <!-- <script src="js/action.js"></script> -->
   </body>
 </html>

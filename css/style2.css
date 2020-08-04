@@ -231,7 +231,8 @@ header {
 
 /* Navigation */
 .header-content {
-  padding: 35px;
+  pointer-events: none;
+  padding: 35px 35px 0px;
   /* padding-left: 5%; */
   /* padding-right: 5%; */
   width: 90%;
@@ -243,6 +244,10 @@ header {
   top: 0;
   z-index: 2;
   border: 1px blue dotted;
+}
+
+.add-click {
+  pointer-events: auto;
 }
 
 .navigation-items {
@@ -272,7 +277,22 @@ img {
 .content-image {
   flex: none;
   align-self: center;
-  /* border: 1px green dashed; */
+  /* border: 10px green dashed; */
+}
+
+.content-image-double {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 1366px;
+}
+
+.image-item-double {
+  width: 35vw;
+}
+
+.content-image-double {
+
 }
 
 .content-image-squares {
@@ -284,12 +304,22 @@ img {
 
 .image-container {
   display: flex;
+  /* flex-direction: column; */
   border-radius: 6px;
   box-sizing: content-box;
   max-height: 540px;
   min-width: 1366px;
   max-width: 1366px;
   /* border: red 2px dashed; */
+}
+
+.image-container-small {
+  overflow: hidden;
+  border-radius: 6px;
+  box-sizing: content-box;
+  max-height: 540px;
+  max-width: 50vw;
+  border: 5px dashed pink;
 }
 
 .image-container-1 {
@@ -412,7 +442,7 @@ img {
 .body-content {
   display: flex;
   flex-direction: column;
-  padding: 72px 0px;
+  padding: 72px 0px 0px;
   position: absolute;
   width: 100%;
   border: #ad03fc 1px dashed;
@@ -652,15 +682,31 @@ img {
   margin-bottom: 96px;
 }
 
+.bottom-margin-18 {
+  margin-bottom: 18px;
+}
+
+.bottom-margin-24 {
+  margin-bottom: 24px;
+}
+
 .add-top-margin {
   margin-top: 24px;
+}
+
+.remove-top-margin {
+  margin-top: 0px;
+}
+
+.remove-top-padding {
+  padding-top: 0px;
 }
 
 .stat-item {
   border: orange 1px dashed;
 }
 
-.stat-item h3 {
+.stat-item h3, .stat-item p {
   text-align: center;
 }
 
@@ -672,4 +718,44 @@ img {
   line-height: 124px;
   margin-bottom: 36px;
   text-align: center;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+
+}
+
+.footer-content {
+  width: 1366px;
+  display: flex;
+  justify-content: space-between;
+  padding: 96px 0px;
+  height: 30vh;
+  border: 3px dashed blue;
+}
+
+.footer-statement {
+  width: 20vw;
+  border: red 1px dashed;
+}
+
+.footer-statement p {
+  font-size: 1rem;
+}
+
+.footer-quote {
+  font-family: freight-display-pro, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0px 0px 18px;
+  color: #4F4F4F;
+}
+
+.contact-info {
+  text-align: right;
+  width: 15vw;
+  border: red 1px dashed;
 }
