@@ -2,14 +2,14 @@ div {
   border: none !important;
 }
 
-.homepage-image {
+.homepage-image-container {
   height: 100%;
   width: 100%;
   position: relative;
   z-index: -0;
 }
 
-.homepage-image {
+#homepage-image-0 {
   position: absolute;
   object-fit: contain;
   height: 60vh;
@@ -23,27 +23,27 @@ span#homepage-header:before {
 
 @keyframes animate {
   0% {
-    content: 'Design, because it matters.';
+    content: 'design, because it matters.';
   }
 
   20% {
-    content: 'Bridge the divide between people.';
+    content: 'bridge the divide between people.';
   }
 
   40% {
-    content: 'Make something unforgettable.';
+    content: 'make something unforgettable.';
   }
 
   60% {
-    content: 'Thrive under constraints.';
+    content: 'thrive under constraints.';
   }
 
   80% {
-    content: 'Diversity → Inclusion → Equity → Justice';
+    content: 'change the world for us';
   }
 
   100% {
-    content: 'Design, because it matters.';
+    content: 'design, because it matters.';
   }
 }
 
@@ -56,6 +56,10 @@ span#homepage-header:before {
 }
 
 /* Landing Page */
+#homepage-head {
+  font-size: 1.5rem;
+}
+
 #homepage-header {
   font-size: 1.5rem;
 }
@@ -69,8 +73,9 @@ span#homepage-header:before {
 
 .homepage-title {
   display: flex;
+  flex-direction: column;
   min-width: 1372px;
-  margin: 25vh 0vw;
+  margin: 25vh 0vw;;
   border: red 1px dashed;
 }
 

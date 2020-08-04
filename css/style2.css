@@ -8,6 +8,11 @@ div {
   /* width: 5vw; */
 }
 
+*::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
 .selected {
   color: #3190FF;
 }
