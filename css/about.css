@@ -1,0 +1,32 @@
+.head-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 3px green dashed;
+}
+
+.body-content {
+  margin-top: 0px;
+}
+
+#head {
+  width: 15vw;
+  margin-bottom: 5vh;
+  margin-right: 15vw;
+}
+
+.profile {
+  width: 30vw;
+}
+
+.profile-quote {
+  font-family: freight-display-pro, serif;
+  /* text-align: center; */
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0px 0px 36px;
+  color: #4F4F4F;
+}

@@ -76,7 +76,10 @@ span#homepage-header:before {
 
 .project-item {
   font-size: 1rem;
+  padding-bottom: .2vh;
   margin-bottom: .5vh;
+  line-height: 18px;
+  /* border: 1px dashed green; */
 }
 
 #project-title {

@@ -1,18 +1,54 @@
 $(document).ready(function() {
   console.log("it works")
 
+  // change face
+  $('#head').on('mouseover', function() {
+    $('#head').attr('src', 'assets/face-1.png');
+  }).on('mouseleave', function() {
+    $('#head').attr('src', 'assets/face-0.png');
+  })
+
   // Project Toggle
   $('.project-item').on('mouseover', function() {
 
     $('#project-title, #project-attr').css('display', 'block'); // show the hidden block
     var thisMouse = this.id; // assign id value
     changeProjectTitle(thisMouse); // change the title based on the value
-
+    appendEmoji(thisMouse);
   }).on('mouseleave', function() {
-
+    var thisMouse = this.id;
     $('#project-title, #project-attr').css('display', 'none');
-
+    removeEmoji(thisMouse);
   })
+
+  function appendEmoji(project) {
+    var appendThis;
+
+    switch(project) {
+      case 'project1':
+        appendThis = " 😎";
+        break;
+
+      case 'project2':
+        appendThis = " 👤";
+        break;
+
+      case 'project3':
+        appendThis = " 🏆";
+        break;
+    }
+
+    console.log("appendThis called! + " + project);
+    $("#" + project).append(appendThis);
+  };
+
+  function removeEmoji(project) {
+    var removedEmoji = $("#" + project).text(function(_,txt) {
+      return txt.slice(0, -2);
+    })
+
+    console.log("new string" + removedEmoji);
+  }
 
   function changeProjectTitle(project) {
 

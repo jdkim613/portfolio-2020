@@ -3,6 +3,11 @@ div {
   border: none !important;
 }
 
+#logo {
+  width: 3vw;
+  /* width: 5vw; */
+}
+
 .selected {
   color: #3190FF;
 }
