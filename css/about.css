@@ -17,6 +17,12 @@
   }
 } */
 
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+  .profile-quote {
+    font-size: 3rem !important;
+  }
+}
+
 .head-container {
   position: relative;
   height: 100vh;

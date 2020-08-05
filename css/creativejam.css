@@ -49,3 +49,16 @@
 #share-separate {
   margin: 0px;
 }
+
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+  #image-container-cjstory {
+    max-height: 530px;
+  }
+
+  #image-item-cj-0 {
+    max-width: 80vw;
+    height: 370px;
+    object-fit: contain;
+    /* border: 3px green solid; */
+  }
+}

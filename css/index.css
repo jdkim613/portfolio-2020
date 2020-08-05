@@ -1,5 +1,22 @@
 div {
-  /* border: none !important; */
+  border: none !important;
+}
+
+body {
+  margin: auto;
+  justify-content: center;
+  border: 2px dashed red;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1000px) {
+  .content-container-index {
+    width: 70vw;
+    margin: auto;
+  }
+}
+
+.content-container-index {
+  border: 2px dashed orange;
 }
 
 .homepage-image-container {
@@ -74,8 +91,13 @@ span#homepage-header:before {
 .homepage-title {
   display: flex;
   flex-direction: column;
-  min-width: 1372px;
+  min-width: 80vw;
   margin: 25vh 0vw;;
+  border: red 1px dashed;
+}
+
+.content-inside {
+  width: 80vw;
   border: red 1px dashed;
 }
 
@@ -85,6 +107,10 @@ span#homepage-header:before {
   margin-bottom: .5vh;
   line-height: 18px;
   /* border: 1px dashed green; */
+}
+
+.project-details {
+  margin-right: 0px;
 }
 
 #project-title {

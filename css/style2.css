@@ -311,7 +311,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  min-width: 1366px;
+  min-width: 1370px;
 }
 
 .image-item-double {
@@ -335,8 +335,8 @@ img {
   border-radius: 6px;
   box-sizing: content-box;
   max-height: 540px;
-  min-width: 1366px;
-  max-width: 1366px;
+  min-width: 1370px;
+  max-width: 1370px;
   /* border: red 2px dashed; */
 }
 
@@ -581,7 +581,7 @@ img {
   align-self: center;
   margin: 0px 0px;
   width: 100%;
-  max-width: 1366px;
+  max-width: 80vw;
   border: blue 1px dashed;
 }
 
@@ -600,7 +600,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
-  max-width: 1372px;
+  max-width: 1370px;
 }
 
 .content-row div {
@@ -801,14 +801,14 @@ footer {
 }
 
 .footer-container {
-  width: 1366px;
+  width: 1370px;
   display: flex;
   flex-direction: column;
   padding: 96px 0px;
 }
 
 .footer-content {
-  width: 1366px;
+  width: 1370px;
   display: flex;
   justify-content: space-between;
   height: 30vh;
@@ -848,4 +848,99 @@ footer {
 .social-icons {
   width: 1.75vw;
   margin-left: .75vw;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+
+  .body-style {
+    font-size: .9rem;
+  }
+
+  .title-content {
+    min-width: 35vw;
+  }
+
+  .subtitle-type {
+
+  }
+
+  .image-container {
+    min-width: 60vw;
+    max-width: 80vw;
+  }
+
+  .content-container {
+    width: 90vw;
+  }
+
+  .content-left {
+    width: 20vw;
+    margin-right: 10vw;
+  }
+
+  .content-right {
+    width: 50vw;
+  }
+
+  .perspective-container {
+    /* max-width: 100%; */
+  }
+
+  .perspective-statement {
+    font-size: 3rem;
+  }
+
+  img {
+    max-width: 80vw;
+  }
+
+  #image-container-pc-02 {
+    width: 80vw;
+  }
+
+  .image-container-1 {
+    max-width: 80vw;
+}
+
+  .content-image {
+    width: 80vw;
+  }
+
+  .content-image-double {
+    min-width: 0px;
+    width: 80vw;
+  }
+
+  .small-quote {
+    font-size: 3rem;
+  }
+
+  .footer-container {
+    width: 80vw;
+  }
+
+  .footer-content {
+    width: 100%;
+  }
+
+  .stat-content {
+    width: 80vw;
+  }
+
+  .title-inblock {
+    width: 80vw;
+  }
+
+  .quote-blocks {
+    width: 80vw;
+  }
+
+  .image-content-left {
+    width: 20vw;
+    margin-right: 20vw;;
+  }
+
+  .content-right-2 {
+    width: 40vw;
+  }
 }
