@@ -302,8 +302,15 @@ img {
 }
 
 .content-image {
-  flex: none;
+  flex: center;
   align-self: center;
+  /* border: 10px green dashed; */
+}
+
+.content-image-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* border: 10px green dashed; */
 }
 
@@ -874,12 +881,12 @@ footer {
   }
 
   .content-left {
-    width: 20vw;
+    width: 30vw;
     margin-right: 10vw;
   }
 
   .content-right {
-    width: 50vw;
+    width: 40vw;
   }
 
   .perspective-container {
