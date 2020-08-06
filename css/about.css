@@ -21,6 +21,10 @@
   .profile-quote {
     font-size: 3rem !important;
   }
+
+  .profile {
+    width: 50vw !important;
+  }
 }
 
 .head-container {
