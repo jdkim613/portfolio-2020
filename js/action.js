@@ -31,17 +31,46 @@ $(document).ready(function() {
   document.body.removeChild(el);
 };
 
+  // more project nav
+  $('#more-projects').on('click', function() {
+
+    console.log('clicked for more');
+
+    // $('.more-projects-nav').toggleClass('disappear');
+    $('.more-projects-nav').toggleClass('slide-appear');
+    $('.sliding-nav').toggleClass('no-event');
+    $('body').toggleClass('fixed-position');
+    $('.header-content > *').toggleClass('white-font');
+
+    // if ($('.more-projects-nav').hasClass('slide-appear') == false) {
+    //
+    // } else {
+    //   $('.header-content > *').removeClass('white-font');
+    // }
+  })
+
   // Project Toggle
   $('.project-item').on('mouseover', function() {
 
     $('#project-title, #project-attr').css('display', 'block'); // show the hidden block
+    $('#project-title-index, #project-attr-index').css('display', 'block');
     var thisMouse = this.id; // assign id value
     changeProjectTitle(thisMouse); // change the title based on the value
     appendEmoji(thisMouse);
+
+
+    $('#nav-image-container').addClass('fade-in'); // make visible
+    $('#nav-image-container').css('opacity', '1');
+
   }).on('mouseleave', function() {
     var thisMouse = this.id;
     $('#project-title, #project-attr').css('display', 'none');
+    $('#project-title-index, #project-attr-index').css('display', 'none');
     removeEmoji(thisMouse);
+
+    $('#nav-image-container').toggleClass('fade-in'); // make invisible
+    $('#nav-image-container').css('opacity', '0');
+
   })
 
   function appendEmoji(project) {
@@ -77,23 +106,27 @@ $(document).ready(function() {
 
     var projectTitle;
     var projectAttr;
+    var projectImg;
 
     switch(project) {
       case 'project1':
         projectTitle = 'Internship – 10 Weeks';
         projectAttr = 'UX, XR, Consulting';
+        projectImg = 'assets/hololens-project.png';
         console.log('project 1 selected');
         break;
 
       case 'project2':
         projectTitle = 'Independent Project – 12 Weeks';
         projectAttr = 'Design Research';
+        projectImg = 'assets/persona-project.png';
         console.log('project 2 selected');
         break;
 
       case 'project3':
         projectTitle = 'Creative Jam – 48 Hours';
         projectAttr = 'Experience Design';
+        projectImg = 'assets/creativejam-project.png';
         console.log('project 3 selected');
         break;
       case 'project4':
@@ -103,8 +136,9 @@ $(document).ready(function() {
         break;
     }
 
-    $('#project-title').text(projectTitle);
-    $('#project-attr').text(projectAttr);
+    $('#project-title, #project-title-index').text(projectTitle);
+    $('#project-attr, #project-attr-index').text(projectAttr);
+    $('#nav-project-image').attr('src', projectImg);
 
   }
 

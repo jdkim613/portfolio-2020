@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   </head>
- 
+
   <header>
     <div class="header-content">
       <div class="add-click">
@@ -17,16 +17,56 @@
         </a>
       </div>
       <div class="navigation-items add-click">
-        <a href="about.html">
-          <div class="about-page">
-            <h3>Bio</h3>
+        <div class="navigation-item">
+          <a href="about.html">
+            <div class="about-page">
+              <h3>Bio</h3>
+            </div>
+          </a>
+        </div>
+        <div class="navigation-item">
+          <div id="more-projects">
+            <h3>+</h3>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </header>
 
   <body>
+    <!-- more projects nav -->
+    <div class="sliding-nav no-event">
+      <div class="more-projects-nav slide-appear">
+        <div class="more-projects-content">
+          <div class="content-inside white-font">
+            <div class="content-left project-items">
+              <a href="hololens.html">
+                <p id="project1" class="project-item">XR Demo</p>
+              </a>
+              <a href="persona.html">
+                <p id="project2" class="project-item">Student Personas</p>
+              </a>
+              <a href="creativejam.html">
+                <p id="project3" class="project-item">AdobeXAirbnb</p>
+              </a>
+            </div>
+            <div class="content-right project-details">
+              <p id="project-title">Internship – 10 Weeks</p>
+              <p id="project-attr">UX, XR, Consulting</p>
+            </div>
+          </div>
+          <div class="content-inside white-font">
+            <div class="content-left"></div>
+            <div class="content-right">
+              <div id="nav-image-container">
+                <img id="nav-project-image" src="assets/hololens-project.png"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Homepage Module -->
     <div class="white-bg content-container-index remove-bottom-margin">
 
@@ -60,8 +100,8 @@
           </a> -->
         </div>
         <div class="content-right project-details">
-          <p id="project-title">Internship – 10 Weeks</p>
-          <p id="project-attr">UX, XR, Consulting</p>
+          <p id="project-title-index">Internship – 10 Weeks</p>
+          <p id="project-attr-index">UX, XR, Consulting</p>
         </div>
       </div>
     </div>

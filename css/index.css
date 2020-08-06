@@ -105,28 +105,3 @@ span#homepage-header:before {
   justify-content: space-between;
   border: red 1px dashed;
 }
-
-.project-item {
-  font-size: 1rem;
-  padding-bottom: .2vh;
-  margin-bottom: .5vh;
-  line-height: 18px;
-  /* border: 1px dashed green; */
-}
-
-.project-details {
-  width: 30vw;
-  margin-right: 0px;
-}
-
-#project-title {
-  display: none;
-  font-size: 1rem;
-}
-
-#project-attr {
-  display: none;
-  font-style: italic;
-  font-size: 1rem;
-  color: #5A5A5A;
-}

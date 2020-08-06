@@ -7,6 +7,8 @@
     <link  rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
+
+
   <header>
     <div class="header-content">
       <div class="add-click">
@@ -15,16 +17,57 @@
         </a>
       </div>
       <div class="navigation-items add-click">
-        <a href="about.html">
-          <div class="about-page">
-            <h3>Bio</h3>
+        <div class="navigation-item">
+          <a href="about.html">
+            <div class="about-page">
+              <h3>Bio</h3>
+            </div>
+          </a>
+        </div>
+        <div class="navigation-item">
+          <div id="more-projects">
+            <h3>+</h3>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </header>
 
   <body>
+
+    <!-- more projects nav -->
+    <div class="sliding-nav no-event">
+      <div class="more-projects-nav slide-appear">
+        <div class="more-projects-content">
+          <div class="content-inside white-font">
+            <div class="content-left project-items">
+              <a href="hololens.html">
+                <p id="project1" class="project-item">XR Demo</p>
+              </a>
+              <a href="persona.html">
+                <p id="project2" class="project-item">Student Personas</p>
+              </a>
+              <a href="creativejam.html">
+                <p id="project3" class="project-item">AdobeXAirbnb</p>
+              </a>
+            </div>
+            <div class="content-right project-details">
+              <p id="project-title">Internship – 10 Weeks</p>
+              <p id="project-attr">UX, XR, Consulting</p>
+            </div>
+          </div>
+          <div class="content-inside white-font">
+            <div class="content-left"></div>
+            <div class="content-right">
+              <div id="nav-image-container">
+                <img id="nav-project-image" src="assets/hololens-project.png"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="body-content remove-top-padding">
 
       <div class="head-container">
@@ -38,13 +81,13 @@
           <p class="body-style bottom-margin-18">I believe inclusive designs are the principles that bring us closer to those that are different from us. Inclusion isn't just about race, gender, or wealth– it's also saying "hello" to new friends who are alone. I became a designer so that I can help solve these problems at scale and empower people who just need a little boost.</p>
           <p class="body-style bottom-margin-24">Do something crazy!</p>
           <div class="social-icon-row-0">
-            <a href="https://www.linkedin.com/in/jdkim613/">
+            <a target="_blank" href="https://www.linkedin.com/in/jdkim613/">
               <img class="social-icons-0" class src="assets/social/linkedin-icon.png"></img>
             </a>
-            <a href="https://www.instagram.com/johnjkim.me/">
+            <a target="_blank" href="https://www.instagram.com/johnjkim.me/">
               <img class="social-icons-0" class src="assets/social/twitter-icon.png"></img>
             </a>
-            <a href="https://twitter.com/johnjkim_me">
+            <a target="_blank" href="https://twitter.com/johnjkim_me">
               <img class="social-icons-0" class src="assets/social/insta-icon.png"></img>
             </a>
           </div>

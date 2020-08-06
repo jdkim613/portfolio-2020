@@ -3,7 +3,13 @@
 }
 
 #image-item-hololens-header {
+  top: 10vh;
+  width: 60vw;
+}
 
+.body-content {
+  padding-top: 0px;
+  /* position: relative; */
 }
 
 .title-image {
