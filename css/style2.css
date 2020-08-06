@@ -568,7 +568,7 @@ img {
 .content-container-index {
   display: flex;
   flex-direction: column;
-  padding: 96px 0px 96px 0px;
+  padding: 96px 0px 72px 0px;
 
   /* Inside Auto Layout */
   flex: none;
@@ -857,7 +857,7 @@ footer {
   margin-left: .75vw;
 }
 
-@media screen and (max-width: 1300px) and (min-width: 800px) {
+@media screen and (max-width: 1500px) and (min-width: 800px) {
 
   .body-style {
     font-size: .9rem;
