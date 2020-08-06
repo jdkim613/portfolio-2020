@@ -1,6 +1,6 @@
 /* General CSS */
 div {
-  /* border: none !important; */
+  border: none !important;
 }
 
 #logo {
@@ -912,7 +912,14 @@ footer {
   .content-image {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80vw;
+  }
+
+  .content-image-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
   }
 
   .content-image-double {

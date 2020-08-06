@@ -1,5 +1,5 @@
 div {
-  border: none !important;
+  /* border: none !important; */
 }
 
 body {
@@ -115,6 +115,7 @@ span#homepage-header:before {
 }
 
 .project-details {
+  width: 30vw;
   margin-right: 0px;
 }
 

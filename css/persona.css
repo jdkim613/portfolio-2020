@@ -29,14 +29,10 @@ body {
 
 .image-container {
   box-sizing: content-box;
-  min-height: 450px;
-  max-height: 450px;
-  min-width: 1366px;
-  max-width: 1366px;
 }
 
 .image-container-1 {
-  max-width: 1000px;
+  max-width: 80vw;
 }
 
 .small-image {
