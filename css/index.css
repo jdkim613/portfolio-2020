@@ -93,7 +93,8 @@ span#homepage-header:before {
 .homepage-title {
   display: flex;
   flex-direction: column;
-  min-width: 80vw;
+  width: 80vw;
+  max-width: 1370px;
   margin: 25vh 0vw;;
   border: red 1px dashed;
 }
