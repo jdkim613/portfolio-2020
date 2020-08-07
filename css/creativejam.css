@@ -37,6 +37,7 @@
 
 #image-item-cj-0 {
   width: 80vw;
+  max-width: 1370px;
   top: -5px;
   outline: 8px white solid;
   outline-offset: -2px;

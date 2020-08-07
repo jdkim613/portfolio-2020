@@ -33,6 +33,7 @@ body {
 
 .image-container-1 {
   max-width: 80vw;
+  max-width: 1200px;
 }
 
 .small-image {
