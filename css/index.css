@@ -6,6 +6,7 @@ body {
   margin: auto;
   /* display: flex; */
   justify-content: center;
+  position: relative;
   /* border: 2px dashed red; */
 }
 
@@ -18,14 +19,30 @@ body {
 
 .content-container-index {
   width: 100vw;
-  border: 2px dashed orange;
 }
 
 .homepage-image-container {
   height: 100%;
   width: 100%;
+  z-index: 0;
+  /* position: absolute; */
+}
+
+#homepage-image-2 {
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+  right: 0;
+  border-radius: 0px 0px 0px 0px;
+  background-image: linear-gradient(to bottom, transparent 50%, black 100%), url("../assets/home-1.jpg");
+  background-size: cover;
+}
+
+#homepage-image-2::after {
+  display: block;
   position: relative;
-  z-index: -0;
+  height: 100%;
+  
 }
 
 #homepage-image-0 {
@@ -34,13 +51,16 @@ body {
   height: 40vh;
   left: 30vw;
   top: 10vw;
+
 }
 
 span#homepage-header:before {
   content: '';
-  animation: animate infinite 10s;
+  /* animation: animate infinite 10s; */
 }
 
+/* obsolete */
+/* 
 @keyframes animate {
   0% {
     content: 'design, because it matters.';
@@ -65,7 +85,7 @@ span#homepage-header:before {
   100% {
     content: 'design, because it matters.';
   }
-}
+} */
 
 .title-image {
   position: absolute;
@@ -88,7 +108,6 @@ span#homepage-header:before {
   margin-top: 10vh;
   display: flex;
   justify-content: center;
-  border: 4px pink dashed;
 }
 
 .homepage-title {
@@ -97,7 +116,6 @@ span#homepage-header:before {
   width: 80vw;
   max-width: 1370px;
   margin: 25vh 0vw;;
-  border: red 1px dashed;
 }
 
 .content-inside {
@@ -105,5 +123,6 @@ span#homepage-header:before {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: red 1px dashed;
+  position: relative;
+  z-index: 1;
 }

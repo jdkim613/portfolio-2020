@@ -40,7 +40,12 @@ $(document).ready(function() {
     $('.more-projects-nav').toggleClass('slide-appear');
     $('.sliding-nav').toggleClass('no-event');
     $('body').toggleClass('fixed-position');
-    $('.header-content > *').toggleClass('white-font');
+
+    if(!$('.navigation-items').hasClass('white-font')) {
+      $('.navigation-item').addClass('white-font');
+    } else {
+      $('.navigation-item').removeClass('white-font');
+    }
 
     // if ($('.more-projects-nav').hasClass('slide-appear') == false) {
     //
