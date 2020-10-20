@@ -5,17 +5,18 @@ $(document).ready(function() {
 
   // change face
   $('#head').on('mouseover', function() {
-    $('#head').attr('src', 'assets/face-1.png');
+    $('#email-copied').text('Click me...');
   }).on('mouseleave', function() {
     $('#head').attr('src', 'assets/face-0.png');
-    $('#email-copied').css('display', 'none');
+    $('#email-copied').text('Hover me...');
   })
 
 
   // email copy
   $('#head').on('click', function() {
+    $('#head').attr('src', 'assets/face-1.png');
     emailToClipboard('jdkim613@gmail.com');
-    $('#email-copied').css('display', 'block');
+    $('#email-copied').text('Email copied!');
   })
 
 

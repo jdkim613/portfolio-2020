@@ -7,8 +7,8 @@ $(document).ready(function() {
     $('#homepage-head').text('We can–');
   })
 
-  var bgImage = ['assets/home-1.jpg', 'assets/home-2.jpg', 'assets/home-3.jpg', 'assets/home-4.jpg','assets/home-5.jpg'];
-  var homeString = ['design, because it matters.','design, because it farts.', 'make something unforgettable.', 'thrive under constraints.', 'change the world.']
+  var bgImage = ['assets/home-1.jpg', 'assets/home-2.jpg', 'assets/home-3.jpg', 'assets/home-4.jpg','assets/home-5.jpg', 'assets/home-0.jpg'];
+  var homeString = ['design, because it matters.','thrive under constraints.', 'understand real lives.', 'make something unforgettable.', 'define moments that matter.', 'bridge the gap between people.']
   var imageHead = document.getElementById('homepage-image-2');
   var imageInt = 0;
 
