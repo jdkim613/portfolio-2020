@@ -34,7 +34,7 @@ body {
   width: 50vw;
   right: 0;
   border-radius: 0px 0px 0px 0px;
-  background-image: linear-gradient(to bottom, transparent 50%, black 100%), url("../assets/home-1.jpg");
+  background-image: linear-gradient(to bottom, transparent 50%, black 100%), url("../assets/home-0.jpg");
   background-size: cover;
 }
 
