@@ -20,7 +20,7 @@ $(document).ready(function() {
         if (imageInt == bgImage.length) {
           imageInt =  0;
         }
-  }, 3000);
+  }, 5000);
 
 
 })
