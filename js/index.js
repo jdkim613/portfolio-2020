@@ -1,4 +1,16 @@
 $(document).ready(function() {
+
+  if($(window).width() > 812) {
+    $('#dummy-target-web').attr('id', 'homepage-image-2');
+    $('#web-title-target').attr('id', 'homepage-header');
+    console.log('web id entered');
+  } else {
+    $('#dummy-target-mobile').attr('id', 'homepage-image-2');
+    $('#mobile-title-target').attr('id', 'homepage-header');
+    console.log('mobile id entered');
+  }
+
+
   // change face
   $('#homepage-head').on('mouseover', function() {
     console.log('you are here');
@@ -21,7 +33,5 @@ $(document).ready(function() {
           imageInt =  0;
         }
   }, 5000);
-
-
 })
 

@@ -1072,7 +1072,7 @@ footer {
   margin-left: 1vw;
 }
 
-@media screen and (max-width: 1500px) and (min-width: 800px) {
+@media screen and (max-width: 1500px) and (min-width: 813px) {
 
   .overview-items {
     flex-wrap: wrap;
@@ -1184,5 +1184,19 @@ footer {
 
   .content-right-2 {
     width: 40vw;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .black-bg:before{
+    width: 100%;
+  } 
+
+  .gray-bg:before {
+    width: 100%;
+  }
+
+  .white-bg:before {
+    width: 100%;
   }
 }
