@@ -311,6 +311,7 @@ header {
   padding-bottom: .2vh;
   margin-bottom: .5vh;
   line-height: 18px;
+  min-width: 100%;
   /* border: 1px dashed green; */
 }
 

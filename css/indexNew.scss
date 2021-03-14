@@ -1,0 +1,142 @@
+body {
+    background-color: black;
+    cursor: url("../assets/cursor-white.png"), pointer;
+}
+
+#main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px red dashed;
+}
+
+#statement-container {
+    width: 90vw;
+    border: 2px orange dashed;
+}
+
+#home-statement {
+    color: white;
+    font-family: degular;
+    font-size: 6rem;
+    font-weight: 100;
+    margin: 96px 0px 24px;
+}
+
+#personal-statement {
+    color: #FFFFFF;
+    opacity: 60%;
+    font-family: degular;
+    // font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 300;
+
+}
+
+#project-container {
+    width: 90vw;
+    margin-top: 7.5vh;
+    border: 1px orange dashed;
+}
+
+#project-label {
+    color: #FFFFFF;
+    font-family: Degular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+#project-contents {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    justify-content: space-between;
+
+    border: 2px green dotted;
+}
+
+#project-list {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+
+    border: 1px blue dotted;
+}
+
+#project-information {
+    width: 50vw;
+
+    border: 1px blue dotted;
+}
+
+#project-information * {
+    font-family: degular;
+    color: #FFFFFF;
+}
+
+#project-information p:nth-child(2){
+    opacity: 60%;
+}
+
+.project-content {
+    padding: 12px 0px 0px 12px;
+    height: 10vh;
+    width: .75vw;
+    background-color: #FFFFFF;
+    margin-right: 12px;
+    cursor: url("../assets/cursor-circle.png"), pointer;
+
+    // transform: scaleX(1);
+
+    border: 1px green dashed;
+}
+
+.project-name {
+    font-family: degular;
+    font-weight: 100;
+    font-size: 1.25rem;
+    opacity: 0%;
+}
+
+*::selection {
+    background: #FFFFFF;
+    color: #000000;
+  }
+
+  .cursor-here {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #FFF;
+      transition: .2s ease-out;
+      pointer-events: none;
+      mix-blend-mode: difference;
+  }
+
+  h1:hover ~ .cursor-here {
+    transform: scale(40);
+  }
+
+  #landing-footer {
+      width: 90vw;;
+      position: absolute;
+      bottom: 36px;
+      display: flex;
+      justify-content: flex-end;
+
+      border: 1px green dashed;
+  }
+
+  #landing-footer-text {
+      color: #FFF;
+      font-family: Degular;
+      text-transform: uppercase;
+      opacity: 40%;
+      border: 1px blue dashed;
+  }

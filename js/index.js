@@ -10,6 +10,58 @@ $(document).ready(function() {
     console.log('mobile id entered');
   }
 
+  $('.project-content').on('mouseover', function() {
+
+    var thisMouse = this.id; // assign id value
+    TweenMax.to(this, 1, {width: '15vw', transformOrigin:"left", ease: "circ.out"});
+    showProjectTitle(thisMouse, true); // show project inside .project-content
+    
+
+  }).on('mouseleave', function() {
+
+    var thisMouse = this.id; // assign id value
+    TweenMax.to(this, 1, {width: '.75vw', ease: "circ.out"});
+    showProjectTitle(thisMouse, false); // hide project inside .project-content
+
+  })
+
+  function showProjectTitle(projectID, onSwitch) {
+
+    var selectedProject = '';
+
+    switch(projectID) {
+      case 'project1':
+        selectedProject = document.querySelectorAll('#project1-name');
+        console.log('selectedProject is 1');
+        break;
+
+      case 'project2':
+        selectedProject = document.querySelectorAll('#project2-name');
+        console.log('selectedProject is 2');
+        break;
+
+      case 'project3':
+        selectedProject = document.querySelectorAll('#project3-name');
+        console.log('selectedProject is 3');
+        break;
+
+    }
+
+    if(onSwitch == true) {
+      TweenMax.to(selectedProject, .75, {opacity: '100%', ease: "circ.out"}); // animate project content
+      console.log('selectedProject is ' + projectID);
+    } else {
+      TweenMax.to(selectedProject, .75, {opacity: '0%', ease: "circ.out"}); // animate project content
+    }
+  }
+
+  // Custom cursor for main statements
+  const cursorRound = document.querySelector('.cursor-here');
+  document.addEventListener('mousemove', (e) => {
+    cursorRound.style.left = e.pageX + 'px';
+    cursorRound.style.top = e.pageY + 'px';
+  })
+
 
   // change face
   $('#homepage-head').on('mouseover', function() {

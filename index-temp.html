@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <link rel="stylesheet" href="css/style2.css">
-  <link rel="stylesheet" href="css/indexNew.scss">
+  <link rel="stylesheet" href="css/index.css">
   <title> John J. Kim | Design </title>
   <link rel='icon' href='assets/logo.ico' type='image/x-icon' />
   <link rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
@@ -15,7 +15,7 @@
   <div class="header-content">
     <div class="add-click">
       <a href="index.html">
-        <img id="logo" src="assets/logo-2020-2.png"></img>
+        <img id="logo" src="assets/logo.png"></img>
       </a>
     </div>
     <div class="navigation-items add-click white-font">
@@ -72,50 +72,75 @@
   </div>
 
   <!-- Homepage Module -->
-  <div id='main-container'>
-        <div id='statement-container'>
-            <h1 id='home-statement'>To design is to change the flowing behavior of a person, a group, or the society in a given time and space.</h1>
-            <p id='personal-statement'>I create spaces and places (physically and conceptually) where people can feel included, inspired, and incredible.</p>
-            <div class='cursor-here'></div>
+  <div class="white-bg content-container-index remove-bottom-margin">
+
+    <!-- image -->
+    <div class="homepage-image-container">
+      <!-- <img id="homepage-image-0" src="assets/doodle-1.png"></img> -->
+      <!-- <div id="homepage-image-2">hello</div> -->
+    </div>
+
+    <!-- web -->
+    <div class="mobile-off homepage-content">
+      <div class="homepage-title">
+        <p id="homepage-head">We can–
+          <br>
+        </p>
+        <p><span id="web-title-target">bridge the divide between people.</span></p>
+      </div>
+    </div>
+    <div class="mobile-off content-inside">
+      <div class="content-left project-items">
+        <a href="hololens.html">
+          <a href="creativejam.html">
+            <p id="project3" class="project-item">AdobeXAirbnb</p>
+        <a href="persona.html">
+          <p id="project2" class="project-item">Student Personas</p>
+        </a>
+        </a>
+          <p id="project1" class="project-item">XR Demo</p>
+        </a>
+        <!-- <a href="">
+            <p id="project4" class="project-item">Student Elections</p>
+          </a> -->
+      </div>
+      <div class="content-right project-details white-font">
+        <p id="project-title-index">Internship – 10 Weeks</p>
+        <p id="project-attr-index">UX, XR, Consulting</p>
+      </div>
+    </div>
+
+    <!-- mobile -->
+    <div class="mobile-on homepage-content">
+      <div id="dummy-target-mobile" class="mobile-on"></div>
+      <div class="content-inside">
+        <div class="homepage-title">
+          <p id="homepage-head">We can–
+            <br>
+          </p>
+          <p><span id="mobile-title-target">bridge the divide between people.</span></p>
         </div>
-        <div id='project-container'>
-            <h3 id='project-label'>Spaces</h3>
-            <div id='project-contents'>
-                <div id='project-list'>
-                    <a href='creativejam.html'>
-                        <div id="project3" class='project-content'>
-                            <p id='project3-name' class='project-name'>AdobeXAirbnb</p>
-                        </div>
-                    </a>
-                    <a href='persona.html'>
-                        <div id="project2" class='project-content'>
-                            <p id='project2-name'  class='project-name'>Student Personas</p>
-                        </div>
-                    </a>
-                    <a href='hololens.html'>
-                        <div id="project1" class='project-content'>
-                            <p id='project1-name'  class='project-name'>HoloLens Demo</p>
-                        </div>
-                    </a>
-                </div>
-                <div id='project-information'>
-                    <p id="project-title">Internship – 10 Weeks</p>
-                    <p id="project-attr">UX, XR, Consulting</p>
-                </div>
-            </div>
+        <div class="project-items">
+          <a href="creativejam.html">
+            <p id="project3" class="project-item">AdobeXAirbnb</p>
+          </a>
+          <a href="persona.html">
+            <p id="project2" class="project-item">Student Personas</p>
+          </a>
+          <a href="hololens.html">
+            <p id="project1" class="project-item">XR Demo</p>
+          </a>
+          <!-- <a href="">
+              <p id="project4" class="project-item">Student Elections</p>
+            </a> -->
         </div>
+      </div>
+    </div>
+
   </div>
-  
 
   <script src="js/index.js"></script>
   <script src="js/action.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
 </body>
-
-<footer>
-  <div id='landing-footer'>
-    <p id='landing-footer-text'>Designed & Coded by Jusung</p>
-  </div>
-</footer>
 
 </html>

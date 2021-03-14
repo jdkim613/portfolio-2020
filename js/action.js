@@ -47,32 +47,29 @@ $(document).ready(function() {
     } else {
       $('.navigation-item').removeClass('white-font');
     }
-
-    // if ($('.more-projects-nav').hasClass('slide-appear') == false) {
-    //
-    // } else {
-    //   $('.header-content > *').removeClass('white-font');
-    // }
   })
 
   // Project Toggle
-  $('.project-item').on('mouseover', function() {
+  $('.project-item, .project-content').on('mouseover', function() {
 
     $('#project-title, #project-attr').css('display', 'block'); // show the hidden block
     $('#project-title-index, #project-attr-index').css('display', 'block');
     var thisMouse = this.id; // assign id value
     changeProjectTitle(thisMouse); // change the title based on the value
-    appendEmoji(thisMouse);
+
+    // appendEmoji(thisMouse);
 
 
     $('#nav-image-container').addClass('fade-in'); // make visible
     $('#nav-image-container').css('opacity', '1');
 
   }).on('mouseleave', function() {
+
     var thisMouse = this.id;
     $('#project-title, #project-attr').css('display', 'none');
     $('#project-title-index, #project-attr-index').css('display', 'none');
-    removeEmoji(thisMouse);
+
+    // removeEmoji(thisMouse);
 
     $('#nav-image-container').toggleClass('fade-in'); // make invisible
     $('#nav-image-container').css('opacity', '0');
@@ -191,25 +188,6 @@ $(document).ready(function() {
         }, function() {
           $(this).removeClass( "image-shadow" );
         });
-
-      // Changing Case Titles
-      // function cases(caseID, question, type, attr) {
-      //   this.caseID = caseID;
-      //   this.question = question;
-      //   this.type = type;
-      //   this.attr = attr;
-      // }
-      //
-      // var caseItemsArray = [
-      //   cases("caseZero", "How might we question?", "Independent Project |", "UX, Branding"),
-      //   cases("caseOne", "I like we question?", "Internship |", "UX, Branding"),
-      //   cases("caseTwo", "Question needs to be longer than below?!", "Coursework |", "UX, Branding"),
-      //   cases("caseThree", "Meow the question?", "Work |", "UX, Branding"),
-      //   cases("caseFour", "Monkey isn't a question?", "Freenlance |", "UX, Branding"),
-      //   cases("caseFive", "Ah. The question?", "Unassigned |", "UX, Branding"),
-      // ]
-
-      //
 
       var caseZero = new Array("How might we question?", "Independent Project |", "UX, Branding");
       var caseOne = new Array("I like we question?", "Internship |", "UX, Branding");
