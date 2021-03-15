@@ -6,6 +6,7 @@ div {
 #logo {
   /* width: 3vw; */
   width: 4vw;
+  min-width: 64px;
   /* border: 1px dashed green; */
 }
 
@@ -74,24 +75,24 @@ body {
 }
 
 h1 {
-  font-family: freight-macro-pro, serif;
+  font-family: degular;
   margin-top: 0px;
 }
 
 h2 {
-  font-family: proxima-nova, sans-serif;
+  font-family: degular;
   margin-top: 0px;
   color: #333333;
 }
 
 h3 {
-  font-family: freight-macro-pro, serif;
+  font-family: degular;
   margin-top: 0px;
   color: #333333;
 }
 
 p {
-  font-family: freight-macro-pro, serif;
+  font-family: degular;
   color: #1E1D21;
   margin: 0px;
 }
@@ -120,7 +121,7 @@ a:link {
 
 a:hover {
   color: rgba(1.0, 1.0, 1.0, 0.4);
-  top: -2.5px;
+  /* top: -2.5px; */
 }
 
 a:visited {
@@ -237,7 +238,7 @@ a:visited {
 }
 
 .image-description {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
@@ -434,6 +435,7 @@ header {
 }
 
 .navigation-items {
+  
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -442,11 +444,14 @@ header {
 }
 
 .navigation-item {
-  margin-right: 1vw;
+  margin-right: 2vw;
 }
 
 .navigation-items h3 {
+  font-family: degular;
+  text-transform: uppercase;
   font-weight: 500;
+  font-size: 1.25rem;
 }
 
 #more-projects {
@@ -598,11 +603,11 @@ img {
 
 .image-selector-item {
   display: inline;
-  font-family: proxima-nova, sans-serif;
-  font-weight: 700;
+  font-family: degular-display, sans-serif;
+  font-weight: 600;
   font-style: normal;
-  font-size: 14px;
-  letter-spacing: 0.02em;
+  font-size: 16px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-right: 24px;
 }

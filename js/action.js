@@ -43,8 +43,10 @@ $(document).ready(function() {
     $('body').toggleClass('fixed-position');
 
     if(!$('.navigation-items').hasClass('white-font')) {
-      $('.navigation-item').addClass('white-font');
+      console.log('add white-font class');
+      $('.navigation-item').toggleClass('white-font');
     } else {
+      console.log('remove white-font class');
       $('.navigation-item').removeClass('white-font');
     }
   })

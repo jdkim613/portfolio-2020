@@ -94,7 +94,11 @@
   justify-content: flex-start;
 }
 
+.social-icon-row-0 {
+
+}
+
 .social-icons-0 {
   width: 1.75vw;
-  margin-right: .75vw;
+  min-width: 36px;
 }
