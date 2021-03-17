@@ -56,10 +56,37 @@ $(document).ready(function() {
   }
 
   // Custom cursor for main statements
-  const cursorRound = document.querySelector('.cursor-here');
+  const getElementPos = document.querySelector('#container-above');
+  const cursorRound = $('.cursor-here');
+  var containerSelector = $('#container-above');
+  var rect = getElementPos.getBoundingClientRect();
+
+  // console.log(rect.top, rect.right, rect.bottom, rect.left);
+
+  var containerWidth = window.innerWidth - rect.top;
+  var containerHeight = window.innerHeight - rect.left;
+  var clipSize = 5;
+
+  $('.home-statement').on('mouseover', function() {
+    clipSize = 400;
+    var idLocation = 'home-statment'
+    console.log('this.class: ' + idLocation);
+  }).on('mouseleave', function() {
+    clipSize = 10;
+  })
+
   document.addEventListener('mousemove', (e) => {
-    cursorRound.style.left = e.pageX + 'px';
-    cursorRound.style.top = e.pageY + 'px';
+
+    
+    var xCord = e.pageX;
+    var yCord = e.pageY;
+
+    // console.log(xCord + ', ' + yCord);
+
+
+    $('#container-above').css('clip-path', 'circle( ' + clipSize +'px at ' + (xCord + 9) + 'px ' + (yCord + 23) + 'px)');
+
+    
   })
 
 
