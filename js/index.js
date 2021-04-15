@@ -10,6 +10,7 @@ $(document).ready(function() {
     console.log('mobile id entered');
   }
 
+  // Project Item Animation 1
   $('.project-content').on('mouseover', function() {
 
     var thisMouse = this.id; // assign id value
@@ -21,6 +22,23 @@ $(document).ready(function() {
 
     var thisMouse = this.id; // assign id value
     TweenMax.to(this, 1, {width: '.75vw', ease: "circ.out"});
+    showProjectTitle(thisMouse, false); // hide project inside .project-content
+
+  })
+
+  // Project Item Animation 2
+  $('.selected-project-item').on('mouseover', function() {
+
+    var thisMouse = this.id; // assign id value
+    TweenMax.to(this, 1, {width: '12vw', transformOrigin:"left", ease: "circ.out"});
+    TweenMax.to(this, 1, {height: '12vw', transformOrigin:"top", ease: "circ.out", padding: "16px"});
+    showProjectTitle(thisMouse, true); // show project inside .project-content
+
+  }).on('mouseleave', function() {
+
+    var thisMouse = this.id; // assign id value
+    TweenMax.to(this, 1, {height: '15px', transformOrigin:"top", ease: "circ.out"});
+    TweenMax.to(this, 1, {width: '7.5vw', transformOrigin:"left", ease: "circ.out", padding: "0px"});
     showProjectTitle(thisMouse, false); // hide project inside .project-content
 
   })
@@ -42,6 +60,16 @@ $(document).ready(function() {
 
       case 'project3':
         selectedProject = document.querySelectorAll('#project3-name');
+        console.log('selectedProject is 3');
+        break;
+
+      case 'project4':
+        selectedProject = document.querySelectorAll('#project4-name');
+        console.log('selectedProject is 3');
+        break;
+
+      case 'project5':
+        selectedProject = document.querySelectorAll('#project5-name');
         console.log('selectedProject is 3');
         break;
 
@@ -84,7 +112,7 @@ $(document).ready(function() {
     // console.log(xCord + ', ' + yCord);
 
 
-    $('#container-above').css('clip-path', 'circle( ' + clipSize +'px at ' + (xCord + 9) + 'px ' + (yCord + 23) + 'px)');
+    $('#container-above').css('clip-path', 'circle( ' + clipSize +'px at ' + (xCord + 9) + 'px ' + (yCord + 82) + 'px)');
 
     
   })
@@ -113,4 +141,24 @@ $(document).ready(function() {
         }
   }, 5000);
 })
+
+// Skew Project Items
+let proxy = { skew: 0 },
+    skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+    clamp = gsap.utils.clamp(-2, 2); // don't let the skew go beyond 20 degrees. 
+
+ScrollTrigger.create({
+  onUpdate: (self) => {
+    let skew = clamp(self.getVelocity() / -300);
+    // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+      proxy.skew = skew;
+      gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+    }
+  }
+});
+
+// make the right edge "stick" to the scroll bar. force3D: true improves performance
+gsap.set(".skewElem", {transformOrigin: "center", force3D: true});
+
 

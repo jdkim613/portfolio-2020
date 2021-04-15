@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 2px red dashed;
+    // border: 2px red dashed;
 }
 
 #top-container {
@@ -20,7 +20,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 2px orange dashed;
+    // border: 2px orange dashed;
 }
 
 #statement-container {
@@ -29,7 +29,7 @@ body {
     position: relative;
     margin: 0px 0px 24px;
 
-    border: 2px yellow dashed;
+    // border: 2px yellow dashed;
 }
 
 .wrapped-container {
@@ -40,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 2px green dashed;
+    // border: 2px green dashed;
 }
 
 #container-above {
@@ -90,7 +90,7 @@ body {
 #project-container {
     width: 90vw;
     margin-top: 7.5vh;
-    border: 1px orange dashed;
+    // border: 1px orange dashed;
 }
 
 #project-label {
@@ -108,7 +108,7 @@ body {
     align-self: start;
     justify-content: space-between;
 
-    border: 2px green dotted;
+    // border: 2px green dotted;
 }
 
 #project-list {
@@ -116,13 +116,13 @@ body {
     flex-direction: row;
     align-self: start;
 
-    border: 1px blue dotted;
+    // border: 1px blue dotted;
 }
 
 #project-information {
     width: 50vw;
 
-    border: 1px blue dotted;
+    // border: 1px blue dotted;
 }
 
 #project-information * {
@@ -144,14 +144,58 @@ body {
 
     // transform: scaleX(1);
 
-    border: 1px green dashed;
+    // border: 1px green dashed;
+}
+
+// Project Item Selection
+
+.project-name-container {
+    opacity: 0%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px blue solid;
+}
+
+.project-item-information {
+
 }
 
 .project-name {
     font-family: degular;
-    font-weight: 100;
-    font-size: 1.25rem;
-    opacity: 0%;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.project-type {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.project-timeline {
+
+}
+
+// Project Item Images
+#project-image-wrapper {
+    border: 1px lightblue dashed;
+}
+
+#project-image-container {
+    border: 1px lightgreen dashed;
+}
+
+.project-item-images {
+    border: 1px lightyellow dashed;
+}
+
+.project-item-image {
+    width: 50vw;
+    border-radius: 12px;
+
+    // border: 1px green dashed;
 }
 
 *::selection {
@@ -164,7 +208,7 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 1px red solid;
+    // border: 1px red solid;
 }
 
 .cursor-here {
@@ -194,7 +238,7 @@ h1:hover ~ .wrapped-container {
     flex-direction: column;
     justify-content: flex-end;
 
-    border: 1px green dashed;
+    // border: 1px green dashed;
 }
 
 #landing-footer-wrapper {
@@ -209,3 +253,71 @@ h1:hover ~ .wrapped-container {
     opacity: 40%;
     // border: 1px blue dashed;
 }
+
+// CSS: Selected Projects
+#something-else {
+
+}
+
+.testing-class {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20vh;
+
+    border: 1px lightblue dashed;
+}
+
+#selected-project-header {
+    display: flex;
+    font-family: degular;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    color: white;
+}
+
+#selected-project-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 15vw;
+
+    margin: 1.25vh 0 5vh;
+}
+
+.selected-filter-item {
+    font-family: degular;
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.6;
+}
+
+#filter-item-selected {
+    opacity: 1;
+}
+
+#selected-project-container {
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-around;
+
+    border: pink solid 1px;
+}
+
+.selected-project-item {
+    width: 7.5vw;
+    height: 15px;
+    margin: 0 1vw;
+    background-color: white;
+
+    border: 1px green dashed; 
+}
+

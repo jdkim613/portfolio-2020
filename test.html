@@ -1,0 +1,151 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/indexNew.scss">
+  <title> John J. Kim | Design </title>
+  <link rel='icon' href='assets/logo.ico' type='image/x-icon' />
+  <link rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+</head>
+
+<header>
+  <div class="header-content">
+    <div class="add-click">
+      <a href="index.html">
+        <img id="logo" src="assets/logo-2020-2.png"></img>
+      </a>
+    </div>
+    <div class="navigation-items add-click white-font">
+      <div class="navigation-item">
+        <a href="about.html">
+          <div class="about-page">
+            <h3>Bio</h3>
+          </div>
+        </a>
+      </div>
+      <div class="navigation-item">
+        <div id="more-projects">
+          <h3><strong>+</strong></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<body>
+  <div id="dummy-target-web" class="mobile-off"></div>
+
+  <!-- more projects nav -->
+  <div class="sliding-nav no-event">
+    <div class="more-projects-nav slide-appear">
+      <div class="more-projects-content">
+        <div class="content-inside white-font">
+          <div class="content-left project-items">
+            <a href="creativejam.html">
+              <p id="project3" class="project-item">AdobeXAirbnb</p>
+            </a>
+            <a href="persona.html">
+              <p id="project2" class="project-item">Student Personas</p>
+            </a>
+            <a href="hololens.html">
+              <p id="project1" class="project-item">XR Demo</p>
+            </a>
+          </div>
+          <div class="content-right project-details">
+            <p id="project-title">Internship – 10 Weeks</p>
+            <p id="project-attr">UX, XR, Consulting</p>
+          </div>
+        </div>
+        <div class="content-inside white-font">
+          <div class="content-left"></div>
+          <div class="content-right">
+            <div id="nav-image-container">
+              <img id="nav-project-image" src="assets/hololens-project.png"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Homepage Module -->
+  <div id='main-container' class='skewElem'>
+
+    <div id='top-container'> 
+      <div id='statement-container'>
+
+        <div id='container-above'>
+          <div class='wrapped-container'>
+            <h1 id='black-text' class='home-statement'>To design is to break the imbalances of power in the world and to create an equitable space for all.</h1>
+            <p id='black-text' class='personal-statement'>I disassemble injustices existing in our societies allowing new spaces to be formed.</p>
+            <!-- <div class='cursor-here'></div> -->
+          </div>
+        </div>
+
+        <div id='container-below'>
+          <div class='wrapped-container'>
+            <h1 class='home-statement'>To design is to change the flowing behavior of a person, a group, or the society in a given time and space.</h1>
+            <p class='personal-statement'>I create spaces and places (physically and conceptually) where people can feel included, inspired, and incredible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id='something-else' class='testing-class'>
+        <h1 id='selected-project-header'>Spaces</h1>
+        <div id='selected-project-filters'>
+            <h2 id='filter-item-selected' class='selected-filter-item'>All</h2>
+            <h2 class='selected-filter-item'>UX</h2>
+            <h2 class='selected-filter-item'>Visual</h2>
+            <h2 class='selected-filter-item'>Thoughts</h2>
+        </div>
+        <div id='selected-project-container' class='skewElem'>
+            <div id='project1' class='selected-project-item'>
+                <div id='project1-name' class='project-name-container'>
+                    <div class='project-item-information'>
+                        <p class='project-name'>AdobeXAirbnb</p>
+                        <p class='project-type'>Research, Visual</p>
+                    </div>
+                    <p class='project-timeline'>12 Weeks</p>
+                </div>
+            </div>
+            <div id='project2' class='selected-project-item'>
+                <p id='project2-name' class='project-name'>Student Personas</p>
+            </div>
+            <div id='project3' class='selected-project-item'>
+                <p id='project3-name' class='project-name'>HoloLens</p>
+            </div>
+            <div id='project4' class='selected-project-item'>
+                <p id='project4-name' class='project-name'>Credena Health</p>
+            </div>
+        </div>
+        <div id='project-image-wrapper'>
+            <div id='project-image-container'>
+                <div class='project-item-images'>
+                    <img class='project-item-image' src='assets/index/hololens-2.gif'>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <script src="js/index.js"></script>
+  <script src="js/action.js"></script>
+</body>
+
+<!-- <footer>
+  <div id='landing-footer'>
+    <div id='landing-footer-wrapper'>
+      <p id='landing-footer-text'>Designed & Coded by Jusung</p>
+    </div>
+  </div>
+</footer> -->
+
+</html>
