@@ -11,20 +11,20 @@ $(document).ready(function() {
   }
 
   // Project Item Animation 1
-  $('.project-content').on('mouseover', function() {
+  // $('.project-content').on('mouseover', function() {
 
-    var thisMouse = this.id; // assign id value
-    TweenMax.to(this, 1, {width: '15vw', transformOrigin:"left", ease: "circ.out"});
-    showProjectTitle(thisMouse, true); // show project inside .project-content
+  //   var thisMouse = this.id; // assign id value
+  //   TweenMax.to(this, 1, {width: '15vw', transformOrigin:"left", ease: "circ.out"});
+  //   showProjectTitle(thisMouse, true); // show project inside .project-content
     
 
-  }).on('mouseleave', function() {
+  // }).on('mouseleave', function() {
 
-    var thisMouse = this.id; // assign id value
-    TweenMax.to(this, 1, {width: '.75vw', ease: "circ.out"});
-    showProjectTitle(thisMouse, false); // hide project inside .project-content
+  //   var thisMouse = this.id; // assign id value
+  //   TweenMax.to(this, 1, {width: '.75vw', ease: "circ.out"});
+  //   showProjectTitle(thisMouse, false); // hide project inside .project-content
 
-  })
+  // })
 
   // Project Item Animation 2
   $('.selected-project-item').on('mouseover', function() {
@@ -46,41 +46,71 @@ $(document).ready(function() {
   function showProjectTitle(projectID, onSwitch) {
 
     var selectedProject = '';
+    var imageRevealDiv = '';
+    var imageRevealID = '';
 
     switch(projectID) {
       case 'project1':
         selectedProject = document.querySelectorAll('#project1-name');
+        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-1:after");
+        imageRevealID = $("#project-image-img-1");
         console.log('selectedProject is 1');
         break;
 
       case 'project2':
         selectedProject = document.querySelectorAll('#project2-name');
+        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-2:after");
+        imageRevealID = CSSRulePlugin.getRule("#project-image-item-2");
         console.log('selectedProject is 2');
         break;
 
       case 'project3':
         selectedProject = document.querySelectorAll('#project3-name');
+        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-3:after");
+        imageRevealID = CSSRulePlugin.getRule("#project-image-item-3");
         console.log('selectedProject is 3');
         break;
 
       case 'project4':
         selectedProject = document.querySelectorAll('#project4-name');
-        console.log('selectedProject is 3');
+        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-4:after");
+        imageRevealID = CSSRulePlugin.getRule("#project-image-item-4");
+        console.log('selectedProject is 4');
         break;
 
       case 'project5':
         selectedProject = document.querySelectorAll('#project5-name');
-        console.log('selectedProject is 3');
+        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-5:after");
+        imageRevealID = CSSRulePlugin.getRule("#project-image-item-5");
+        console.log('selectedProject is 5');
         break;
 
     }
 
     if(onSwitch == true) {
-      TweenMax.to(selectedProject, .75, {opacity: '100%', ease: "circ.out"}); // animate project content
+      TweenMax.to(selectedProject, .75, {visibility: "visible", ease: "circ.out"}); // animate project content
+      showProjectImageItem(imageRevealDiv, imageRevealID, true); // reveal image
       console.log('selectedProject is ' + projectID);
     } else {
-      TweenMax.to(selectedProject, .75, {opacity: '0%', ease: "circ.out"}); // animate project content
+      TweenMax.to(selectedProject, .75, {visibility: "hidden", ease: "circ.out"}); // animate project content
+      showProjectImageItem(imageRevealDiv, imageRevealID, false); // hide image
+      console.log('hide image' + projectID);
     }
+  }
+
+  // Project Image Item Reveal
+  const imageRevealTL = new TimelineLite(); // create animation timeline
+  const imageHideTL = new TimelineLite(); // create animation timeline
+
+  function showProjectImageItem(divSelected, imgSelected, revealTrigger) {
+    if(revealTrigger == true) {
+      TweenMax.to(divSelected, 0, {width: '0%', ease:"circ.out"}); 
+      TweenMax.from(imgSelected, 0.75, {transform: "scale(2)", ease:"circ.out"}); // if revealTrigger is 'true', reveal image
+    } else {
+      TweenMax.to(divSelected, 0.75, {width: '100%', ease:"circ.out"})
+      TweenMax.to(imgSelected, 0.75, {transform: "scale(1)", ease:"circ.out"});  // if revealTrigger is 'falase', hide image
+    }
+    
   }
 
   // Custom cursor for main statements
@@ -112,7 +142,7 @@ $(document).ready(function() {
     // console.log(xCord + ', ' + yCord);
 
 
-    $('#container-above').css('clip-path', 'circle( ' + clipSize +'px at ' + (xCord + 9) + 'px ' + (yCord + 82) + 'px)');
+    $('#container-above').css('clip-path', 'circle( ' + clipSize +'px at ' + (xCord + 10) + 'px ' + (yCord + 25) + 'px)');
 
     
   })
