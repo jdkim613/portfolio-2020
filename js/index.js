@@ -27,12 +27,21 @@ $(document).ready(function() {
   // })
 
   // Project Item Animation 2
-  $('.selected-project-item').on('mouseover', function() {
+  $('.selected-project-item, project-name-container').on('mouseover', function() {
+
 
     var thisMouse = this.id; // assign id value
+    showProjectTitle(thisMouse, true); // show project inside .project-content
+
+    
+    var thisChild = $(this).find("div");
+    var thisParent = $(this).parent('.selected-project-item');
+    console.log('thisMouse = ' + thisMouse);
+    
     TweenMax.to(this, 1, {width: '12vw', transformOrigin:"left", ease: "circ.out"});
     TweenMax.to(this, 1, {height: '12vw', transformOrigin:"top", ease: "circ.out", padding: "16px"});
-    showProjectTitle(thisMouse, true); // show project inside .project-content
+    
+    showProjectImageItem();
 
   }).on('mouseleave', function() {
 
@@ -40,61 +49,68 @@ $(document).ready(function() {
     TweenMax.to(this, 1, {height: '15px', transformOrigin:"top", ease: "circ.out"});
     TweenMax.to(this, 1, {width: '7.5vw', transformOrigin:"left", ease: "circ.out", padding: "0px"});
     showProjectTitle(thisMouse, false); // hide project inside .project-content
+    hideProjectImageItem();
+    console.log('mouse left');
 
   })
+
 
   function showProjectTitle(projectID, onSwitch) {
 
     var selectedProject = '';
-    var imageRevealDiv = '';
-    var imageRevealID = '';
+    var imageRevealSource = '';
 
     switch(projectID) {
       case 'project1':
+        // AdobeXAirbnb
         selectedProject = document.querySelectorAll('#project1-name');
-        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-1:after");
-        imageRevealID = $("#project-image-img-1");
+        imageRevealSource = 'assets/index/adobexairbnb.gif';
         console.log('selectedProject is 1');
         break;
 
       case 'project2':
+        // Persona
         selectedProject = document.querySelectorAll('#project2-name');
-        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-2:after");
-        imageRevealID = CSSRulePlugin.getRule("#project-image-item-2");
+        imageRevealSource = 'assets/index/student-persona.gif';
         console.log('selectedProject is 2');
         break;
 
       case 'project3':
+        // HoloLens
         selectedProject = document.querySelectorAll('#project3-name');
-        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-3:after");
-        imageRevealID = CSSRulePlugin.getRule("#project-image-item-3");
+        imageRevealSource = 'assets/index/hololens-4.gif';
         console.log('selectedProject is 3');
         break;
 
       case 'project4':
+        // Credena
         selectedProject = document.querySelectorAll('#project4-name');
-        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-4:after");
-        imageRevealID = CSSRulePlugin.getRule("#project-image-item-4");
+        imageRevealSource = 'assets/index/credena.gif';
         console.log('selectedProject is 4');
         break;
 
       case 'project5':
+        // Sony
         selectedProject = document.querySelectorAll('#project5-name');
-        imageRevealDiv = CSSRulePlugin.getRule("#project-image-item-5:after");
-        imageRevealID = CSSRulePlugin.getRule("#project-image-item-5");
+        imageRevealSource = 'assets/index/sony-2.gif';
+        console.log('selectedProject is 5');
+        break;
+
+      case 'project6':
+        // Branding Works
+        selectedProject = document.querySelectorAll('#project6-name');
+        imageRevealSource = 'assets/index/branding.gif';
         console.log('selectedProject is 5');
         break;
 
     }
 
+    $("#project-image-img-1").attr('src', imageRevealSource);
+
     if(onSwitch == true) {
       TweenMax.to(selectedProject, .75, {visibility: "visible", ease: "circ.out"}); // animate project content
-      showProjectImageItem(imageRevealDiv, imageRevealID, true); // reveal image
-      console.log('selectedProject is ' + projectID);
     } else {
       TweenMax.to(selectedProject, .75, {visibility: "hidden", ease: "circ.out"}); // animate project content
-      showProjectImageItem(imageRevealDiv, imageRevealID, false); // hide image
-      console.log('hide image' + projectID);
     }
   }
 
@@ -102,15 +118,32 @@ $(document).ready(function() {
   const imageRevealTL = new TimelineLite(); // create animation timeline
   const imageHideTL = new TimelineLite(); // create animation timeline
 
-  function showProjectImageItem(divSelected, imgSelected, revealTrigger) {
-    if(revealTrigger == true) {
-      TweenMax.to(divSelected, 0, {width: '0%', ease:"circ.out"}); 
-      TweenMax.from(imgSelected, 0.75, {transform: "scale(2)", ease:"circ.out"}); // if revealTrigger is 'true', reveal image
-    } else {
-      TweenMax.to(divSelected, 0.75, {width: '100%', ease:"circ.out"})
-      TweenMax.to(imgSelected, 0.75, {transform: "scale(1)", ease:"circ.out"});  // if revealTrigger is 'falase', hide image
-    }
-    
+  // function showProjectImageItem(divSelected, imgSelected, revealTrigger) {
+  //   if(revealTrigger == true) {
+  //     // TweenMax.to(divSelected, 0, {width: '0%', ease:"circ.out"}); 
+  //     TweenMax.to(divSelected, 1, {opacity: '0%', ease:"circ.out"}); 
+  //     TweenMax.from(imgSelected, 1, {transform: "scale(2)", ease:"circ.out"}); // if revealTrigger is 'true', reveal image
+  //   } else {
+  //     // TweenMax.to(divSelected, 0.5, {width: '100%', ease:"circ.out"})
+  //     TweenMax.to(divSelected, .25, {opacity: '100%', ease:"circ.out"}); 
+  //     TweenMax.to(imgSelected, 1, {transform: "scale(1)", ease:"circ.out"});  // if revealTrigger is 'falase', hide image
+  //   }
+  // }
+
+  // const projectImageDiv = CSSRulePlugin.getRule("#project-image-item-1:after"); // create variable for ImageDiv
+  const projectImageID = $('#project-image-img-1'); // create variable for ImageID
+
+  function showProjectImageItem() {
+    TweenMax.to(projectImageID, 1, {opacity: '100%', ease:"circ.out"}); 
+    TweenMax.from(projectImageID, 1, {transform: "scale(2)", ease:"circ.out"}); // if revealTrigger is 'true', reveal image
+    console.log('reveal image');
+  }
+
+  // Project Image Item Hide
+  function hideProjectImageItem() {
+    TweenMax.to(projectImageID, 1, {opacity: '0%', ease:"circ.out"}); 
+    TweenMax.to(projectImageID, 1, {transform: "scale(1)", ease:"circ.out"});  // if revealTrigger is 'false', hide image
+    console.log('hide image');
   }
 
   // Custom cursor for main statements
@@ -190,5 +223,78 @@ ScrollTrigger.create({
 
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
 gsap.set(".skewElem", {transformOrigin: "center", force3D: true});
+
+// Filter Selection
+$('.selected-filter-item').on('click', function() {
+
+  var getThis = this;
+  var getFilterID = this.id;
+
+  changeFilterSelection(getThis, getFilterID);
+
+  if(!$(this).hasClass('filter-item-selected')) {
+
+    $('h2.selected-filter-item').not(this).removeClass('filter-item-selected');
+    $(this).addClass('filter-item-selected');
+
+    // console.log('the class does not exist');
+  } 
+})
+
+function changeFilterSelection(thisSelection, filterSelection) {
+
+  var selectedFilter = ''
+
+  switch(filterSelection) {
+    case 'filter-all':
+      selectedFilter = 'all';
+      break;
+
+    case 'filter-ux':
+      selectedFilter = '.ux-case';
+      break;
+
+    case 'filter-visual':
+      selectedFilter = '.visual-case';
+      break;
+
+    case 'filter-research':
+      selectedFilter = '.research-case';
+      break;
+
+    case 'filter-thoughts':
+      selectedFilter = '.thoughts-case';
+      break;
+  }
+
+  console.log('selectedFilter = ' + selectedFilter);
+
+  var unselectedFilters = $('#selected-project-container div.selected-project-item').not(selectedFilter);
+
+  if(selectedFilter == 'all') {
+
+    // if the 'all' filter is selected, show all project items
+    // $('#selected-project-container div.selected-project-item').css('display', 'block');
+    TweenMax.to($('#selected-project-container div.selected-project-item'), 0.5, {width: '7.5vw', margin: '0 1vw', display: 'block', ease: 'circ.out'});
+
+  } else {
+    // else
+
+    if(!$(thisSelection).hasClass('filter-item-selected')) {
+
+      $('h2.selected-filter-item').not(this).removeClass('filter-item-selected'); // remove class 'filter-item-selected'
+      $(this).addClass('filter-item-selected'); // add class 'filter-item-selected' to toggle between filters
+
+      // choose all project items without filter class and hide
+      TweenMax.to(unselectedFilters, 0.5, {width: '0px', margin: '0px', display: 'none', ease: "circ.out"});
+      TweenMax.to(selectedFilter, 0.5, {width: '7.5vw', margin: '0 1vw', display: 'block', ease: 'circ.out'});
+
+      // unselectedFilters.css('display', 'none');
+      // $(selectedFilter).css('display', 'block');
+
+    } 
+  }
+
+}
 
 
