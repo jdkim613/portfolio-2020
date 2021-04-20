@@ -40,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    // border: 2px green dashed;
+    border: 2px green dashed;
 }
 
 #container-above {
@@ -62,6 +62,15 @@ body {
     background-color: black;
 
     border: 3px blue dashed;
+}
+
+#black-gradient-elem {
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    background-image: linear-gradient(to bottom, transparent 5%, black 95%);
+    bottom: 0;
+    background-blend-mode: darken;
 }
 
 #black-text {
@@ -293,30 +302,6 @@ h1:hover ~ .wrapped-container {
     transform: scale(40);
 }
 
-#landing-footer {
-    width: 90vw;;
-    position: absolute;
-    bottom: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    // border: 1px green dashed;
-}
-
-#landing-footer-wrapper {
-    margin-top: 1.5vh;
-}
-
-#landing-footer-text {
-    text-align: right;
-    color: #FFF;
-    font-family: Degular;
-    text-transform: uppercase;
-    opacity: 40%;
-    // border: 1px blue dashed;
-}
-
 /* Project Items */
 .selected-project-wrapper {
     width: 100vw;
@@ -325,7 +310,7 @@ h1:hover ~ .wrapped-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     position: relative;
 
     border: 1px lightblue dashed;
@@ -344,11 +329,14 @@ h1:hover ~ .wrapped-container {
 #selected-project-filters {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 20vw;
-    min-width: 250px;
+    justify-content: center;
+    // justify-content: space-around;
+    // width: 20vw;
+    // min-width: 250px;
 
     margin: 1.25vh 0 5vh;
+
+    border: pink solid 1px;
 }
 
 .selected-filter-item {
@@ -359,7 +347,12 @@ h1:hover ~ .wrapped-container {
     color: white;
     opacity: 0.6;
 
+    margin-right: clamp(15px, 1vw, 24px);
+    margin-left: clamp(15px, 1vw, 24px);
+
     cursor: pointer;
+
+    
 }
 
 .filter-item-selected {
@@ -379,8 +372,93 @@ h1:hover ~ .wrapped-container {
     width: 7.5vw;
     height: 15px;
     margin: 0 1vw;
+    // margin-right: clamp(15px, 1vw, 24px);
     background-color: white;
 
     border: 1px green dashed; 
 }
 
+
+/* Text Footer */
+#landing-footer-wrapper {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+
+    border: 1px green dashed;
+}
+
+#landing-footer-container {
+    width: 80vw;
+
+    border: 1px blue dashed;
+}
+
+.footer-text-container {
+    margin-bottom: clamp(48px, 15vh, 72px);
+    border: 1px red dashed;
+}
+
+#footer-text-header, #footer-text-variable {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+#landing-footer-content {
+    width: inherit;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px green dashed;
+}
+
+#social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 400px;
+    max-width: 750px;
+    width: 17.5vw;
+
+    border: 1px green dashed;
+}
+
+.social-link-item {
+    font-family: degular;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.social-link-item:hover {
+    opacity: 50%;
+}
+
+#footer-author {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px blue dashed;
+}
+
+#landing-footer-text, #last-updated-date {
+    text-align: right;
+    color: #FFF;
+    font-family: Degular;
+    text-transform: uppercase;
+    // border: 1px blue dashed;
+}
+
+#last-updated-date { 
+    margin-top: 4px;
+    opacity: 40%;
+}

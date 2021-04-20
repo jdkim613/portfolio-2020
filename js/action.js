@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
   // email copy
-  $('#head').on('click', function() {
+  $('#head, #email-copy-link').on('click', function() {
     $('#head').attr('src', 'assets/face-1.png');
     emailToClipboard('jdkim613@gmail.com');
     $('#email-copied').text('Email copied!');
@@ -30,6 +30,7 @@ $(document).ready(function() {
   el.select();
   document.execCommand('copy');
   document.body.removeChild(el);
+  console.log('email copied');
 };
 
   // more project nav
