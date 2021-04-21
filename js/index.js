@@ -31,7 +31,7 @@ $(document).ready(function () {
 
 
     var thisMouse = this.id; // assign id value
-    showProjectTitle(thisMouse, true); // show project inside .project-content
+    
 
 
     var thisChild = $(this).find("div");
@@ -40,6 +40,7 @@ $(document).ready(function () {
 
     TweenMax.to(this, 1, { width: '12vw', transformOrigin: "left", ease: "circ.out" });
     TweenMax.to(this, 1, { height: '12vw', transformOrigin: "top", ease: "circ.out", padding: "16px" });
+    showProjectTitle(thisMouse, true); // show project inside .project-content
 
     showProjectImageItem();
 

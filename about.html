@@ -7,6 +7,8 @@
     <link rel='icon' href='assets/bio.ico' type='image/x-icon'/ >
     <link  rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
   </head>
 
 
@@ -27,7 +29,12 @@
         </div>
         <div class="navigation-item">
           <div id="more-projects">
-            <h3>+</h3>
+            <div class="interactive-menu-button">
+              <a id='hamburger-menu-link' href="#">
+                <span id='hamburger-menu-1'>Menu</span>
+              </a>
+            </div>
+            <!-- <h3><strong>+</strong></h3> -->
           </div>
         </div>
       </div>

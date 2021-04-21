@@ -452,10 +452,104 @@ header {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.25rem;
+  margin-bottom: 4px;
 }
 
 #more-projects {
   cursor: pointer;
+}
+
+.interactive-menu-button {
+  position: relative;
+
+  border: 1px green dashed;
+}
+
+#hamburger-menu-link {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: relative;
+}
+
+#hamburger-menu-link.active span {
+  background: transparent;
+}
+
+#hamburger-menu-link.active span:after {
+  transform: translateY(-6px) translateX(1px) rotate(45deg);
+  background: #FFF;
+}
+
+#hamburger-menu-link.active span:before {
+  transform: translateY(6px) translateX(1px) rotate(-45deg);
+  background: #FFF;
+}
+
+#hamburger-menu {
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  text-indent: -999em;
+  width: 100%;
+  top: 6px;
+  transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+}
+
+#hamburger-menu:after {
+  content: '';
+  height: 2px;
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+  top: 6px;
+}
+
+#hamburger-menu:before {
+  content: '';
+  height: 2px;
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+}
+
+#hamburger-menu-1 {
+  height: 2px;
+  position: absolute;
+  background: #000;
+  text-indent: -999em;
+  width: 100%;
+  top: 6px;
+  transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+}
+
+#hamburger-menu-1:after {
+  content: '';
+  height: 2px;
+  background: #000;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+  top: 6px;
+}
+
+#hamburger-menu-1:before {
+  content: '';
+  height: 2px;
+  background: #000;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
 }
 
 .about-page {
@@ -463,6 +557,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 6px;
 }
 
 .more-menu {
@@ -684,6 +779,10 @@ img {
 
 .purple-font * {
   color: #EF00EF;
+}
+
+.black-font * {
+  color: #000000;
 }
 
 

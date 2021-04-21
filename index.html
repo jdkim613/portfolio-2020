@@ -2,12 +2,17 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <link rel="stylesheet" href="css/style2.css">
-  <link rel="stylesheet" href="css/indexNew.scss">
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link rel="stylesheet" type="text/css" href="css/indexNew.scss">
   <title> John J. Kim | Design </title>
   <link rel='icon' href='assets/logo.ico' type='image/x-icon' />
   <link rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
 
 </head>
 
@@ -28,7 +33,12 @@
       </div>
       <div class="navigation-item">
         <div id="more-projects">
-          <h3><strong>+</strong></h3>
+          <div class="interactive-menu-button">
+            <a id='hamburger-menu-link' href="#">
+              <span id='hamburger-menu'>Menu</span>
+            </a>
+          </div>
+          <!-- <h3><strong>+</strong></h3> -->
         </div>
       </div>
     </div>
@@ -71,99 +81,178 @@
     </div>
   </div>
 
-  <!-- Homepage Module -->
-  <div id='main-container'>
+  <main>
+    <!-- Homepage Module -->
+    <section>
+      <div id='main-container' class='skewElem'>
 
-    <div id='top-container'> 
-      <div id='statement-container'>
-
-        <div id='container-above'>
-          <div class='wrapped-container'>
-            <h1 id='black-text' class='home-statement'>To design is to break the imbalances of power in the world and to create an equitable space for all.</h1>
-            <p id='black-text' class='personal-statement'>I disassemble injustices existing in our societies allowing new spaces to be formed.</p>
-            <!-- <div class='cursor-here'></div> -->
+        <div id='top-container'> 
+          <div id='statement-container'>
+  
+            <div id='container-above'>
+              <div class='wrapped-container'>
+                <h1 id='black-text' class='home-statement'>To design is to break the imbalances of power in the world and to create an equitable space for all.</h1>
+                <p id='black-text' class='personal-statement'>I break malevolent patterns and disassemble exclusive spaces existing in our societies allowing new spaces to be formed.</p>
+                <!-- <div class='cursor-here'></div> -->
+              </div>
+            </div>
+  
+            <div id='container-below'>
+              <div class='wrapped-container'>
+                <h1 class='home-statement'>To design is to change the flowing behavior of a person, a group, or the society in a given time and space.</h1>
+                <p class='personal-statement'>I arrange shapes and its interactivity to create spaces (physically and conceptually) where people can feel included, inspired, and incredible.</p>
+              </div>
+            </div>
+          </div>
+          <div id='black-gradient-elem'>
+            <div id='view-project-button'>
+              <h3>View Projects</h3>
+              <img src='assets/triangle.svg' alt=''>
+            </div>
           </div>
         </div>
-
-        <div id='container-below'>
-          <div class='wrapped-container'>
-            <h1 class='home-statement'>To design is to change the flowing behavior of a person, a group, or the society in a given time and space.</h1>
-            <p class='personal-statement'>I create spaces and places (physically and conceptually) where people can feel included, inspired, and incredible.</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-    
-    <!-- Spaces Container -->
-    <!-- <div id='project-container'>
-        <h3 id='project-label'>Spaces</h3>
-        <div id='project-contents'>
-            <div id='project-list'>
+    </section>
+    <section>
+      <div id='projects-container'>
+        <div class='selected-project-wrapper'>
+            <h1 id='selected-project-header'>Spaces</h1>
+            <div id='selected-project-filters'>
+                <h2 id='filter-all' class='selected-filter-item filter-item-selected'>All</h2>
+                <h2 id='filter-ux' class='selected-filter-item'>UX</h2>
+                <h2 id='filter-visual' class='selected-filter-item'>Visual</h2>
+                <h2 id='filter-research' class='selected-filter-item'>Research</h2>
+                <h2 id='filter-thoughts' class='selected-filter-item'>Thoughts</h2>
+            </div>
+            <div id='selected-project-container' class='skewElem'>
                 <a href='creativejam.html'>
-                    <div id="project3" class='project-content'>
-                        <p id='project3-name' class='project-name'>AdobeXAirbnb</p>
+                    <div id='project1' class='selected-project-item ux-case visual-case'>
+                        <div id='project1-name' class='project-name-container'>
+                            <div class='project-item-information'>
+                                <p class='project-name'>AdobeXAirbnb</p>
+                                <p class='project-type'>Experience Design</p>
+                            </div>
+                            <p class='project-timeline'>48 Hours</p>
+                        </div>
                     </div>
                 </a>
                 <a href='persona.html'>
-                    <div id="project2" class='project-content'>
-                        <p id='project2-name'  class='project-name'>Student Personas</p>
+                    <div id='project2' class='selected-project-item visual-case research-case'>
+                        <div id='project2-name' class='project-name-container'>
+                            <div class='project-item-information'>
+                                <p class='project-name'>Student Personas</p>
+                                <p class='project-type'>Design Research</p>
+                            </div>
+                            <p class='project-timeline'>12 Weeks</p>
+                        </div>
                     </div>
                 </a>
                 <a href='hololens.html'>
-                    <div id="project1" class='project-content'>
-                        <p id='project1-name'  class='project-name'>HoloLens Demo</p>
+                    <div id='project3' class='selected-project-item ux-case'>
+                        <div id='project3-name' class='project-name-container'>
+                            <div class='project-item-information'>
+                                <p class='project-name'>HoloLens</p>
+                                <p class='project-type'>Extended Reality Design</p>
+                            </div>
+                            <p class='project-timeline'>10 Weeks</p>
+                        </div>
                     </div>
                 </a>
+                <a href='creativejam.html'>
+                    <div id='project4' class='selected-project-item ux-case research-case'>
+                        <div id='project4-name' class='project-name-container'>
+                            <div class='project-item-information'>
+                                <p class='project-name'>Credena Pharmacy</p>
+                                <p class='project-type'>Experience Design Concept</p>
+                            </div>
+                            <div class='project-item-footer'>
+                            <p class='project-timeline'>12 Weeks</p>
+                            <img class='project-lock-icon' src='assets/icons/lock-icon-filled.svg'>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a href='creativejam.html'>
+                  <div id='project5' class='selected-project-item visual-case'>
+                      <div id='project5-name' class='project-name-container'>
+                          <div class='project-item-information'>
+                              <p class='project-name'>Sony Entertainment</p>
+                              <p class='project-type'>UI Design</p>
+                          </div>
+                          <div class='project-item-footer'>
+                            <p class='project-timeline'>12 Weeks</p>
+                            <img class='project-lock-icon' src='assets/icons/lock-icon-filled.svg'>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+                <a href='creativejam.html'>
+                  <div id='project6' class='selected-project-item visual-case'>
+                      <div id='project6-name' class='project-name-container'>
+                          <div class='project-item-information'>
+                              <p class='project-name'>Branding & Design</p>
+                              <p class='project-type'>Collection</p>
+                          </div>
+                          <p class='project-timeline'>2016 - Present</p>
+                      </div>
+                  </div>
+              </a>
+                
             </div>
-            <div id='project-information'>
-                <p id="project-title">Internship – 10 Weeks</p>
-                <p id="project-attr">UX, XR, Consulting</p>
+            <div id='project-image-wrapper'>
+                <div id='project-image-container'>
+                    <div class='project-item-images'>
+                        <div id='project-image-item-1' class='project-item-image'>
+                            <img id='project-image-img-1' src=''>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
+      </div>
+    </section>
+    <section id='footer-snap'>
+      <div id='landing-footer-wrapper'>
+        <div id='landing-footer-container'>
+          <div class='footer-text-container'>
+            <p id='footer-text-header'>We can–
+              <br>
+            </p>
+            <p><span id='footer-text-variable'>bridge the divide between people.</span></p>
+          </div>
+          <div id='landing-footer-content'>
+            <div id='social-links'>
+              <a target="_blank" href="https://www.linkedin.com/in/jusung/">
+                <p class='social-link-item'>LinkedIn</p>
+              </a>
+              <p class='social-link-item'> – </p>
+              <a target="_blank" href="https://www.instagram.com/jusung.me/">
+                <p class='social-link-item'>Instagram</p>
+              </a>
+              <p class='social-link-item'> – </p>
+              <div>
+                <p id='email-copy-link' class='social-link-item'> Email 
+                  <span class='email-copied-signifier'> - Copied</span>
+                </p>
+              </div>
+            </div>
+            <div id='footer-author'>
+              <p id='landing-footer-text'>Made by Jusung</p>
+              <p id='last-updated-date'>April 20, 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  </div>
+  
+  
+
   
 
   <script src="js/index.js"></script>
   <script src="js/action.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
 </body>
-
-<footer>
-  <div id='landing-footer'>
-    <!-- Spaces Container -->
-    <div id='project-container'>
-      <h3 id='project-label'>Spaces</h3>
-      <div id='project-contents'>
-          <div id='project-list'>
-              <a href='creativejam.html'>
-                  <div id="project3" class='project-content'>
-                      <p id='project3-name' class='project-name'>AdobeXAirbnb</p>
-                  </div>
-              </a>
-              <a href='persona.html'>
-                  <div id="project2" class='project-content'>
-                      <p id='project2-name'  class='project-name'>Student Personas</p>
-                  </div>
-              </a>
-              <a href='hololens.html'>
-                  <div id="project1" class='project-content'>
-                      <p id='project1-name'  class='project-name'>HoloLens Demo</p>
-                  </div>
-              </a>
-          </div>
-          <div id='project-information'>
-              <p id="project-title">Internship – 10 Weeks</p>
-              <p id="project-attr">UX, XR, Consulting</p>
-          </div>
-      </div>
-    </div>
-    <div id='landing-footer-wrapper'>
-      <p id='landing-footer-text'>Designed & Coded by Jusung</p>
-    </div>
-  </div>
-</footer>
 
 </html>

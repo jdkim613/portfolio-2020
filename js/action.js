@@ -43,25 +43,26 @@ $(document).ready(function() {
   console.log('email copied');
 };
 
-  // more project nav
-  $('#more-projects').on('click', function() {
-
-    console.log('clicked for more');
-
-    // $('.more-projects-nav').toggleClass('disappear');
+ // more project nav
+  $('.interactive-menu-button a').click(function() {
+    $(this).toggleClass('active');
     $('.more-projects-nav').toggleClass('slide-appear');
     $('.sliding-nav').toggleClass('no-event');
     $('body').toggleClass('fixed-position');
 
+    var idFinder = false;
+
     if(!$('.navigation-items').hasClass('white-font')) {
-      console.log('add white-font class');
       $('.navigation-item').toggleClass('white-font');
     } else {
-      console.log('remove white-font class');
+      console.log('remove black-font class');
       $('.navigation-item').removeClass('white-font');
     }
-  })
 
+    console.log('this ' + this);
+  });
+
+ 
   // Project Toggle
   $('.project-item, .project-content').on('mouseover', function() {
 
