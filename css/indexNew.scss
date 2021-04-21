@@ -5,17 +5,17 @@ body {
 
 main {
     height: 100vh;
-    overflow: scroll;
-    scroll-snap-type: y proximity;
+    // overflow: scroll;
+    // scroll-snap-type: y proximity;
 }
 
-section {
-    scroll-snap-align: start;
-}
+// section {
+//     scroll-snap-align: start;
+// }
 
-section #footer-snap {
-    scroll-snap-align: end;
-}
+// section #footer-snap {
+//     scroll-snap-align: end;
+// }
 
 #main-container {
     width: 100vw;
@@ -24,6 +24,8 @@ section #footer-snap {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    scroll-snap-align: start;
 
     // border: 2px red dashed;
 }
@@ -151,6 +153,8 @@ section #footer-snap {
     // width: 90vw;
     // margin-top: 7.5vh;
     border: 10px orange dashed;
+
+    scroll-snap-align: start;
 
 }
 
