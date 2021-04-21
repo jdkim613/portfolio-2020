@@ -3,6 +3,20 @@ body {
     cursor: url("../assets/cursor-white.png"), pointer;
 }
 
+main {
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y proximity;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+section #footer-snap {
+    scroll-snap-align: end;
+}
+
 #main-container {
     width: 100vw;
     height: 100vh;
@@ -71,6 +85,42 @@ body {
     background-image: linear-gradient(to bottom, transparent 5%, black 95%);
     bottom: 0;
     background-blend-mode: darken;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    // border: 2px yellow dashed;
+}
+
+#view-project-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    margin-bottom: 5vh;
+    // cursor: pointer;
+    // border: 2px yellow dashed;
+}
+
+#view-project-button h3 {
+    font-family: degular;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+// #view-project-button h3:hover {
+//     opacity: 50%;
+// }
+
+#view-project-button img {
+    width: 0.5vw;
+    min-width: 8px;
+
+    // border: 2px yellow dashed;
 }
 
 #black-text {
@@ -96,10 +146,11 @@ body {
     font-weight: 300;
 }
 
-#project-container {
-    width: 90vw;
-    margin-top: 7.5vh;
-    // border: 1px orange dashed;
+#projects-container {
+    // width: 90vw;
+    // margin-top: 7.5vh;
+    border: 10px orange dashed;
+
 }
 
 #project-label {
@@ -116,6 +167,7 @@ body {
     flex-direction: row;
     align-self: start;
     justify-content: space-between;
+
 
     // border: 2px green dotted;
 }
@@ -313,6 +365,7 @@ h1:hover ~ .wrapped-container {
     margin-bottom: 10vh;
     position: relative;
 
+
     border: 1px lightblue dashed;
 }
 
@@ -382,7 +435,7 @@ h1:hover ~ .wrapped-container {
 /* Text Footer */
 #landing-footer-wrapper {
     width: 100vw;
-    height: 40vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -425,9 +478,9 @@ h1:hover ~ .wrapped-container {
     flex-direction: row;
     justify-content: space-between;
 
-    min-width: 400px;
-    max-width: 750px;
-    width: 17.5vw;
+    // min-width: 400px;
+    // max-width: 750px;
+    // width: 25vw;
 
     border: 1px green dashed;
 }
@@ -437,15 +490,39 @@ h1:hover ~ .wrapped-container {
     font-size: 1.25rem;
     color: #FFFFFF;
     text-transform: uppercase;
+    
+    margin-right: clamp(12px, 2.5vw, 48px);
 }
 
 .social-link-item:hover {
     opacity: 50%;
 }
 
+#email-copy-link {
+    height: 25px;
+    width: 150px;
+    position: relative;
+    // display: block;
+    overflow: hidden;
+    margin: 0;
+
+    // border: 1px green dashed;
+}
+
+.email-copied-signifier {
+    position: absolute;
+    // display: inline;
+    z-index: 200;
+    top: 100%;
+    margin-left: 6px;
+    
+    // border: 1px yellow dashed;
+}
+
 #footer-author {
     display: flex;
     flex-direction: column;
+    font-weight: 500;
 
     border: 2px blue dashed;
 }

@@ -1,6 +1,10 @@
 $(document).ready(function() {
   console.log("it works")
 
+  // Footer Email Signifier 
+  var emailTL = new TimelineMax({paused: true});
+  
+
   const myEmail = 'jdkim613@gmail.com';
 
   // change face
@@ -15,6 +19,7 @@ $(document).ready(function() {
   // email copy
   $('#head, #email-copy-link').on('click', function() {
     $('#head').attr('src', 'assets/face-1.png');
+    emailTL.play();
     emailToClipboard('jdkim613@gmail.com');
     $('#email-copied').text('Email copied!');
   })
@@ -30,6 +35,11 @@ $(document).ready(function() {
   el.select();
   document.execCommand('copy');
   document.body.removeChild(el);
+
+  // animate email signifier and move it back down
+  emailTL.to('.email-copied-signifier', 0.5, {top: '0%', ease: Power4.easeOut});
+  TweenMax.to('.email-copied-signifier', 0.5, {top: '100%', ease: Power4.easeOut, delay: 1}, 2);
+
   console.log('email copied');
 };
 
