@@ -115,6 +115,13 @@ $(document).ready(function () {
         console.log('selectedProject is 5');
         break;
 
+      case 'project-more':
+        // Branding Works
+        selectedProject = document.querySelectorAll('#projectmore-name');
+        imageRevealSource = 'assets/index/wip.gif';
+        console.log('selectedProject is work-in-progress');
+        break;
+
     }
 
     $("#project-image-img-1").attr('src', imageRevealSource);
