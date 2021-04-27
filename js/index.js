@@ -10,21 +10,30 @@ $(document).ready(function () {
     console.log('mobile id entered');
   }
 
-  // Project Item Animation 1
-  // $('.project-content').on('mouseover', function() {
+    // Preload images for better performance
+    var indexImages = [];
+  
+    function preload() {
+        for (var i = 0; i < arguments.length; i++) {
+            indexImages[i] = new Image();
+            indexImages[i].src = preload.arguments[i];
+            indexImages[i].id = 'project-image-img-1';
+        }
+    }
+  
+    //-- usage --//
+    preload(
 
-  //   var thisMouse = this.id; // assign id value
-  //   TweenMax.to(this, 1, {width: '15vw', transformOrigin:"left", ease: "circ.out"});
-  //   showProjectTitle(thisMouse, true); // show project inside .project-content
-
-
-  // }).on('mouseleave', function() {
-
-  //   var thisMouse = this.id; // assign id value
-  //   TweenMax.to(this, 1, {width: '.75vw', ease: "circ.out"});
-  //   showProjectTitle(thisMouse, false); // hide project inside .project-content
-
-  // })
+      // load more photos here
+        'assets/index/wip.gif',
+        'assets/index/adobexairbnb.gif',
+        'assets/index/student-persona.gif',
+        'assets/index/hololens-4.gif',
+        'assets/index/credena.gif',
+        'assets/index/sony-2.gif',
+        'assets/index/branding.gif'
+        
+    )
 
   // Project Item Animation 2
   $('.selected-project-item, project-name-container').on('mouseover', function () {
@@ -55,78 +64,91 @@ $(document).ready(function () {
 
   })
 
-  // view project button
-  // $('#view-project-button').on('click', function() {
-  //   TweenMax.to($('main'), {duration: 0.75, scrollTo:"#projects-container", ease: 'circ.out'});
-  //   console.log('view project button clicked');
-  // })
-
+// More Project Microinteraction
   $('#view-project-button').on('mouseover', function() {
     TweenMax.to($('#view-project-button img'), {duration: 0.75, rotation: -360, ease: 'circ.out'});
     TweenMax.to($('#view-project-button img'), {duration: 0, rotation: 360, ease: 'circ.out'});
   })
 
-
+// Change the project image
   function showProjectTitle(projectID, onSwitch) {
 
     var selectedProject = '';
     var imageRevealSource = '';
+    var preloadedImageKey = '';
 
     switch (projectID) {
       case 'project1':
         // AdobeXAirbnb
         selectedProject = document.querySelectorAll('#project1-name');
-        imageRevealSource = 'assets/index/adobexairbnb.gif';
+        // imageRevealSource = 'assets/index/adobexairbnb.gif';
+        preloadedImageKey = 1;
+
         console.log('selectedProject is 1');
         break;
 
       case 'project2':
         // Persona
         selectedProject = document.querySelectorAll('#project2-name');
-        imageRevealSource = 'assets/index/student-persona.gif';
+        // imageRevealSource = 'assets/index/student-persona.gif';
+        preloadedImageKey = 2;
+
         console.log('selectedProject is 2');
         break;
 
       case 'project3':
         // HoloLens
         selectedProject = document.querySelectorAll('#project3-name');
-        imageRevealSource = 'assets/index/hololens-4.gif';
+        // imageRevealSource = 'assets/index/hololens-4.gif';
+        preloadedImageKey = 3;
+
         console.log('selectedProject is 3');
         break;
 
       case 'project4':
         // Credena
         selectedProject = document.querySelectorAll('#project4-name');
-        imageRevealSource = 'assets/index/credena.gif';
+        // imageRevealSource = 'assets/index/credena.gif';
+        preloadedImageKey = 4;
+
         console.log('selectedProject is 4');
         break;
 
       case 'project5':
         // Sony
         selectedProject = document.querySelectorAll('#project5-name');
-        imageRevealSource = 'assets/index/sony-2.gif';
+        // imageRevealSource = 'assets/index/sony-2.gif';
+        preloadedImageKey = 5;
+
         console.log('selectedProject is 5');
         break;
 
       case 'project6':
         // Branding Works
         selectedProject = document.querySelectorAll('#project6-name');
-        imageRevealSource = 'assets/index/branding.gif';
+        // imageRevealSource = 'assets/index/branding.gif';
+        preloadedImageKey = 6;
+
         console.log('selectedProject is 5');
         break;
 
       case 'project-more':
         // Branding Works
         selectedProject = document.querySelectorAll('#projectmore-name');
-        imageRevealSource = 'assets/index/wip.gif';
+        // imageRevealSource = 'assets/index/wip.gif';
+        preloadedImageKey = 0;
+
         console.log('selectedProject is work-in-progress');
         break;
 
     }
 
-    $("#project-image-img-1").attr('src', imageRevealSource);
+    // Change the source using preloaded images
+    $("#project-image-img-1").attr('src', indexImages[preloadedImageKey].src);
+    
 
     if (onSwitch == true) {
+      
       TweenMax.to(selectedProject, .75, { visibility: "visible", ease: "circ.out" }); // animate project content
     } else {
       TweenMax.to(selectedProject, .75, { visibility: "hidden", ease: "circ.out" }); // animate project content
