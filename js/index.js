@@ -17,7 +17,10 @@ $(document).ready(function () {
         for (var i = 0; i < arguments.length; i++) {
             indexImages[i] = new Image();
             indexImages[i].src = preload.arguments[i];
-            indexImages[i].id = 'project-image-img-1';
+            indexImages[i].id = 'project-image-img-' + i;
+            indexImages[i].className = 'project-image-imgs';
+            $('#project-image-item-1').append(indexImages[i]);
+            $('#project-image-img-' + i).hide();
         }
     }
   
@@ -51,7 +54,7 @@ $(document).ready(function () {
     TweenMax.to(this, 1, { height: '12vw', transformOrigin: "top", ease: "circ.out", padding: "16px" });
     showProjectTitle(thisMouse, true); // show project inside .project-content
 
-    showProjectImageItem();
+    // showProjectImageItem();
 
   }).on('mouseleave', function () {
 
@@ -59,6 +62,7 @@ $(document).ready(function () {
     TweenMax.to(this, 1, { height: '15px', transformOrigin: "top", ease: "circ.out" });
     TweenMax.to(this, 1, { width: '7.5vw', transformOrigin: "left", ease: "circ.out", padding: "0px" });
     showProjectTitle(thisMouse, false); // hide project inside .project-content
+
     hideProjectImageItem();
     console.log('mouse left');
 
@@ -70,11 +74,13 @@ $(document).ready(function () {
     TweenMax.to($('#view-project-button img'), {duration: 0, rotation: 360, ease: 'circ.out'});
   })
 
+  // Assign which project image to show
+  var projectImageID = $('#hello'); // create variable for ImageID
+
 // Change the project image
   function showProjectTitle(projectID, onSwitch) {
 
     var selectedProject = '';
-    var imageRevealSource = '';
     var preloadedImageKey = '';
 
     switch (projectID) {
@@ -144,7 +150,9 @@ $(document).ready(function () {
     }
 
     // Change the source using preloaded images
-    $("#project-image-img-1").attr('src', indexImages[preloadedImageKey].src);
+    // $("#project-image-img-1").attr('src', indexImages[preloadedImageKey].src);
+    projectImageID = '#project-image-img-' + preloadedImageKey;
+    showProjectImageItem(projectImageID);
     
 
     if (onSwitch == true) {
@@ -156,35 +164,24 @@ $(document).ready(function () {
   }
 
   // Project Image Item Reveal
-  const imageRevealTL = new TimelineLite(); // create animation timeline
-  const imageHideTL = new TimelineLite(); // create animation timeline
+  function showProjectImageItem(excludedID) {
 
-  // function showProjectImageItem(divSelected, imgSelected, revealTrigger) {
-  //   if(revealTrigger == true) {
-  //     // TweenMax.to(divSelected, 0, {width: '0%', ease:"circ.out"}); 
-  //     TweenMax.to(divSelected, 1, {opacity: '0%', ease:"circ.out"}); 
-  //     TweenMax.from(imgSelected, 1, {transform: "scale(2)", ease:"circ.out"}); // if revealTrigger is 'true', reveal image
-  //   } else {
-  //     // TweenMax.to(divSelected, 0.5, {width: '100%', ease:"circ.out"})
-  //     TweenMax.to(divSelected, .25, {opacity: '100%', ease:"circ.out"}); 
-  //     TweenMax.to(imgSelected, 1, {transform: "scale(1)", ease:"circ.out"});  // if revealTrigger is 'falase', hide image
-  //   }
-  // }
-
-  // const projectImageDiv = CSSRulePlugin.getRule("#project-image-item-1:after"); // create variable for ImageDiv
-  const projectImageID = $('#project-image-img-1'); // create variable for ImageID
-
-  function showProjectImageItem() {
-    TweenMax.to(projectImageID, 1, { opacity: '100%', ease: "circ.out" });
-    TweenMax.from(projectImageID, 1, { transform: "scale(2)", ease: "circ.out" }); // if revealTrigger is 'true', reveal image
-    console.log('reveal image');
+    $(excludedID).show();
+    $(projectImageID).siblings().hide();
+    
+    // Tween animate
+    TweenMax.to(excludedID, 1.5, { opacity: '100%', ease: "circ.out" });
+    TweenMax.from(excludedID, 1.5, { transform: "scale(2)", ease: "circ.out" }); // if revealTrigger is 'true', reveal image
+    // console.log('reveal image');
   }
 
   // Project Image Item Hide
   function hideProjectImageItem() {
-    TweenMax.to(projectImageID, 1, { opacity: '0%', ease: "circ.out" });
+
+    // Tween animate
+    TweenMax.to(projectImageID, 2, { opacity: '0%', ease: "circ.out" });
     TweenMax.to(projectImageID, 1, { transform: "scale(1)", ease: "circ.out" });  // if revealTrigger is 'false', hide image
-    console.log('hide image');
+    // console.log('hide image');
   }
 
   // Custom cursor for main statements

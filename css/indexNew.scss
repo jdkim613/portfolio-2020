@@ -309,7 +309,7 @@ main {
     border: white 1px dashed;
 }
 
-#project-image-img-1 {
+.project-image-imgs {
     max-width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -543,4 +543,8 @@ h1:hover ~ .wrapped-container {
 #last-updated-date { 
     margin-top: 4px;
     opacity: 40%;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 813px) {
+
 }
