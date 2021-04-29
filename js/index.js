@@ -230,19 +230,18 @@ $(document).ready(function () {
   })
 
   var bgImage = ['assets/home-1.JPG', 'assets/home-2.JPG', 'assets/home-3.JPG', 'assets/home-4.JPG', 'assets/home-5.jpg', 'assets/home-0.JPG'];
-  var variableString = ['design, because it matters.', 'thrive under constraints.', 'work with real people.', 'make something unforgettable.', 'define moments that matter.']
-  var imageHead = document.getElementById('homepage-image-2');
-  var imageInt = 0;
+  // var variableString = ['design, because it matters.', 'thrive under constraints.', 'work with real people.', 'make something unforgettable.', 'define moments that matter.'];
+  // var imageInt = 0;
 
-  setInterval(function () {
-    // imageHead.style.backgroundImage = "linear-gradient(to bottom, transparent 50%, black 100%),url(" + bgImage[imageInt] + ")"; // obsolete
-    $('#footer-text-variable').text(variableString[imageInt]);
+  // setInterval(function () {
+  //   // imageHead.style.backgroundImage = "linear-gradient(to bottom, transparent 50%, black 100%),url(" + bgImage[imageInt] + ")"; // obsolete
+  //   $('#footer-text-variable').text(variableString[imageInt]);
 
-    imageInt = imageInt + 1;
-    if (imageInt == bgImage.length) {
-      imageInt = 0;
-    }
-  }, 2000);
+  //   imageInt = imageInt + 1;
+  //   if (imageInt == bgImage.length) {
+  //     imageInt = 0;
+  //   }
+  // }, 2000);
 
   // Skew Project Items
   let proxy = { skew: 0 },

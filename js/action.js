@@ -53,10 +53,11 @@ $(document).ready(function() {
     var idFinder = false;
 
     if(!$('.navigation-items').hasClass('white-font')) {
-      $('.navigation-item').toggleClass('white-font');
+      $('.about-page h3').css('color', '#FFF');
+      $('.navigation-items').toggleClass('white-font');
     } else {
-      console.log('remove black-font class');
-      $('.navigation-item').removeClass('white-font');
+      $('.about-page h3').css('color', '#333333');
+      $('.navigation-items').removeClass('white-font');
     }
 
     console.log('this ' + this);
@@ -266,5 +267,18 @@ $(document).ready(function() {
         removeCaseTitles()
       });
 
+      // footer text variable 
+      var variableStringArray = ['design, because it matters.', 'thrive under constraints.', 'work with real people.', 'make something unforgettable.', 'define moments that matter.'];
+      var imageInt = 0;
+
+      setInterval(function () {
+        // imageHead.style.backgroundImage = "linear-gradient(to bottom, transparent 50%, black 100%),url(" + bgImage[imageInt] + ")"; // obsolete
+        $('#footer-text-variable').text(variableStringArray[imageInt]);
+    
+        imageInt = imageInt + 1;
+        if (imageInt == variableStringArray.length) {
+          imageInt = 0;
+        }
+      }, 2000);
 
   });

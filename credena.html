@@ -3,8 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/hololens.css">
+    <link rel="stylesheet" href="css/password-protect.css">
     <title> Credena Pharmacy Concept </title>
-    <link rel='icon' href='assets/xrdemo.ico' type='image/x-icon'/ >
+    <link rel='icon' href='assets/xrdemo.ico' type='image/x-icon'>
     <link  rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
@@ -15,7 +16,7 @@
     <div class="header-content">
       <div class="add-click">
         <a href="index.html">
-          <img id="logo" src="assets/logo.png"></img>
+          <img id="logo" src="assets/logo-2020-2.png"></img>
         </a>
       </div>
       <div class="navigation-items add-click">
@@ -30,7 +31,7 @@
           <div id="more-projects">
             <div class="interactive-menu-button">
               <a id='hamburger-menu-link' href="#">
-                <span id='hamburger-menu-1'>Menu</span>
+                <span id='hamburger-menu'>Menu</span>
               </a>
             </div>
             <!-- <h3><strong>+</strong></h3> -->
@@ -41,6 +42,103 @@
   </header>
 
   <body>
+
+    <!-- password protection overlay -->
+    <div id='password-protection-overlay'>
+      <div id="protection-wrapper">
+        <div id="protection-container">
+
+          <!-- password input module -->
+          <div id="password-container">
+            <div id="password-require-container">
+              <img src="assets/icons/password-icon.svg" alt="password-required-icon" id="locked-page-icon">
+              <h3 id="password-statement">This space is password protected</h3>
+            </div>
+            <div id="password-input-container">
+              <input type="password" name="case-password" id="password-input-area" cols="30" rows="1" placeholder='Enter password'></input>
+              <div id="submit-button-container">
+                <button id="submit-password">
+                  <img src="assets/icons/submit-password.svg" alt="submit-icon" id="submit-icon">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- case preview module -->
+          <div id="case-preview">
+            <div id="preview-case-image-container">
+              <img src="assets/case-image-placeholder.png" alt="credena-case-preview-image" id="preview-case-image">
+            </div>
+            <!-- Overview Module -->
+            <div class="content-container">
+              <div class="content-inside">
+                <div class="item content-left">
+                  <h2 class="section-title">Overview</h2>
+                </div>
+                <div class="item content-right">
+                  <div class="content-block">
+                    <h3 class="overview-statement">Inspiring new Extended Reality market opportunities with business-ready solutions.</h3>
+                  </div>
+                  <div class="flexible-container">
+                    <div class="overview-items">
+                      <div class="overview-item">
+                        <h3 class="overview-item-header">Client</h3>
+                        <p class="overview-item-body">Credena Pharmacy</p>
+                      </div>
+                      <div class="overview-item">
+                        <h3 class="overview-item-header">Role</h3>
+                        <p class="overview-item-body">UX Designer (Avanade)</p>
+                      </div>
+                      <div class="overview-item">
+                        <h3 class="overview-item-header">Time</h3>
+                        <p class="overview-item-body">14 Weeks</p>
+                      </div>
+                      <div class="overview-item">
+                        <h3 class="overview-item-header">Tools</h3>
+                        <p class="overview-item-body">Mural<br>Figma</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id='landing-footer-wrapper'>
+            <div id='landing-footer-container'>
+              <div class='footer-text-container'>
+                <p id='footer-text-header'>We can–
+                  <br>
+                </p>
+                <p><span id='footer-text-variable'>bridge the divide between people.</span></p>
+              </div>
+              <div id='landing-footer-content'>
+                <div id='social-links'>
+                  <a target="_blank" href="https://www.linkedin.com/in/jusung/">
+                    <p class='social-link-item'>LinkedIn</p>
+                  </a>
+                  <p class='social-link-item'> – </p>
+                  <a target="_blank" href="https://www.instagram.com/jusung.me/">
+                    <p class='social-link-item'>Instagram</p>
+                  </a>
+                  <p class='social-link-item'> – </p>
+                  <div>
+                    <p id='email-copy-link' class='social-link-item'> Email 
+                      <span class='email-copied-signifier'> - Copied</span>
+                    </p>
+                  </div>
+                </div>
+                <div id='footer-author'>
+                  <p id='landing-footer-text'>Made by Jusung</p>
+                  <p id='last-updated-date'>April 20, 2021</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <!-- more projects nav -->
     <div class="sliding-nav no-event">
@@ -286,17 +384,17 @@
               <div class="stat-item">
                 <p class="stat">55K</p>
                 <h3 class="section-header">New Employees</h3>
-                <p class"body-style"><i>2019</i></p>
+                <p class="body-style"><i>2019</i></p>
               </div>
               <div class="stat-item">
                 <p class="stat">$240</p>
                 <h3 class="section-header">Training Cost per Employee</h3>
-                <p class"body-style"><i>20h x $12 average wages</i></p>
+                <p class="body-style"><i>20h x $12 average wages</i></p>
               </div>
               <div class="stat-item">
                 <p class="stat">$13M</p>
                 <h3 class="section-header">Market Cap</h3>
-                <p class"body-style"><i>Starbucks alone</i></p>
+                <p class="body-style"><i>Starbucks alone</i></p>
               </div>
             </div>
           </div>
@@ -497,5 +595,6 @@
 
     <script src="js/hololens.js"></script>
     <script src="js/action.js"></script>
+    <script src="js/protection.js"></script>
   </body>
 </html>

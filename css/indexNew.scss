@@ -437,113 +437,113 @@ h1:hover ~ .wrapped-container {
 }
 
 
-/* Text Footer */
-#landing-footer-wrapper {
-    width: 100vw;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// /* Text Footer */
+// #landing-footer-wrapper {
+//     width: 100vw;
+//     height: 50vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    background-color: black;
+//     background-color: black;
 
-    border: 1px green dashed;
-}
+//     border: 1px green dashed;
+// }
 
-#landing-footer-container {
-    width: 80vw;
+// #landing-footer-container {
+//     width: 80vw;
 
-    border: 1px blue dashed;
-}
+//     border: 1px blue dashed;
+// }
 
-.footer-text-container {
-    margin-bottom: clamp(48px, 15vh, 72px);
-    border: 1px red dashed;
-}
+// .footer-text-container {
+//     margin-bottom: clamp(48px, 15vh, 72px);
+//     border: 1px red dashed;
+// }
 
-#footer-text-header, #footer-text-variable {
-    font-size: 1.5rem;
-    color: #FFFFFF;
-}
+// #footer-text-header, #footer-text-variable {
+//     font-size: 1.5rem;
+//     color: #FFFFFF;
+// }
 
-#landing-footer-content {
-    width: inherit;
+// #landing-footer-content {
+//     width: inherit;
 
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
 
-    border: 1px green dashed;
-}
+//     border: 1px green dashed;
+// }
 
-#social-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+// #social-links {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
 
-    // min-width: 400px;
-    // max-width: 750px;
-    // width: 25vw;
+//     // min-width: 400px;
+//     // max-width: 750px;
+//     // width: 25vw;
 
-    border: 1px green dashed;
-}
+//     border: 1px green dashed;
+// }
 
-.social-link-item {
-    font-family: degular;
-    font-size: 1.25rem;
-    color: #FFFFFF;
-    text-transform: uppercase;
+// .social-link-item {
+//     font-family: degular;
+//     font-size: 1.25rem;
+//     color: #FFFFFF;
+//     text-transform: uppercase;
     
-    margin-right: clamp(12px, 2.5vw, 48px);
-}
+//     margin-right: clamp(12px, 2.5vw, 48px);
+// }
 
-.social-link-item:hover {
-    opacity: 50%;
-}
+// .social-link-item:hover {
+//     opacity: 50%;
+// }
 
-#email-copy-link {
-    height: 25px;
-    width: 150px;
-    position: relative;
-    // display: block;
-    overflow: hidden;
-    margin: 0;
+// #email-copy-link {
+//     height: 25px;
+//     width: 150px;
+//     position: relative;
+//     // display: block;
+//     overflow: hidden;
+//     margin: 0;
 
-    // border: 1px green dashed;
-}
+//     // border: 1px green dashed;
+// }
 
-.email-copied-signifier {
-    position: absolute;
-    // display: inline;
-    z-index: 200;
-    top: 100%;
-    margin-left: 6px;
+// .email-copied-signifier {
+//     position: absolute;
+//     // display: inline;
+//     z-index: 200;
+//     top: 100%;
+//     margin-left: 6px;
     
-    // border: 1px yellow dashed;
-}
+//     // border: 1px yellow dashed;
+// }
 
-#footer-author {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
+// #footer-author {
+//     display: flex;
+//     flex-direction: column;
+//     font-weight: 500;
 
-    border: 2px blue dashed;
-}
+//     border: 2px blue dashed;
+// }
 
-#landing-footer-text, #last-updated-date {
-    text-align: right;
-    color: #FFF;
-    font-family: Degular;
-    text-transform: uppercase;
-    // border: 1px blue dashed;
-}
+// #landing-footer-text, #last-updated-date {
+//     text-align: right;
+//     color: #FFF;
+//     font-family: Degular;
+//     text-transform: uppercase;
+//     // border: 1px blue dashed;
+// }
 
-#last-updated-date { 
-    margin-top: 4px;
-    opacity: 40%;
-}
+// #last-updated-date { 
+//     margin-top: 4px;
+//     opacity: 40%;
+// }
 
 @media screen and (max-width: 1500px) and (min-width: 813px) {
 
