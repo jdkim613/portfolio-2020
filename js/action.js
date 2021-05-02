@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("it works")
 
   // Footer Email Signifier 
   var emailTL = new TimelineMax({paused: true});
@@ -281,4 +280,95 @@ $(document).ready(function() {
         }
       }, 2000);
 
+
+    // Random statement generator 
+    var statementContainer = [
+      { statement: 'Right thing in the right place for the right person for the right task at the right moment for the right price.',
+        author: '– Bill Buxton',
+        type: 'quote'
+      },
+      { statement: 'Know thy user, know thy are not the user.',
+        author: '– Arnie Lund',
+        type: 'quote'
+      },
+      { statement: '"You are making me rethink about my entire life in this project"',
+        author: '– Peter Lin',
+        type: 'Review'
+      },
+      { statement: 'Anyone can cook.',
+        author: '– Auguste Gusteau, Ratatouille',
+        type: 'quote'
+      },
+      { statement: 'Right thing in the right place for the right person for the right task at the right moment for the right price.',
+        author: '– Bill Buxton',
+        type: 'quote'
+      }
+      // { statement: '',
+      //   author: '',
+      //   type: ''
+      // }
+    ];
+
+    var randNumb = Math.floor(Math.random() * statementContainer.length);
+
+    function addRandStatement(chosenIndex) {
+      if(chosenIndex > 10) {
+        $('#preload-statement-number').text('#' + (chosenIndex + 1));
+      } else {
+        $('#preload-statement-number').text('#0' + (chosenIndex + 1));
+      }
+
+      $('#preload-statement-type').text(statementContainer[chosenIndex].type);
+      $('#preload-statement').text(statementContainer[chosenIndex].statement);
+      $('#preload-statement-author').text(statementContainer[chosenIndex].author);
+    };
+
+    addRandStatement(randNumb);
+
   });
+
+  // Test function
+  function thisTestFunc() {
+    console.log("this test works!");
+  }
+
+  // Preload Functions
+  var transitionTL = gsap.timeline();
+  let progress = $('#preload-bar');
+
+  var imageIndex = 0;
+  var appendIndex = '#test-img-container-' + imageIndex;
+
+  var queue = new createjs.LoadQueue(false);
+
+  queue.on('progress', event => {
+    // console.log(event);
+    let progress = Math.floor(event.progress * 100);
+    var progressGage = (progress * 0.7);
+    // console.log(progressGage)
+    TweenMax.to($('#preload-bar'), {duration: 1, width: progressGage +'vw', ease: 'circ.out'}, 1)
+
+
+    if (progress == 100) {
+      console.log('all done');
+    }
+
+  })
+
+  queue.on('complete', event => {
+    transitionTL.to($('#preload-case-wrapper'), {duration: 0.75, width: 0, ease:'circ.out'}, 4);
+    TweenMax.to($('#preload-case-wrapper > *'), {duration: 0.75, position: 'absolute', right: '100vw'}, 4);
+  })
+
+  queue.on('fileload', handleFileComplete);
+  
+  function handleFileComplete(event) {
+    var item = event.item;
+    var type = item.type; 
+
+    if (type == createjs.Types.IMAGE) {
+      $(appendIndex).append(event.result);
+      ++imageIndex;
+      appendIndex = '#test-img-container-' + imageIndex;
+    }
+  }

@@ -5,6 +5,7 @@ $(document).ready(function() {
 
     // change the header text to white
     $('.navigation-item h3').css('color', '#FFF');
+    $('.body-content').css('overflow', 'hidden');
 
     // animate the preview image
     TweenMax.from($('#preview-case-image'), {duration: 1.5, margin: '15vh 0', opacity: 0, ease: 'circ.out'});
@@ -15,7 +16,6 @@ $(document).ready(function() {
     var setInputWidth = $('#password-statement').width();
     $('#password-input-area').css('width', setInputWidth);
     $('#submit-button-container').css('left', setInputWidth);
-    console.log(setInputWidth);
 
     // microinteraction for lock botton
     $('#locked-page-icon').on('mouseover', function() {
@@ -48,6 +48,10 @@ $(document).ready(function() {
 
     // detect when enter is pressed
     $('#password-input-area').keypress(function(event){
+        passwordEnter(event);  
+    })
+
+    function passwordEnter(event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         var inputID = $('#password-input-area');
         var userPWInput = inputID.val();
@@ -55,7 +59,6 @@ $(document).ready(function() {
 
         var correctPWTL = gsap.timeline();
         var hideOverlayTL = gsap.timeline();
-
 
         if(keycode == '13') {
 
@@ -74,6 +77,7 @@ $(document).ready(function() {
                 // change the menu colors
                 TweenMax.to($('.navigation-item h3'), {duration: 0.5, color: '#333333'});
                 $('#hamburger-menu').attr('id', 'hamburger-menu-1');
+                $('.body-content').css('overflow', 'scroll');
 
                 // console.log('password is correct');
 
@@ -89,6 +93,7 @@ $(document).ready(function() {
             }
 
         }
-    })
+
+    }
 
 });
