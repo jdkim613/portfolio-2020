@@ -16,6 +16,9 @@
     content: 'John.';
   }
 } */
+body {
+  background-color: #000;
+}
 
 @media screen and (max-width: 1300px) and (min-width: 800px) {
   .profile-quote {
@@ -101,4 +104,316 @@
 .social-icons-0 {
   width: 1.75vw;
   min-width: 36px;
+}
+
+/* New Bio Page */
+
+#bio-wrapper {
+
+}
+
+#bio-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#bio-image-wrapper {
+  width: 45vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px green dashed;
+}
+
+#bio-pic {
+  max-height: 70vh;
+  max-width: 25vw;
+  border-radius: 2%;
+  object-fit: cover;
+}
+
+#bio-content-wrapper {
+  width: 55vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px red dashed;
+}
+
+#bio-content-container {
+  /* height: 80vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 72px;
+
+  border: 1px yellow dashed;
+}
+
+#bio-navbar-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7.5vh;
+}
+
+.bio-navbar-item {
+  font-family: Degular;
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-right: clamp(24px, 2.5vw, 64px);
+  color: #FFF;
+  opacity: 0.5;
+
+  cursor: pointer;
+}
+
+.navbar-item-selected {
+  opacity: 1;
+}
+
+#biography-selection {
+  /* opacity: 1; */
+}
+
+#bio-content-biography-wrapper {
+  position: relative;
+  height: 50vh;
+}
+
+#bio-content-biography-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  border: 1px pink dashed;
+}
+
+.bio-content-swap {
+  position: absolute;
+  z-index: -1;
+}
+
+#bio-content-biography-swap {
+
+}
+
+#bio-content-resume-swap {
+  left: 150px;
+  opacity: 0;
+  /* visibility: hidden; */
+}
+
+#bio-content-summary-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.bio-content-summary {
+  font-family: FreightDisp Pro;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #FFF;
+}
+
+#bio-content-biography {
+  
+}
+
+#biography-content {
+  width: 40vw;
+  margin-bottom: 48px;
+  font-family: degular;
+  color: #FFF;
+}
+
+#bio-content-attr-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.experience-container-title {
+  font-family: FreightDisp Pro;
+  font-weight: 500;;
+  color: #FFF;
+  margin: 0 0 36px;
+}
+
+.attr-container {
+  margin: 0 256px 8px 0;
+}
+
+.attr-header, .attr-list-items, .attr-list-item {
+  font-size: 1rem;
+  color: #FFF;
+}
+
+.attr-header {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.attr-list-item {
+  opacity: 0.5;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+  /* justify-content: space-between; */
+
+  min-width: 500px;
+}
+
+.experience-attr {
+  /* width: 125px; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+
+  margin-right: clamp(48px, 5vw, 64px);
+}
+
+.experience-date, .experience-location, .experience-header, .experience-role {
+  font-family: Degular;
+  font-size: 1rem;
+  color: #FFF;
+}
+
+.experience-date, .experience-header {
+  font-weight: 600;
+  text-transform: uppercase;
+
+  margin-bottom: 2px;
+}
+
+.experience-location, .experience-role {
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+.content-divider {
+  width: 150%;
+  border-top: 1px solid #FFF !important;
+  opacity: 0.25;
+  margin: 12px 0 36px;
+}
+
+#landing-footer-wrapper {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7.5%;
+
+  background-color: black;
+
+  border: 1px green dashed;
+}
+
+#landing-footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10% 0 0;
+  /* border: 1px blue dashed; */
+}
+
+.footer-text-container {
+  margin-bottom: clamp(48px, 15vh, 72px);
+  border: 1px red dashed;
+}
+
+#footer-text-header, #footer-text-variable {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+
+#landing-footer-content {
+  width: inherit;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px green dashed;
+}
+
+#social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* // min-width: 400px;
+  // max-width: 750px;
+  // width: 25vw; */
+
+  border: 1px green dashed;
+}
+
+.social-link-item {
+  font-family: degular;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  
+  margin-right: clamp(12px, 2.5vw, 36px);
+}
+
+.social-link-item:hover {
+  opacity: 50%;
+}
+
+#email-copy-link {
+  height: 25px;
+  width: 150px;
+  position: relative;
+  /* // display: block; */
+  overflow: hidden;
+  margin: 0;
+  cursor: pointer;
+
+  /* // border: 1px green dashed; */
+}
+
+.email-copied-signifier {
+  position: absolute;
+  /* // display: inline; */
+  z-index: 200;
+  top: 100%;
+  margin-left: 6px;
+  
+  /* // border: 1px yellow dashed; */
+}
+
+#footer-author {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+
+  border: 2px blue dashed;
+}
+
+#landing-footer-text, #last-updated-date {
+  text-align: right;
+  color: #FFF;
+  font-family: Degular;
+  text-transform: uppercase;
+  /* border: 1px blue dashed; */
+}
+
+#last-updated-date { 
+  margin-top: 4px;
+  opacity: 40%;
 }

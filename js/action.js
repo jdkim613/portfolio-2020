@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  console.log('loaded action.js top');
+
   // Footer Email Signifier 
   var emailTL = new TimelineMax({paused: true});
   
@@ -342,11 +344,10 @@ $(document).ready(function() {
   var queue = new createjs.LoadQueue(false);
 
   queue.on('progress', event => {
-    // console.log(event);
+
     let progress = Math.floor(event.progress * 100);
     var progressGage = (progress * 0.7);
-    // console.log(progressGage)
-    TweenMax.to($('#preload-bar'), {duration: 1, width: progressGage +'vw', ease: 'circ.out'}, 1)
+    TweenMax.to($('#preload-bar'), { duration: 1, width: progressGage + 'vw', ease: 'circ.out' }, 1)
 
 
     if (progress == 100) {
@@ -356,19 +357,32 @@ $(document).ready(function() {
   })
 
   queue.on('complete', event => {
-    transitionTL.to($('#preload-case-wrapper'), {duration: 0.75, width: 0, ease:'circ.out'}, 4);
-    TweenMax.to($('#preload-case-wrapper > *'), {duration: 0.75, position: 'absolute', right: '100vw'}, 4);
+    transitionTL.to($('#preload-case-wrapper > *'), { duration: 0.75, position: 'absolute', right: '100vw' }, 2)
+    .to($('#preload-case-wrapper'), { duration: 0.75, width: 0, ease: 'circ.out' }, 2.5);
   })
 
+  console.log('loaded action.js');
   queue.on('fileload', handleFileComplete);
-  
+
   function handleFileComplete(event) {
+
     var item = event.item;
-    var type = item.type; 
+    var type = item.type;
 
     if (type == createjs.Types.IMAGE) {
-      $(appendIndex).append(event.result);
-      ++imageIndex;
-      appendIndex = '#test-img-container-' + imageIndex;
+      // prepend the preloaded image into the selected element -> selector is stored in individual js files
+      $(imageIDArray[imageArrayIndex].findID).prepend(event.result);
+
+      if(!imageIDArray[imageArrayIndex].assignClass == '') {
+        $(imageIDArray[imageArrayIndex].findID + '> img').attr('class', imageIDArray[imageArrayIndex].assignClass)
+      }
+
+      if(!imageIDArray[imageArrayIndex].assignID == '') {
+        $(imageIDArray[imageArrayIndex].findID + '> img').attr('id', imageIDArray[imageArrayIndex].assignID)
+      }
+      
+      // ++imageIndex;
+      // appendIndex = '#test-img-container-' + imageIndex;
+      ++imageArrayIndex;
     }
   }

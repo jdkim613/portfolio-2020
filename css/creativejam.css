@@ -5,12 +5,10 @@
   margin: 96px 0px;
 }
 
-.title-image {
+#hero-image img {
   position: absolute;
-  /* max-height: 480px; */
   max-width: 1000px;
   object-fit: cover;
-  /* background-attachment: fixed; */
   top: 0px;
   left: 40vw;
   z-index: -1;
@@ -35,7 +33,7 @@
   border: 1px red dashed;
 }
 
-#image-item-cj-0 {
+#image-container-cjstory > img {
   width: 80vw;
   max-width: 1370px;
   top: -5px;
