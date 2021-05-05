@@ -64,6 +64,10 @@ $(document).ready(function() {
 
             if(userPWInput == thePassword) {
 
+                // change logo & add class so navbar item change color
+                $('#logo').attr('src', 'assets/logo.png');
+                $('.add-click').addClass('yes-change');
+
                 // animate unlock
                 correctPWTL.to($('#locked-page-icon'), {duration: 0.5, rotation: +360, ease: 'circ.out'})
                 .to($('#locked-page-icon'), {duration: 0, attr:{src:'assets/icons/password-icon-unlocked.svg'}}, -0.25);

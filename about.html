@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/about.css">
     <title> Bio </title>
-    <link rel='icon' href='assets/bio.ico' type='image/x-icon'/ >
+    <link rel='icon' href='assets/bio.ico' type='image/x-icon'>
     <link  rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
@@ -16,10 +16,10 @@
     <div class="header-content">
       <div class="add-click">
         <a href="index.html">
-          <img id="logo" src="assets/logo.png"></img>
+          <img class="no-change" id="logo" src="assets/logo-2020-2.png"></img>
         </a>
       </div>
-      <div class="navigation-items add-click">
+      <div class="navigation-items add-click white-font">
         <div class="navigation-item">
           <a href="about.html">
             <div class="about-page">
@@ -31,7 +31,7 @@
           <div id="more-projects">
             <div class="interactive-menu-button">
               <a id='hamburger-menu-link' href="#">
-                <span id='hamburger-menu-1'>Menu</span>
+                <span id='hamburger-menu'>Menu</span>
               </a>
             </div>
             <!-- <h3><strong>+</strong></h3> -->
@@ -76,34 +76,175 @@
       </div>
     </div>
 
-    <div class="body-content remove-top-padding">
+    <div id="bio-wrapper">
+        <div id="bio-container">
+            <div id="bio-image-wrapper">
+                <img id='bio-pic' src='assets/about/prof.jpg'>
+            </div>
+            <div id="bio-content-wrapper">
+                <div id="bio-navbar-container">
+                    <h2 id='biography-selection' class="bio-navbar-item navbar-item-selected">Biography</h2>
+                    <h2 id='resume-selection' class="bio-navbar-item">Resume</h2>
+                </div>
+                <!-- make this relative -->
+                <div id="bio-content-container">
+                    <div id="bio-content-biography-wrapper">
+                        <!-- make this absolute disp flex-->
+                        <div id="bio-content-biography-container">
 
-      <div class="head-container">
-        <div class="head-email">
-          <img id="head" src="assets/face-0.png"></img>
-          <p id="email-copied">Hover me...</p>
+                            <!-- biography -->
+                            <div id='bio-content-biography-swap' class="bio-content-swap">
+                                <div id="bio-content-summary-container">
+                                    <hi class='bio-content-summary'>designer.</hi>
+                                    <hi class='bio-content-summary'>thinker.</hi>
+                                    <hi class='bio-content-summary'>student.</hi>
+                                </div>
+                                <div id="bio-content-biography">
+                                    <p id='biography-content'>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                                        mollit anim id est laborum.
+                                    </p>
+                                    <div id="bio-content-attr-container">
+                                        <div class='attr-container' id="bio-content-location">
+                                            <h3 class="attr-header">Location</h3>
+                                            <div class="attr-list-items">
+                                                <p class="attr-list-item">New York</p>
+                                                <p class="attr-list-item">Seattle</p>
+                                            </div>
+                                        </div>
+                                        <div class='attr-container' id="bio-content-current">
+                                            <h3 class="attr-header">Currently</h3>
+                                            <div class="attr-list-items">
+                                                <p class="attr-list-item">Listening to Mer by Hyukoh</p>
+                                                <p class="attr-list-item">Reading Crying in H-Mart by Michelle Zauner </p>
+                                                <p class="attr-list-item">Playing rugby at Pier 40</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- resume -->
+                            <div id='bio-content-resume-swap' class="bio-content-swap">
+                                <div id="bio-content-resume">
+                                    <div id="work-experience-wrapper">
+                                        <div id="work-experience-container">
+                                            <!-- <h1 class="experience-container-title">Work</h1> -->
+                                            <div class="experience-container">
+                                                <div class="experience-attr">
+                                                    <h2 class="experience-date">AUG 2020 - Present</h2>
+                                                    <h2 class="experience-location">New York</h2>
+                                                </div>
+                                                <div class="experience-content">
+                                                    <h2 class="experience-header">Avanade</h2>
+                                                    <p class="experience-role">Experience Designer</p>
+                                                </div>
+                                            </div>
+                                            <div class="experience-container">
+                                                <div class="experience-attr">
+                                                    <h2 class="experience-date">OCT 2020 - JAN 2021</h2>
+                                                    <h2 class="experience-location">New York</h2>
+                                                </div>
+                                                <div class="experience-content">
+                                                    <h2 class="experience-header">UserBit</h2>
+                                                    <p class="experience-role">Growth Marketing Manager</p>
+                                                </div>
+                                            </div>
+                                            <div class="experience-container">
+                                                <div class="experience-attr">
+                                                    <h2 class="experience-date">OCT 2018 - JAN 2019</h2>
+                                                    <h2 class="experience-location">Remote</h2>
+                                                </div>
+                                                <div class="experience-content">
+                                                    <h2 class="experience-header">Jumpstart</h2>
+                                                    <p class="experience-role">Creative Design Intern</p>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="experience-container">
+                                                <div class="experience-attr">
+                                                    <h2 class="experience-date">SEP 2017 - Jun 2020</h2>
+                                                    <h2 class="experience-location">Bothell</h2>
+                                                </div>
+                                                <div class="experience-content">
+                                                    <h2 class="experience-header">University of Washington</h2>
+                                                    <p class="experience-roles">
+                                                        <p class="experience-role">Student Experience Researcher</p>
+                                                        <p class="experience-role">Digital Transformation & Design Assistant</p>
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class='content-divider'></div>
+                                    <div id="independent-project-wrapper">
+                                        <!-- <h1 class="experience-container-title">Projects</h1> -->
+                                        <div id="independent-project-container">
+                                            <div class="experience-container">
+                                                <div class="experience-attr">
+                                                    <h2 class="experience-date">FEB 2019 - MAR 2020</h2>
+                                                    <h2 class="experience-location">Seattle</h2>
+                                                </div>
+                                                <div class="experience-content">
+                                                    <h2 class="experience-header">Eventplore</h2>
+                                                    <p class="experience-role">Experience Lead</p>
+                                                </div>
+                                            </div>
+                                            <div class="experience-container">
+                                                <div class="experience-attr">
+                                                    <h2 class="experience-date">NOV 2016 - MAY 2020</h2>
+                                                    <h2 class="experience-location">Seattle</h2>
+                                                </div>
+                                                <div class="experience-content">
+                                                    <h2 class="experience-header">AAPI BeSpoken</h2>
+                                                    <p class="experience-role">Co-Creator, Digital Media</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- insert footer here -->
+                <div id='landing-footer-wrapper'>
+                    <div id='landing-footer-container'>
+                      <div id='landing-footer-content'>
+                        <div id='social-links'>
+                          <a target="_blank" href="https://www.linkedin.com/in/jusung/">
+                            <p class='social-link-item'>LinkedIn</p>
+                          </a>
+                          <p class='social-link-item'> – </p>
+                          <a target="_blank" href="https://www.instagram.com/jusung.me/">
+                            <p class='social-link-item'>Instagram</p>
+                          </a>
+                          <p class='social-link-item'> – </p>
+                          <div>
+                            <p id='email-copy-link' class='social-link-item'> Email 
+                              <span class='email-copied-signifier'> - Copied</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div id='footer-author'>
+                          <p id='landing-footer-text'>Design & Built by Jusung</p>
+                          <p id='last-updated-date'>May 1, 2021</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="profile">
-          <h3 class="profile-quote">Hello,<br>I'm John</h3>
-          <p class="body-style bottom-margin-18">I realized that I don't really care much about technology as much as I do about people. I love the connections we build with one another; the moments that we sit down and laugh together. Those are the moments I design for.</p>
-          <p class="body-style bottom-margin-18">I believe inclusive designs are the principles that bring us closer to those that are different from us. Inclusion isn't just about race, gender, or wealth– it's also saying "hello" to new friends who are alone. I became a designer so that I can help solve these problems at scale and empower people who just need a little boost.</p>
-          <p class="body-style bottom-margin-24">Do something crazy!</p>
-          <div class="social-icon-row-0">
-            <a target="_blank" href="https://www.linkedin.com/in/jusung/">
-              <img class="social-icons-0" class src="assets/social/linkedin-icon.png"></img>
-            </a>
-            <a target="_blank" href="https://twitter.com/jusung_me">
-              <img class="social-icons" class src="assets/social/twitter-icon.png"></img>
-            </a>
-            <a target="_blank" href="https://www.instagram.com/jusung.me/">
-              <img class="social-icons" class src="assets/social/insta-icon.png"></img>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+    <script src="js/about.js"></script>
     <script src="js/action.js"></script>
   </body>
 

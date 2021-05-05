@@ -53,12 +53,14 @@ $(document).ready(function() {
 
     var idFinder = false;
 
-    if(!$('.navigation-items').hasClass('white-font')) {
+    if(!$('.navigation-items').hasClass('white-font') || !$('.navigation-items').hasClass('yes-change')) {
       $('.about-page h3').css('color', '#FFF');
       $('.navigation-items').toggleClass('white-font');
+      $('#logo').attr('src', 'assets/logo-2020-2.png');
     } else {
       $('.about-page h3').css('color', '#333333');
-      $('.navigation-items').removeClass('white-font');
+      $('.navigation-items').toggleClass('white-font');
+      $('#logo').attr('src', 'assets/logo.png');
     }
 
     console.log('this ' + this);

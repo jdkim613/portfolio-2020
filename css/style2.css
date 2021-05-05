@@ -662,6 +662,10 @@ header {
   margin-bottom: 6px;
 }
 
+.about-page h3 {
+  mix-blend-mode: difference;
+}
+
 .more-menu {
   margin-left: 36px;
 }
@@ -1338,6 +1342,7 @@ footer {
   color: #FFFFFF;
   text-transform: uppercase;
   
+  cursor: pointer;
   margin-right: clamp(12px, 2.5vw, 48px);
 }
 
