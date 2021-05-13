@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/hololens.css">
     <title> HoloLens Guides </title>
-    <link rel='icon' href='assets/xrdemo.ico' type='image/x-icon'/ >
+    <link rel='icon' href='assets/xrdemo.ico' type='image/x-icon' >
     <link  rel="stylesheet" href="https://use.typekit.net/kbx5ndp.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
@@ -15,10 +15,10 @@
     <div class="header-content">
       <div class="add-click">
         <a href="index.html">
-          <img class='yes-change' id="logo" src="assets/logo-2020-2.png"></img>
+          <img class='yes-change' id="logo" src="assets/logo.png"></img>
         </a>
       </div>
-      <div class="navigation-items add-click">
+      <div class="navigation-items add-click yes-change">
         <div class="navigation-item">
           <a href="about.html">
             <div class="about-page">
@@ -30,7 +30,7 @@
           <div id="more-projects">
             <div class="interactive-menu-button">
               <a id='hamburger-menu-link' href="#">
-                <span id='hamburger-menu'>Menu</span>
+                <span id='hamburger-menu-1'>Menu</span>
               </a>
             </div>
             <!-- <h3><strong>+</strong></h3> -->
@@ -105,8 +105,8 @@
               </div>
             </div>
           </div>
-          <div class="content-right">
-            <img id="image-item-hololens-header" class="title-image" src="assets/hololens-image.png"></img>
+          <div id='hero-image-container' class="content-right">
+            <!-- image inserted dynamically -->
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
       <div class="black-bg lightgray-font content-container">
         <div class="content-image">
           <div id="image-container-hl-0" class="image-container-1">
-              <img id="image-item-hl-0" class="border-round image-shadow" src="assets/hololens/hololens-video-01.gif">
+            <!-- image inserted dynamically -->
           </div>
           <h2 class="image-description">Source: Microsoft</h2>
         </div>
@@ -196,7 +196,7 @@
       <div class="white-bg content-container">
         <div class="content-image">
           <div id="image-container-hl-1" class="image-container-1">
-              <img id="image-item-hl-1" class="border-round" src="assets/hololens/hype-cycle.png">
+            <!-- Dynamically insert image -->
           </div>
           <h2 class="image-description">Gartner Hype Cycle</h2>
         </div>
@@ -220,7 +220,7 @@
       <div class="gray-bg content-container">
         <div class="content-image">
           <div id="image-container-hl-2" class="image-container-1">
-              <img id="image-item-hl-2" class="border-round" src="assets/hololens/affinity-diagramming.png">
+              <!-- Dynamically insert image -->
               <h2 class="image-description">Affinity Diagramming</h2>
           </div>
         </div>
@@ -276,7 +276,7 @@
       <div class="gray-bg content-container remove-top-padding">
         <div class="content-image">
           <div id="image-container-hl-3" class="image-container-1">
-              <img id="image-item-hl-3" class="border-round" src="assets/hololens/adjacencies.png">
+              <!-- Dynamically insert image -->
           </div>
         </div>
       </div>
@@ -302,17 +302,17 @@
               <div class="stat-item">
                 <p class="stat">55K</p>
                 <h3 class="section-header">New Employees</h3>
-                <p class"body-style"><i>2019</i></p>
+                <p class="body-style"><i>2019</i></p>
               </div>
               <div class="stat-item">
                 <p class="stat">$240</p>
                 <h3 class="section-header">Training Cost per Employee</h3>
-                <p class"body-style"><i>20h x $12 average wages</i></p>
+                <p class="body-style"><i>20h x $12 average wages</i></p>
               </div>
               <div class="stat-item">
                 <p class="stat">$13M</p>
                 <h3 class="section-header">Market Cap</h3>
-                <p class"body-style"><i>Starbucks alone</i></p>
+                <p class="body-style"><i>Starbucks alone</i></p>
               </div>
             </div>
           </div>
@@ -322,7 +322,7 @@
       <div class="gray-bg content-container remove-top-padding">
         <div class="content-image">
           <div id="image-container-hl-4" class="image-container-small">
-              <img id="image-item-hl-4" class="border-round image-shadow" src="assets/hololens/barista.jpg">
+              <!-- Dynamically insert image -->
           </div>
           <h2 class="image-description">Photo by Ali Yahya</h2>
         </div>
@@ -346,7 +346,7 @@
       <div class="white-bg content-container remove-top-padding">
         <div class="content-image">
           <div id="image-container-hl-5" class="image-container-2">
-              <img id="image-item-hl-5" class="border-round" src="assets/hololens/instruction-breakdown.png">
+            <!-- Dynamically insert image -->
           </div>
         </div>
       </div>
@@ -370,12 +370,12 @@
       <div class="white-bg content-container">
         <div class="content-inside">
           <div class="content-image-double">
-            <div class="image-container-double">
-                <img id="image-item-hl-6" class="image-item-double border-round image-shadow" src="assets/hololens/guides-editing.gif">
+            <div id="image-container-hl-6" class="image-container-double">
+                <!-- Dynamically insert image -->
                 <h2 class="image-description">Editing Instructions</h2>
             </div>
-            <div class="image-container-double">
-                <img id="image-item-hl-7" class="image-item-double border-round image-shadow" src="assets/hololens/guides-placement.gif">
+            <div id="image-container-hl-7" class="image-container-double">
+                <!-- Dynamically insert image -->
                 <h2 class="image-description">Placing Guides</h2>
             </div>
           </div>
@@ -426,7 +426,7 @@
       <div class="white-bg content-container remove-top-padding">
         <div class="content-image">
           <div id="image-container-hl-9" class="image-container-small">
-              <img id="image-item-hl-9" class="border-round" src="assets/hololens/hololens-testing.jpeg">
+            <!-- Dynamically insert image -->
           </div>
           <h2 class="image-description">Testing the Bike Rotor Demo</h2>
         </div>
@@ -455,7 +455,7 @@
       <div class="gray-bg content-container remove-top-padding">
         <div class="content-image">
           <div id="image-container-hl-10" class="image-container-small">
-              <img id="image-item-hl-10" class="border-round" src="assets/hololens/hololens-demo.gif">
+            <!-- Dynamically insert image -->
           </div>
           <h2 class="image-description">Final Walkthrough</h2>
         </div>
