@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+     // Preload images using Preload.js
+     queue.loadFile({id:'cj-image-0', src:'assets/about/prof.jpg'})
+
 
     // Setting the max width of .experience-attr to whatever is longest
     var maxWidthAttr = 0;
@@ -42,3 +45,9 @@ $(document).ready(function() {
     });
 
 })
+
+var imageArrayIndex = 0;
+var imageIDArray = [
+    {findID:'#bio-image-wrapper', assignID: 'bio-pic', assignClass: ''},
+];
+
