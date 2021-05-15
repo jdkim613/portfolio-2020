@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Preload images using Preload.js
   queue.loadFile({id:'hololens-image-0', src:'assets/hololens-image.png'});
-  queue.loadFile({id:'hololens-image-1', src:'assets/hololens/hololens-video-01.gif'});
+  // queue.loadFile({id:'hololens-image-1', src:'assets/hololens/hololens-video-01.gif'});
   queue.loadFile({id:'hololens-image-2', src:'assets/hololens/hype-cycle.png'});
   queue.loadFile({id:'hololens-image-3', src:'assets/hololens/affinity-diagramming.png'});
   queue.loadFile({id:'hololens-image-4', src:'assets/hololens/adjacencies.png'});
@@ -12,7 +12,7 @@ $(document).ready(function() {
   queue.loadFile({id:'hololens-image-8', src:'assets/hololens/guides-placement.gif'});
   queue.loadFile({id:'hololens-image-9', src:'assets/hololens/cardboard-prototype.gif'});
   queue.loadFile({id:'hololens-image-10', src:'assets/hololens/hololens-testing.jpeg'});
-  queue.loadFile({id:'hololens-image-11', src:'assets/hololens/hololens-demo.gif'});
+  // queue.loadFile({id:'hololens-image-11', src:'assets/hololens/hololens-demo.gif'});
 
   $(".image-selector-item").click(
     function() {
@@ -85,7 +85,7 @@ $(document).ready(function() {
 var imageArrayIndex = 0;
 var imageIDArray = [
     {findID:'#hero-image-container', assignID: 'image-item-hololens-header', assignClass: 'title-image'},
-    {findID:'#image-container-hl-0', assignID: 'image-item-hl-0', assignClass:'border-round'},
+    // {findID:'#image-container-hl-0', assignID: 'image-item-hl-0', assignClass:'border-round'},
     {findID:'#image-container-hl-1', assignID: 'image-item-hl-1', assignClass: 'border-round'},
     {findID:'#image-container-hl-2', assignID: 'image-item-hl-2', assignClass: 'border-round'},
     {findID:'#image-container-hl-3', assignID: 'image-item-hl-3', assignClass: 'border-round'},
@@ -95,5 +95,5 @@ var imageIDArray = [
     {findID:'#image-container-hl-7', assignID: 'image-item-hl-7', assignClass: 'image-item-double border-round image-shadow'},
     {findID:'#image-container-hl-8', assignID: 'image-item-hl-8', assignClass: 'border-round'},
     {findID:'#image-container-hl-9', assignID: 'image-item-hl-9', assignClass: 'border-round'},
-    {findID:'#image-container-hl-10', assignID: 'image-item-hl-10', assignClass: 'border-round'}
+    // {findID:'#image-container-hl-10', assignID: 'image-item-hl-10', assignClass: 'border-round'}
 ];
