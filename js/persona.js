@@ -1,9 +1,11 @@
 $(document).ready(function() {
 
   // Preload images using Preload.js
-  queue.loadFile({id:'hololens-image-0', src:'https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg'})
-  queue.loadFile({id:'hololens-image-1', src:'https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg'})
-  queue.loadFile({id:'hololens-image-2', src:'https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg'})
+  queue.loadFile({id:'persona-image-0', src:'assets/persona/persona-card-slide-0.gif'})
+  queue.loadFile({id:'persona-image-1', src:'assets/persona/students.jpg'})
+  queue.loadFile({id:'persona-image-2', src:'assets/persona/module-design.png'});
+  queue.loadFile({id:'persona-image-3', src:'assets/persona/card-anatomy.png'});
+  queue.loadFile({id:'persona-image-4', src:'assets/persona/never-stop.png'});
 
   // Image Toggle
   // $( ".image-selector-item" ).hover(
@@ -148,3 +150,13 @@ $(document).ready(function() {
         $('#research-item-body').text(researchBody);
       }
 });
+
+var imageArrayIndex = 0;
+var imageIDArray = [
+    {findID:'#image-container-hero', assignID: 'image-item-pc-header', assignClass: 'title-image'},
+    {findID:'#image-container-pc-0', assignID: 'image-item-pc-0', assignClass: 'border-round image shadow'},
+    {findID:'#image-container-pc-02', assignID: 'image-item-pc-02', assignClass: 'border-round image-shadow'},
+    {findID:'#image-container-pc-04', assignID: 'image-item-pc-04', assignClass: 'border-round image-shadow'},
+    {findID:'#image-container-pc-05', assignID: '#image-item-pc-05', assignClass: 'border-round image-shadow'},
+
+];

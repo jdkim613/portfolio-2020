@@ -383,8 +383,6 @@ $(document).ready(function() {
         $(imageIDArray[imageArrayIndex].findID + '> img').attr('id', imageIDArray[imageArrayIndex].assignID)
       }
       
-      // ++imageIndex;
-      // appendIndex = '#test-img-container-' + imageIndex;
       ++imageArrayIndex;
     }
   }
