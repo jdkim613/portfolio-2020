@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     // Comment out below on live production
-    $('#password-protection-overlay').hide();
-    $('#preload-case-wrapper').hide();
+    // $('#password-protection-overlay').hide();
+    // $('#preload-case-wrapper').hide();
 
     
 
