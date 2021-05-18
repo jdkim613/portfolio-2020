@@ -8,9 +8,9 @@ $(document).ready(function() {
   queue.loadFile({id:'hololens-image-4', src:'assets/hololens/adjacencies.png'});
   queue.loadFile({id:'hololens-image-5', src:'assets/hololens/barista.jpg'});
   queue.loadFile({id:'hololens-image-6', src:'assets/hololens/instruction-breakdown.png'});
-  queue.loadFile({id:'hololens-image-7', src:'assets/hololens/guides-editing.gif'});
-  queue.loadFile({id:'hololens-image-8', src:'assets/hololens/guides-placement.gif'});
-  queue.loadFile({id:'hololens-image-9', src:'assets/hololens/cardboard-prototype.gif'});
+  // queue.loadFile({id:'hololens-image-7', src:'assets/hololens/guides-editing.gif'});
+  // queue.loadFile({id:'hololens-image-8', src:'assets/hololens/guides-placement.gif'});
+  // queue.loadFile({id:'hololens-image-9', src:'assets/hololens/cardboard-prototype.gif'});
   queue.loadFile({id:'hololens-image-10', src:'assets/hololens/hololens-testing.jpeg'});
   // queue.loadFile({id:'hololens-image-11', src:'assets/hololens/hololens-demo.gif'});
 
@@ -91,9 +91,9 @@ var imageIDArray = [
     {findID:'#image-container-hl-3', assignID: 'image-item-hl-3', assignClass: 'border-round'},
     {findID:'#image-container-hl-4', assignID: 'image-item-hl-4', assignClass: 'border-round image-shadow'},
     {findID:'#image-container-hl-5', assignID: 'image-item-hl-5', assignClass: 'border-round'},
-    {findID:'#image-container-hl-6', assignID: 'image-item-hl-6', assignClass: 'image-item-double border-round image-shadow'},
-    {findID:'#image-container-hl-7', assignID: 'image-item-hl-7', assignClass: 'image-item-double border-round image-shadow'},
-    {findID:'#image-container-hl-8', assignID: 'image-item-hl-8', assignClass: 'border-round'},
+    // {findID:'#image-container-hl-6', assignID: 'image-item-hl-6', assignClass: 'image-item-double border-round image-shadow'},
+    // {findID:'#image-container-hl-7', assignID: 'image-item-hl-7', assignClass: 'image-item-double border-round image-shadow'},
+    // {findID:'#image-container-hl-8', assignID: 'image-item-hl-8', assignClass: 'border-round'},
     {findID:'#image-container-hl-9', assignID: 'image-item-hl-9', assignClass: 'border-round'},
     // {findID:'#image-container-hl-10', assignID: 'image-item-hl-10', assignClass: 'border-round'}
 ];

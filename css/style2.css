@@ -359,6 +359,10 @@ a:visited {
   margin-bottom: 24px;
 }
 
+.icon-image-2 {
+  width: 5vw;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -1118,7 +1122,7 @@ img {
 }
 
 .icon-content-container {
-  width: 25vw;
+  width: 27.5vw;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -1243,6 +1247,10 @@ img {
 
 .remove-bottom-margin {
   margin-bottom: 0px;
+}
+
+.remove-bottom-padding {
+  padding-bottom: 0;;
 }
 
 .add-top-margin {

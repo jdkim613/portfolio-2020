@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // Preload images using Preload.js
-  queue.loadFile({id:'persona-image-0', src:'assets/persona/persona-card-slide-0.gif'})
+  // queue.loadFile({id:'persona-image-0', src:'assets/persona/persona-card-slide-0.gif'})
   queue.loadFile({id:'persona-image-1', src:'assets/persona/students.jpg'})
   queue.loadFile({id:'persona-image-2', src:'assets/persona/module-design.png'});
   queue.loadFile({id:'persona-image-3', src:'assets/persona/card-anatomy.png'});
@@ -153,7 +153,7 @@ $(document).ready(function() {
 
 var imageArrayIndex = 0;
 var imageIDArray = [
-    {findID:'#image-container-hero', assignID: 'image-item-pc-header', assignClass: 'title-image'},
+    // {findID:'#image-container-hero', assignID: 'image-item-pc-header', assignClass: 'title-image'},
     {findID:'#image-container-pc-0', assignID: 'image-item-pc-0', assignClass: 'border-round image shadow'},
     {findID:'#image-container-pc-02', assignID: 'image-item-pc-02', assignClass: 'border-round image-shadow'},
     {findID:'#image-container-pc-04', assignID: 'image-item-pc-04', assignClass: 'border-round image-shadow'},
