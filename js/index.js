@@ -32,7 +32,7 @@ $(document).ready(function () {
         'assets/index/adobexairbnb.gif',
         'assets/index/student-persona.gif',
         'assets/index/hololens-4.gif',
-        'assets/index/credena.gif',
+        'assets/index/aither.gif',
         'assets/index/sony-2.gif',
         'assets/index/branding.gif'
         
@@ -303,6 +303,10 @@ $(document).ready(function () {
       case 'filter-thoughts':
         selectedFilter = '.thoughts-case';
         break;
+
+      case 'filter-product':
+      selectedFilter = '.product-case';
+      break;
     }
 
     console.log('selectedFilter = ' + selectedFilter);
