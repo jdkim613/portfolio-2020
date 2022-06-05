@@ -1,0 +1,59 @@
+.credena-bg {
+  position: relative;
+  background-color: #1E5496;
+  width: 100vw;
+}
+
+.credena-bg:before {
+  content: "";
+  background-color: #1E5496;
+  position: absolute;
+  height: 100%;
+  width: 4000px;
+  left: -2000px;
+  top: 0px;
+  z-index: -1;
+}
+
+#credena-title > .content-inside > .content-left {
+  max-width: 50vw;
+  width: 35vw;
+}
+
+.site-title {
+  max-width: 60vw;
+  width: 40vw;
+}
+
+.subtitle-content {
+  margin-top: 24px;
+}
+
+#challenge-nav .content-row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* Image Conatiners */
+.image-showcase-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#credena-image-showcase-1 {
+  height: 60vh;
+  -o-object-position: 0%;
+     object-position: 0%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=credena.css.map */
