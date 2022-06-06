@@ -154,11 +154,44 @@ main {
         p {
             font-size: 1.5rem;
             margin: 0;
+            display: inline;
         }
 
         a {
             text-decoration: underline;
+            position: relative;
+            z-index: 2;
+            display: inline;
+            
         }
+
+        a::before {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        a::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            inset: 0 0 0 0;
+            background: rgb(255, 255, 255);
+            z-index: -1;
+            transition: transform .3s ease;
+        }
+
+
 
         img {
             width: 40vw;
