@@ -17,6 +17,13 @@ main {
 //     scroll-snap-align: end;
 // }
 
+@media screen and (max-width: 400px) {
+    #current-container {
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+}
+
 #main-container {
     width: 100vw;
     height: 100vh;
@@ -31,6 +38,10 @@ main {
 
 }
 
+#reveal-effec-container {
+    pointer-events: none
+}
+
 #reveal-effect {
     z-index: 1000;
     width: 100vw;
@@ -42,6 +53,7 @@ main {
     animation-fill-mode: backwards;
     position: absolute;
     overflow: hidden;
+    pointer-events: none
 }
 
 #reveal-effect::after {
@@ -56,6 +68,7 @@ main {
 
     animation: secondaryImageOverlayIn 1s 0s, secondaryImageOverlayOut 1s 0.6s;
     animation-fill-mode: both;
+    pointer-events: none
   }
 
 

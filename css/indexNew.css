@@ -7,6 +7,18 @@ main {
   height: 100vh;
 }
 
+@media screen and (max-width: 400px) {
+  #current-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+}
+
 #main-container {
   width: 100vw;
   height: 100vh;
